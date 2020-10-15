@@ -1,3 +1,12 @@
+![Image of wireframe1](src/images/wireframe1of3.png)
+![Image of wireframe2](src/images/wireframe2of3.png)
+![Image of wireframe3](src/images/wireframe3of3.png)
+![Image of ERD](src/images/ERD.png)
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

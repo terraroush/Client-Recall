@@ -2,6 +2,8 @@
 
 ## Wireframe v2 ##
 
+![Image of wireframe11](src/images/wireframeAndERD/homePage.png)
+![Image of wireframe12](src/images/wireframeAndERD/clientListView.png)
 ![Image of wireframe9](src/images/wireframeAndERD/clientSelectedView.png)
 ![Image of wireframe10](src/images/wireframeAndERD/formView.png)
 

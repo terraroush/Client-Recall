@@ -40,7 +40,7 @@ export const VisitProvider = props => {
             },
             body: JSON.stringify(visit)
         })
-            .then(getAgetVisitsnimals)
+            .then(getVisits)
     }
 
     return (

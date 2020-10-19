@@ -48,7 +48,7 @@ export const Register = props => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="container--login">
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>account with that email address already exists</div>
@@ -56,14 +56,19 @@ export const Register = props => {
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">please register</h1>
+                <h1 className="title">client recall</h1>
+                <h2 className="command">please register</h2>
                 <fieldset>
                     <label htmlFor="username"> username </label>
-                    <input ref={username} type="text" name="username" className="form-control" placeholder="Username" required autoFocus />
+                    <input ref={username} type="text" name="username" className="form-control" placeholder="username" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="inputEmail"> email </label>
-                    <input ref={email} type="email" name="email" className="form-control" placeholder="Email Address" required />
+                    <input ref={email} 
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        placeholder="email address" required />
                 </fieldset>
                 <fieldset>
                     <button type="submit"> register </button>

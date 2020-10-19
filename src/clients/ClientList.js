@@ -1,41 +1,38 @@
-import React, { useContext, useEffect, useState } from "react"
-import { ClientContext } from "./ClientProvider"
-import { ClientCard } from "./ClientCard"
+import React, { useContext, useEffect, useState } from "react";
+import { ClientContext } from "./ClientProvider";
+import { ClientCard } from "./ClientCard";
+import { useHistory } from "react-router-dom";
 
 export const ClientList = () => {
-    const { clients, getClients, searchTerms } = useContext(ClientContext)
-    const [ filteredClients, setFiltered ] = useState([])
+  const { clients, getClients } = useContext(ClientContext);
 
-    // Empty dependency array - useEffect only runs after first render
-    useEffect(() => {
-        getClients()
-    }, [])
+  const [filteredClients, setFiltered] = useState([]);
+  const history = useHistory;
 
-    // useEffect dependency array with dependencies - will run if dependency changes (state)
-    // searchTerms will cause a change
-    useEffect(() => {
-        if (searchTerms !== "") {
-            // If the search field is not blank, display matching clients
-            const subset = clients.filter(client => client.name.toLowerCase().includes(searchTerms.toLowerCase().trim()))
-            setFiltered(subset)
-        } else {
-            // If the search field is blank, display all clients
-            setFiltered(clients)
-        }
-    }, [searchTerms, clients])
+  const activeUser = parseInt(localStorage.getItem("activeUser"));
 
-    return (
-        <>
-            <h1>all clients</h1>
+  useEffect(() => {
+    getClients();
+  }, []);
 
-            <div className="clients">
-				{
-                    filteredClients.map(client => {
-					return <ClientCard key={client.id} client={client} />
-				})
-				}
-			</div>
-        </>
-    )
-}
+  return (
+    <>
+      <h1>all clients</h1>
+      <button
+        onClick={() => {
+          history.push("/clients/create");
+        }}
+      >
+        add client
+      </button>
 
+      <div className="clients">
+        {clients.map((client) => {
+          if (client.userId === activeUser) {
+            return <ClientCard key={client.id} client={client} />;
+          }
+        })}
+      </div>
+    </>
+  );
+};

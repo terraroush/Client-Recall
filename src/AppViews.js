@@ -17,7 +17,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route exact path="/clients">
                 <ClientList />
-                <ClientDetail />
+             
             </Route>
         </ClientProvider>
 

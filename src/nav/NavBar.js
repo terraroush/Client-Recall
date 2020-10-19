@@ -12,7 +12,7 @@ export const NavBar = props => {
                 <Link className="navbar__link" to="/clients">all clients</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/clientcenter">client center</Link>
+                <Link className="navbar__link" to="/client-center">client center</Link>
             </li>
         </ul>
     )

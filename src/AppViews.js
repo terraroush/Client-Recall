@@ -28,6 +28,13 @@ export const AppViews = () => {
             </Route>
         </ClientProvider>
 
+        <ClientProvider>
+            <Route exact path="/client-center">
+            
+                <ClientDetail />
+            </Route>
+        </ClientProvider>
+
     </>
 )
 }

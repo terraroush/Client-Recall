@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 export const ClientList = () => {
   const { clients, getClients } = useContext(ClientContext);
 
-  const [filteredClients, setFiltered] = useState([]);
   const history = useHistory;
 
   const activeUser = parseInt(localStorage.getItem("activeUser"));

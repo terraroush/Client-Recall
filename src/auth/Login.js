@@ -33,6 +33,7 @@ export const Login = props => {
 
         
         <main className="container--login">
+
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>user does not exist</div>
                 <button className="button--close" onClick={e => existDialog.current.close()}>close</button>
@@ -40,11 +41,12 @@ export const Login = props => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>client recall</h1>
-                    <h2>please log in</h2>
+                    <h1 className="title">client recall</h1>
+                    <h2 className="command">please log in</h2>
                     <fieldset>
                         <label htmlFor="inputUsername"> username </label>
-                        <input ref={username} type="text"
+                        <input ref={username}
+                            type="text"
                             id="username"
                             className="form-control"
                             placeholder="username"

@@ -16,10 +16,11 @@ export const AppViews = () => {
 
         <ClientProvider>
             <Route exact path="/clients">
-                
                 <ClientList />
+                <ClientDetail />
             </Route>
         </ClientProvider>
+
 
         <ClientProvider>
             <Route exact path="/clients/detail/:clientId(\d+)">

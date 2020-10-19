@@ -1,21 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ClientContext } from "./ClientProvider";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 export const ClientDetail = () => {
   const { getClientById, deleteClient } = useContext(ClientContext);
-
-  const [client, setClient] = useState({});
-//   const [location, setLocation] = useState({});
-//   const [customer, setCustomer] = useState({});
-
+  const [ client, setClient ] = useState({});
   const { clientId } = useParams();
+  const history = useHistory()
 
   useEffect(() => {
     getClientById(clientId).then((response) => {
         setClient(response);
-    //   setLocation(response.location);
-    //   setCustomer(response.customer);
     });
   }, []);
 
@@ -27,16 +22,16 @@ export const ClientDetail = () => {
 
       <button
         onClick={() => {
-          
+          history.push(`/clients/edit/${client.id}`);
         }}
       >
-        Edit
+        edit
       </button>
 
       <button
         onClick={() => {
           deleteClient(client.id).then(() => {
-            
+            history.push("/clients");
           });
         }}
       >

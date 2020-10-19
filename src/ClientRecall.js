@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import {  AppViews } from "./AppViews";
+import { AppViews } from "./AppViews";
+import { NavBar } from "./nav/NavBar";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 
@@ -11,7 +12,7 @@ export const ClientRecall = () => (
         if (localStorage.getItem("activeUser")) {
           return (
             <>
-              
+              <NavBar />
               <AppViews />
             </>
           );
@@ -19,7 +20,8 @@ export const ClientRecall = () => (
           return <Redirect to="/login" />;
         }
       }}
-    ></Route>
+    />
+
     <Route path="/login">
       <Login />
     </Route>

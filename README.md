@@ -16,4 +16,4 @@
 ![Image of wireframe8](src/images/wireframeAndERD/clientListWDetail8of8.png)
 
 ## ERD *entity relationship diagram* ##
-![Image of ERD](src/images/wireframeAndERD/ERD.png)
+![Image of ERD](src/images/wireframeAndERD/erd.png)

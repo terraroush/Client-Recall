@@ -9,6 +9,7 @@ export const ClientForm = () => {
   const [client, setClient] = useState({});
   //wait for data before button is active
   const [isLoading, setIsLoading] = useState(true);
+  const activeUser = parseInt(localStorage.getItem("activeUser"));
 
   const { clientId } = useParams();
   const history = useHistory();
@@ -26,7 +27,7 @@ export const ClientForm = () => {
     setClient(newClient);
   };
 
-  // Get customers and locations. If animalId is in the URL, getAnimalById
+  // If clientId is in the URL, getClientById
   useEffect(() => {
     
         if (clientId) {
@@ -46,16 +47,20 @@ export const ClientForm = () => {
       //PUT - update
       editClient({
         id: client.id,
-        name: client.name,
+        firstName: client.firstName,
+        lastName: client.lastName,
         email: client.email,
-        phone: client.phone,
+        phone: +client.phone,
+        userId: activeUser
       }).then(() => history.push(`/clients/detail/${client.id}`));
     } else {
       //POST - add
       addClient({
-        name: client.name,
+        firstName: client.firstName,
+        lastName: client.lastName,
         email: client.email,
-        phone: client.phone,
+        phone: +client.phone,
+        userId: activeUser
       }).then(() => history.push("/clients"));
     }
   };
@@ -67,27 +72,43 @@ export const ClientForm = () => {
       </h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="clientName">client name: </label>
+          <label htmlFor="firstName">first name: </label>
           <input
             type="text"
-            id="clientName"
-            name="name"
+            id="firstName"
+            name="firstName"
             required
             autoFocus
             className="form-control"
-            placeholder="client name"
+            placeholder="first name"
             onChange={handleControlledInputChange}
-            defaultValue={client.name}
+            defaultValue={client.firstName}
           />
         </div>
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="clientEmail">client email: </label>
+          <label htmlFor="lastName">last name: </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            className="form-control"
+            placeholder="last name"
+            onChange={handleControlledInputChange}
+            defaultValue={client.lastName}
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div className="form-group">
+          <label htmlFor="clientEmail">email: </label>
           <input
             type="email"
             id="clientEmail"
             name="email"
+            required
             className="form-control"
             placeholder="client email"
             onChange={handleControlledInputChange}
@@ -97,11 +118,12 @@ export const ClientForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="clientPhone">client phone: </label>
+          <label htmlFor="clientPhone">phone: </label>
           <input
             type="text"
             id="clientPhone"
             name="phone"
+            required
             className="form-control"
             placeholder="client phone"
             onChange={handleControlledInputChange}

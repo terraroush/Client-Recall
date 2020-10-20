@@ -23,15 +23,20 @@ export const AppViews = () => {
         </ClientProvider>
         
         <ClientProvider>
-            <Route path="/animals/create">
+            <Route path="/clients/create">
                 <ClientForm />
             </Route>
         </ClientProvider>
 
+        <ClientProvider>
+            <Route path="/clients/detail/:clientId(\d+)">
+                <ClientDetail />
+            </Route>
+        </ClientProvider>
 
         <ClientProvider>
-            <Route exact path="/clients/detail/:clientId(\d+)">
-                <ClientDetail />
+            <Route path="/clients/edit/:clientId(\d+)">
+                <ClientForm />
             </Route>
         </ClientProvider>
 

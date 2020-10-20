@@ -4,6 +4,7 @@ import { Home } from "./Home"
 import { ClientList } from './clients/ClientList'
 import { ClientProvider } from './clients/ClientProvider'
 import { ClientDetail } from './clients/ClientDetail'
+import { ClientForm } from './clients/ClientForm'
 
 
 export const AppViews = () => {
@@ -18,6 +19,12 @@ export const AppViews = () => {
             <Route exact path="/clients">
                 <ClientList />
              
+            </Route>
+        </ClientProvider>
+        
+        <ClientProvider>
+            <Route path="/animals/create">
+                <ClientForm />
             </Route>
         </ClientProvider>
 

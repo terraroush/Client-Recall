@@ -18,7 +18,7 @@ export const ClientForm = () => {
   //Controlled component
   const handleControlledInputChange = (event) => {
     //When changing a state object or array,
-    //always create a copy make changes, and then set state.
+    //always create a copy to make changes, and then set state.
     const newClient = { ...client };
     //client is an object with properties.
     //set the property to the new value
@@ -52,7 +52,7 @@ export const ClientForm = () => {
         email: client.email,
         phone: +client.phone,
         userId: activeUser
-      }).then(() => history.push(`/clients/detail/${client.id}`));
+      }).then(() => history.push(`/clients/detail/${client.id}`)).then(() => setClient({})) 
     } else {
       //POST - add
       addClient({
@@ -66,6 +66,7 @@ export const ClientForm = () => {
   };
 
   return (
+      <div className="formContainer">
     <form className="clientForm">
       <h2 className="clientForm__title">
         {clientId ? "edit client" : "add client"}
@@ -110,7 +111,7 @@ export const ClientForm = () => {
             name="email"
             required
             className="form-control"
-            placeholder="client email"
+            placeholder="email"
             onChange={handleControlledInputChange}
             defaultValue={client.email}
           />
@@ -125,7 +126,7 @@ export const ClientForm = () => {
             name="phone"
             required
             className="form-control"
-            placeholder="client phone"
+            placeholder="phone"
             onChange={handleControlledInputChange}
             defaultValue={client.phone}
           />
@@ -138,10 +139,12 @@ export const ClientForm = () => {
         onClick={(event) => {
           event.preventDefault();
           constructClientObject();
+          
         }}
       >
         {clientId ? "save client" : "add client"}
       </button>
     </form>
+    </div>
   );
 };

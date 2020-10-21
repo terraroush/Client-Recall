@@ -11,7 +11,7 @@ export const ClientList = () => {
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
   useEffect(() => {
-    getClients();
+    getClients()
   }, []);
 
   return (

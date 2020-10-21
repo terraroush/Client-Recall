@@ -6,27 +6,18 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr 10em;
     grid-template-areas: 
         'header'
         'main'
         'footer';
 }
- header,  footer {
-    padding: var(--header-footer-spacing);
-    background-color: rgba(208, 177, 154, 1);
-  }
 #root > header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 60%;
-    grid-template-rows: 1fr;
-    grid-area: "header";
-  }
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 60%;
+  grid-template-rows: 1fr;
+  grid-area: "header";
   
- 
+}
 
-  #root > footer {
-    grid-area: footer;
-  }
 

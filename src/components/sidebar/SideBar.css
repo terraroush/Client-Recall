@@ -1,0 +1,32 @@
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -6em; /* Position them outside of the screen */
+    transition: 0.5s; /* Add transition on hover */
+    padding: 1em; /* 15px padding */
+    width: 8em; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.25em; /* Increase font size */
+    color: black; /* White text color */
+    border-radius: 0 .75em .75em 0; /* Rounded corners on the top right and bottom right side */
+  }
+  
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  /* The about link: 20px from the top with a green background */
+  #addClient {
+    top: 17em;
+    background-color: rgba(253, 142, 62, 1);
+  }
+  
+  #addVisit {
+    top: 20.5em;
+    background-color: rgba(247, 188, 51, 1); 
+  }
+  
+  #search {
+    top: 24em;
+    background-color: rgba(186, 121, 73, 1); 
+  }
+  

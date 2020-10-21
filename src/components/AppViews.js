@@ -7,6 +7,7 @@ import { ClientDetail } from '../components/clients/ClientDetail'
 import { ClientForm } from '../components/clients/ClientForm'
 import { Header } from '../components/header/Header'
 import { Footer } from '../components/footer/Footer'
+import { SideBar } from './sidebar/SideBar'
 
 
 export const AppViews = () => {
@@ -15,6 +16,7 @@ export const AppViews = () => {
     <>
         <Route exact path="/">
             <Header />
+            <SideBar />
             <Home />
             <Footer />
         </Route>
@@ -22,6 +24,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route exact path="/clients">
                 <Header />
+                <SideBar />
                 <ClientList />
                 <Footer />
             </Route>
@@ -30,6 +33,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route path="/clients/create">
                 <Header />
+                <SideBar />
                 <ClientForm />
                 <Footer />
             </Route>
@@ -38,6 +42,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route path="/clients/detail/:clientId(\d+)">
                 <Header />
+                <SideBar />
                 <ClientDetail />
                 <Footer />
             </Route>
@@ -46,6 +51,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route path="/clients/edit/:clientId(\d+)">
                 <Header />
+                <SideBar />
                 <ClientForm />
                 <Footer />
             </Route>
@@ -54,6 +60,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route exact path="/client-center">
                 <Header />
+                <SideBar />
                 <ClientDetail />
                 <Footer />
             </Route>

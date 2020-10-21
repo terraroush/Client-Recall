@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ClientRecall } from './ClientRecall';
+import { ClientRecall } from './components/ClientRecall';
 import './index.css';
 import 'semantic-ui-css/semantic.min.css'
 

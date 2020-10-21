@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import { AppViews } from "./AppViews";
-import { NavBar } from "./nav/NavBar";
-import { Login } from "./auth/Login";
-import { Register } from "./auth/Register";
+import { AppViews } from "../components/AppViews";
+// import { NavBar } from "../components/nav/NavBar";
+import { Login } from "../components/auth/Login";
+import { Register } from "../components/auth/Register";
 
 export const ClientRecall = () => (
   <>
@@ -12,7 +12,7 @@ export const ClientRecall = () => (
         if (localStorage.getItem("activeUser")) {
           return (
             <>
-              <NavBar />
+              
               <AppViews />
             </>
           );

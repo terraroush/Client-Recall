@@ -6,10 +6,10 @@ import "./Header.css"
 export const Header = () => {
 
     return (
-        <>
+        <header className="header">
             <Logo />
             <h1 className="sticky">client recall</h1>
             <NavBar />
-        </>
+        </header>
     )
 }

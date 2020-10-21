@@ -1,28 +1,23 @@
-import React, { useContext, useEffect, useState } from "react";
-import { ClientContext } from "./ClientProvider";
-import { ClientCard } from "./ClientCard";
-import { useHistory } from "react-router-dom";
+import React, { useContext, useEffect } from "react"
+import { ClientContext } from "./ClientProvider"
+import { ClientCard } from "./ClientCard"
+import { useHistory } from "react-router-dom"
 
 export const ClientList = () => {
   const { clients, getClients } = useContext(ClientContext);
 
-  const [filteredClients, setFiltered] = useState([]);
-  const history = useHistory;
+  const history = useHistory();
 
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
   useEffect(() => {
-    getClients();
+    getClients()
   }, []);
 
   return (
     <>
       <h1>all clients</h1>
-      <button
-        onClick={() => {
-          history.push("/clients/create");
-        }}
-      >
+      <button onClick={() => history.push("/clients/create")}>
         add client
       </button>
 

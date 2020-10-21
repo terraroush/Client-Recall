@@ -4,6 +4,7 @@ import { Home } from "./Home"
 import { ClientList } from './clients/ClientList'
 import { ClientProvider } from './clients/ClientProvider'
 import { ClientDetail } from './clients/ClientDetail'
+import { ClientForm } from './clients/ClientForm'
 
 
 export const AppViews = () => {
@@ -20,11 +21,22 @@ export const AppViews = () => {
              
             </Route>
         </ClientProvider>
-
+        
+        <ClientProvider>
+            <Route path="/clients/create">
+                <ClientForm />
+            </Route>
+        </ClientProvider>
 
         <ClientProvider>
-            <Route exact path="/clients/detail/:clientId(\d+)">
+            <Route path="/clients/detail/:clientId(\d+)">
                 <ClientDetail />
+            </Route>
+        </ClientProvider>
+
+        <ClientProvider>
+            <Route path="/clients/edit/:clientId(\d+)">
+                <ClientForm />
             </Route>
         </ClientProvider>
 

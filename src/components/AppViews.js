@@ -6,6 +6,7 @@ import { ClientProvider } from '../components/clients/ClientProvider'
 import { ClientDetail } from '../components/clients/ClientDetail'
 import { ClientForm } from '../components/clients/ClientForm'
 import { Header } from '../components/header/Header'
+import { Footer } from '../components/footer/Footer'
 
 
 export const AppViews = () => {
@@ -13,43 +14,48 @@ export const AppViews = () => {
     return (
     <>
         <Route exact path="/">
-        <Header />
+            <Header />
             <Home />
+            <Footer />
         </Route>
 
         <ClientProvider>
             <Route exact path="/clients">
-            <Header />
+                <Header />
                 <ClientList />
-             
+                <Footer />
             </Route>
         </ClientProvider>
         
         <ClientProvider>
             <Route path="/clients/create">
-            <Header />
+                <Header />
                 <ClientForm />
+                <Footer />
             </Route>
         </ClientProvider>
 
         <ClientProvider>
             <Route path="/clients/detail/:clientId(\d+)">
-            <Header />
+                <Header />
                 <ClientDetail />
+                <Footer />
             </Route>
         </ClientProvider>
 
         <ClientProvider>
             <Route path="/clients/edit/:clientId(\d+)">
-            <Header />
+                <Header />
                 <ClientForm />
+                <Footer />
             </Route>
         </ClientProvider>
 
         <ClientProvider>
             <Route exact path="/client-center">
-            <Header />
+                <Header />
                 <ClientDetail />
+                <Footer />
             </Route>
         </ClientProvider>
 

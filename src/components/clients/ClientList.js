@@ -15,7 +15,7 @@ export const ClientList = () => {
   }, []);
 
   return (
-    <main>
+    <article className="clientList--grid">
       <h1>all clients</h1>
       <button onClick={() => history.push("/clients/create")}>
         add client
@@ -28,6 +28,6 @@ export const ClientList = () => {
           }
         })}
       </div>
-    </main>
+    </article>
   );
 };

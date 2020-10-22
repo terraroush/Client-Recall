@@ -3,13 +3,11 @@ import { Route } from "react-router-dom"
 import { Home } from "../components/Home"
 import { ClientList } from '../components/clients/ClientList'
 import { ClientProvider } from '../components/clients/ClientProvider'
-import { ClientDetail } from '../components/clients/ClientDetail'
 import { ClientForm } from '../components/clients/ClientForm'
 import { Header } from '../components/header/Header'
 import { Footer } from '../components/footer/Footer'
 import { SidebarLeft } from './sidebars/SidebarLeft'
 import { SidebarRight } from './sidebars/SidebarRight'
-
 
 export const AppViews = () => {
   
@@ -47,7 +45,6 @@ export const AppViews = () => {
             <Route path="/clients/detail/:clientId(\d+)">
                 <Header />
                 <SidebarLeft />
-                <ClientDetail />
                 <SidebarRight />
                 <Footer />
             </Route>
@@ -67,7 +64,7 @@ export const AppViews = () => {
             <Route exact path="/client-center">
                 <Header />
                 <SidebarLeft />
-                <ClientDetail />
+                <div></div>
                 <SidebarRight />
                 <Footer />
             </Route>

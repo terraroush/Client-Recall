@@ -1,9 +1,9 @@
 import React from "react"
-import "./SideBar.css"
+import "./Sidebar.css"
 
-export const SideBar = () => {
+export const SidebarLeft = () => {
     return (
-        <div id="mySidenav" class="sidenav sidebar-left">
+        <div id="mySidenav" class="sidebar-left">
             <a href="#" id="addClient">add client</a>
             <a href="#" id="addVisit">add visit</a>
             <a href="#" id="search">search</a>

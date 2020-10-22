@@ -1,7 +1,6 @@
 #sidebar-right, #content {
     height: 100%;
     overflow: auto;
-    float: right;
   }
   
   #sidebar-right {

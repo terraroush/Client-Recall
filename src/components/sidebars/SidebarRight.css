@@ -4,7 +4,7 @@
   }
   
   #sidebar-right {
-    background:white;
+    background:rgb(248, 191, 92);
     width: 100%;
   }
   
@@ -14,6 +14,7 @@
   }
   
   .logo-container { 
+    background:rgb(248, 191, 92);
     position: absolute;
     bottom: 2em;
   }

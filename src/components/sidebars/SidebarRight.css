@@ -14,3 +14,7 @@
     width: 100%;
   }
   
+  .logo-container { 
+    position: absolute;
+    bottom: 2em;
+  }

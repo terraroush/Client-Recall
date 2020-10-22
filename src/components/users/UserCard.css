@@ -1,0 +1,10 @@
+.card-header {
+    background-color: rgb(248, 191, 92);
+}
+
+#user-card {
+    background: rgb(248, 191, 92);
+    position: relative;
+    top: 7em;
+    text-align: center;
+}

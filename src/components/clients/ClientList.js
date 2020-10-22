@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react"
 import { ClientContext } from "./ClientProvider"
-import { ClientCard } from "./ClientCard"
-import { useHistory } from "react-router-dom"
+// import { useHistory } from "react-router-dom"
+import { ClientName } from "./ClientName";
 
 export const ClientList = () => {
   const { clients, getClients } = useContext(ClientContext);
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
@@ -17,14 +17,14 @@ export const ClientList = () => {
   return (
     <article className="clientList--grid">
       <h1>all clients</h1>
-      <button onClick={() => history.push("/clients/create")}>
+      {/* <button onClick={() => history.push("/clients/create")}>
         add client
-      </button>
+      </button> */}
 
-      <div className="clients">
+      <div className="clientList--list">
         {clients.map((client) => {
           if (client.userId === activeUser) {
-            return <ClientCard key={client.id} client={client} />;
+            return <ClientName key={client.id} client={client} />;
           }
         })}
       </div>

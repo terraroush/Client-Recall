@@ -3,7 +3,7 @@ import "./SidebarRight.css";
 
 export const SidebarRight = () => {
   return (
-    <aside id="sidebar-right" class="sidenav sidebar-right">
+    <aside id="sidebar-right" className="sidenav sidebar-right">
       <div id="content">
         
       </div>

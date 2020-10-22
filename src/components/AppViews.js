@@ -28,6 +28,7 @@ export const AppViews = () => {
                 <Header />
                 <SidebarLeft />
                 <ClientList />
+                <SidebarRight />
                 <Footer />
             </Route>
         </ClientProvider>
@@ -37,6 +38,7 @@ export const AppViews = () => {
                 <Header />
                 <SidebarLeft />
                 <ClientForm />
+                <SidebarRight />
                 <Footer />
             </Route>
         </ClientProvider>
@@ -46,6 +48,7 @@ export const AppViews = () => {
                 <Header />
                 <SidebarLeft />
                 <ClientDetail />
+                <SidebarRight />
                 <Footer />
             </Route>
         </ClientProvider>
@@ -55,6 +58,7 @@ export const AppViews = () => {
                 <Header />
                 <SidebarLeft />
                 <ClientForm />
+                <SidebarRight />
                 <Footer />
             </Route>
         </ClientProvider>
@@ -64,6 +68,7 @@ export const AppViews = () => {
                 <Header />
                 <SidebarLeft />
                 <ClientDetail />
+                <SidebarRight />
                 <Footer />
             </Route>
         </ClientProvider>

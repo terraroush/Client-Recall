@@ -64,6 +64,7 @@ export const AppViews = () => {
             <Route exact path="/client-center">
                 <Header />
                 <SidebarLeft />
+                <div></div>
                 <SidebarRight />
                 <Footer />
             </Route>

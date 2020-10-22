@@ -7,7 +7,8 @@ import { ClientDetail } from '../components/clients/ClientDetail'
 import { ClientForm } from '../components/clients/ClientForm'
 import { Header } from '../components/header/Header'
 import { Footer } from '../components/footer/Footer'
-import { SideBar } from './sidebar/SideBar'
+import { SidebarLeft } from './sidebars/SidebarLeft'
+import { SidebarRight } from './sidebars/SidebarRight'
 
 
 export const AppViews = () => {
@@ -16,15 +17,16 @@ export const AppViews = () => {
     <>
         <Route exact path="/">
             <Header />
-            <SideBar />
+            <SidebarLeft />
             <Home />
+            <SidebarRight />
             <Footer />
         </Route>
 
         <ClientProvider>
             <Route exact path="/clients">
                 <Header />
-                <SideBar />
+                <SidebarLeft />
                 <ClientList />
                 <Footer />
             </Route>
@@ -33,7 +35,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route path="/clients/create">
                 <Header />
-                <SideBar />
+                <SidebarLeft />
                 <ClientForm />
                 <Footer />
             </Route>
@@ -42,7 +44,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route path="/clients/detail/:clientId(\d+)">
                 <Header />
-                <SideBar />
+                <SidebarLeft />
                 <ClientDetail />
                 <Footer />
             </Route>
@@ -51,7 +53,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route path="/clients/edit/:clientId(\d+)">
                 <Header />
-                <SideBar />
+                <SidebarLeft />
                 <ClientForm />
                 <Footer />
             </Route>
@@ -60,7 +62,7 @@ export const AppViews = () => {
         <ClientProvider>
             <Route exact path="/client-center">
                 <Header />
-                <SideBar />
+                <SidebarLeft />
                 <ClientDetail />
                 <Footer />
             </Route>

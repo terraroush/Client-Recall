@@ -6,7 +6,7 @@ html, body {
 
 #root {
   display: grid;
-  grid-template-columns: 150px auto 150px;
+  grid-template-columns: 130px auto 220px;
   grid-gap: 1em;
 }
 
@@ -27,11 +27,17 @@ body {
   padding: 1em 0;
 }
 
+article {
+  padding: 1em;
+  
+}
+
 aside, article {
   background: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
+  
   height: 65vh;
 }
 #root > header {

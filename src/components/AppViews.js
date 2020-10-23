@@ -8,6 +8,8 @@ import { Header } from '../components/header/Header'
 import { Footer } from '../components/footer/Footer'
 import { SidebarLeft } from './sidebars/SidebarLeft'
 import { SidebarRight } from './sidebars/SidebarRight'
+import { VisitCard } from './visits/VisitCard'
+import { VisitProvider } from './visits/VisitProvider'
 
 export const AppViews = () => {
   
@@ -61,15 +63,16 @@ export const AppViews = () => {
         </ClientProvider>
 
         <ClientProvider>
-            <Route exact path="/client-center">
-                <Header />
-                <SidebarLeft />
-                <div></div>
-                <SidebarRight />
-                <Footer />
-            </Route>
+            <VisitProvider>
+                <Route exact path="/client-center">
+                    <Header />
+                    <SidebarLeft />
+                    {/* <VisitCard /> */}
+                    <SidebarRight />
+                    <Footer />
+                </Route>
+            </VisitProvider>
         </ClientProvider>
-
     </>
 )
 }

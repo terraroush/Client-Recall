@@ -2,10 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useParams, useHistory } from "react-router-dom";
 
-export const ClientDetail = () => {
+export const ClientDetail = ({clientId}) => {
   const { getClientById, deleteClient } = useContext(ClientContext);
   const [ client, setClient ] = useState({});
-  const { clientId } = useParams();
   const history = useHistory()
 
   useEffect(() => {

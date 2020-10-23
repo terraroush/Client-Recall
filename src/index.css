@@ -37,8 +37,8 @@ aside, article {
   display: flex;
   align-items: center;
   justify-content: center;
-  
   height: 65vh;
+  overflow: scroll;
 }
 #root > header {
   display: grid;
@@ -49,12 +49,12 @@ aside, article {
 }
 
 header{
-  background: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 25vh;
 }
+
 footer{
   background: #eaeaea;
   display: flex;
@@ -62,76 +62,3 @@ footer{
   justify-content: center;
   height: 5vh;
 }
-
-
-
-
-
-
-
-
-
-
-/* #root {
-  display: grid;
-  grid-template-columns: 4ems auto 6ems;
-  grid-template-rows: 5ems auto 3ems;
-  grid-gap: 1em;
-}
-
-header,
-aside,
-article,
-footer {
-  background: #eaeaea;
-  padding: 1em;
-}
-
-header, footer {
-  grid-column: 1 / 4;
-}
-
-/* Demo Specific Styles */
-/* body {
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 1em 0;
-}
-
-#root > * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
-    margin: 0;
-}
-
-#root {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr ;
-  grid-area: "header";
-}
-#root > header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 60%;
-  grid-template-rows: 1fr;
-  grid-area: "header";
-  
-} */
-
-

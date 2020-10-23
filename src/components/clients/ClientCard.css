@@ -1,0 +1,15 @@
+.clientCard {
+    border: .01em solid black;
+    box-shadow: grey;
+    margin: .5em;
+    padding: .5em;
+    max-width: 30%;
+    
+}
+
+.client__name {
+    margin: 0
+}
+
+
+

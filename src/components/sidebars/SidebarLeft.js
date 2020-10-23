@@ -11,7 +11,7 @@ export const SidebarLeft = () => {
 
             <button className="sidenavButton" id="addClient" onClick={() => history.push("/clients/create")}>add client</button>
 
-            <button className="sidenavButton" id="addVisit">add visit</button>
+            <button className="sidenavButton" id="addVisit" onClick={() => history.push("/client-center")}>add visit</button>
 
             <button className="sidenavButton" id="search">search</button>
             

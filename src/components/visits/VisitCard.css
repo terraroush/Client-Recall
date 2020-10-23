@@ -1,0 +1,39 @@
+.visitCard {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 
+        "one one two"
+        "three three three"
+        "four four four ";
+    column-gap: .5em;
+
+    border: .01em solid black;
+    box-shadow: grey;
+    margin: .5em;
+    padding: .5em;
+    max-width: 60%;
+    min-height: 12em;
+    max-height: 12em;
+    overflow: auto;
+}
+
+.visit__date {
+    grid-area: one;
+    margin: 0;
+}
+
+.visit__cost {
+    grid-area: two;
+}
+
+.visit__note {
+    grid-area: three;
+    min-height: 6em;
+    max-height: 6em;
+    overflow: auto;
+}
+
+.visit__rating {
+    grid-area: four;
+}

@@ -4,15 +4,7 @@ import { ClientDetail } from "./ClientDetail";
 import "./ClientName.css"
 
 export const ClientName = ({ client }) => {
-  const [ setClient ] = useState({})
   const modal = useRef(null)
-
-  const handleChosenName = (event) => {
-    const newClient = { ...client }
-    newClient[event.target.id] = event.target.value
-    //update state
-    setClient(newClient)
-}
 
   return (
     <>
@@ -26,7 +18,7 @@ export const ClientName = ({ client }) => {
         name={client.firstName + " " + client.lastName}>
         {client.firstName + " " + client.lastName}
       </button>
-      <Modal ref={modal}><ClientDetail /></Modal>
+      <Modal ref={modal}><ClientDetail clientId={client.id} /></Modal>
     </section>
     </>
   );

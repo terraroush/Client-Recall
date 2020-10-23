@@ -1,32 +1,36 @@
-#mySidenav a {
+#mySidenav .sidenavButton {
     position: absolute; /* Position them relative to the browser window */
     left: -6em; /* Position them outside of the screen */
     transition: 0.5s; /* Add transition on hover */
-    padding: 1em; /* 15px padding */
-    width: 8em; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.25em; /* Increase font size */
-    color: black; /* White text color */
+    padding: 1em; 
+    width: 8em;
+    font-size: 1.25em; 
+    color: black; 
     border-radius: 0 .75em .75em 0; /* Rounded corners on the top right and bottom right side */
+    border: none;
+    text-align: left;
   }
   
-  #mySidenav a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
+  #mySidenav .sidenavButton:hover {
+    left: 0;
+    cursor: pointer; /* On mouse-over, make the elements appear as they should */
   }
-  
-  /* The about link: 20px from the top with a green background */
+
   #addClient {
-    top: 17em;
+    top: 14em;
     background-color: rgba(253, 142, 62, 1);
+    
   }
   
   #addVisit {
-    top: 20.5em;
+    top: 17.5em;
     background-color: rgba(247, 188, 51, 1); 
   }
   
   #search {
-    top: 24em;
+    top: 21em;
     background-color: rgba(186, 121, 73, 1); 
   }
+
+  
   

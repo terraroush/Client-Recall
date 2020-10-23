@@ -6,7 +6,6 @@ import "./ClientName.css"
 export const ClientName = ({ client }) => {
   const modal = useRef(null)
 
- 
   return (
     <>
     <section className="clientName-card">

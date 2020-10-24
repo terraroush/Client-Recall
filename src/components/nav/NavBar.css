@@ -5,6 +5,6 @@
 }
 
 .navbar__item {
-    flex-basis: 15%;
+    flex-basis: 100%;
     list-style-type: none;
 }

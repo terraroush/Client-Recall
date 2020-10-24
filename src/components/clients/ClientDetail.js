@@ -19,7 +19,7 @@ export const ClientDetail = ({clientId}) => {
       <div className="client__email">{client.email}</div>
       <div className="client__phone">{client.phone}</div>
 
-      <button
+      <button className="cursive"
         onClick={() => {
           history.push(`/clients/edit/${client.id}`);
         }}
@@ -27,14 +27,14 @@ export const ClientDetail = ({clientId}) => {
         edit
       </button>
 
-      <button
+      <button className="cursive"
         onClick={() => {
           deleteClient(client.id).then(() => {
             history.push("/clients");
           });
         }}
       >
-        delete client
+        delete
       </button>
 
     </section>

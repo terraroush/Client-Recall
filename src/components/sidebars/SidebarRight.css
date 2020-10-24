@@ -1,4 +1,4 @@
-#sidebar-right, #content {
+#sidebar-right {
     height: 100%;
     overflow: auto;
   }
@@ -16,5 +16,5 @@
   .logo-container { 
     background:rgb(248, 191, 92);
     position: absolute;
-    bottom: 2em;
+    
   }

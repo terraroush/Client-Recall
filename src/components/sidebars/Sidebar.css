@@ -3,8 +3,8 @@
     left: -6em; /* Position them outside of the screen */
     transition: 0.5s; /* Add transition on hover */
     padding: 1em; 
-    width: 8em;
-    font-size: 1.25em; 
+    width: 10em;
+    font-size: 1em; 
     color: black; 
     border-radius: 0 .75em .75em 0; /* Rounded corners on the top right and bottom right side */
     border: none;

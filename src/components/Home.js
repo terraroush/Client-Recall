@@ -4,7 +4,7 @@ const username = localStorage.getItem("username")
 
 export const Home = () => (
   <article className="home--grid">
-    <h3>welcome to client recall, {username}!</h3>
+    <h3 className="cursive">welcome to client recall, {username}!</h3>
     <div>
       use the menu on the left to:</div>
       <ul>

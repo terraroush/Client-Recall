@@ -9,11 +9,11 @@ export const SidebarLeft = () => {
     return (
         <div id="mySidenav" className="sidebar-left">
 
-            <button className="sidenavButton" id="addClient" onClick={() => history.push("/clients/create")}>add client</button>
+            <button className="cursive sidenavButton" id="addClient" onClick={() => history.push("/clients/create")}>add client</button>
 
-            <button className="sidenavButton" id="addVisit" onClick={() => history.push("/client-center")}>add visit</button>
+            <button className="cursive sidenavButton" id="addVisit" onClick={() => history.push("/client-history")}>add visit</button>
 
-            <button className="sidenavButton" id="search">search</button>
+            <button className="cursive sidenavButton" id="search">search</button>
             
         </div>
     )

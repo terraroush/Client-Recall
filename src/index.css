@@ -40,20 +40,6 @@ aside, article {
   height: 65vh;
   overflow: scroll;
 }
-#root > header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 60%;
-  grid-template-rows: 1fr;
-  grid-area: "header";
-  
-}
-
-header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-}
 
 footer{
   background: #eaeaea;

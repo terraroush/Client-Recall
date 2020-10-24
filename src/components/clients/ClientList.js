@@ -1,25 +1,32 @@
-import React, { useContext, useEffect } from "react"
-import { ClientContext } from "./ClientProvider"
-// import { useHistory } from "react-router-dom"
+import React, { useContext, useEffect } from "react";
+import { ClientContext } from "./ClientProvider";
+import { useHistory } from "react-router-dom";
 import { ClientName } from "./ClientName";
+import { Button } from "semantic-ui-react";
 
 export const ClientList = () => {
   const { clients, getClients } = useContext(ClientContext);
 
-  // const history = useHistory();
+  const history = useHistory();
 
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
   useEffect(() => {
-    getClients()
+    getClients();
   }, []);
 
   return (
     <article className="clientList--grid">
-      <h1>all clients</h1>
-      {/* <button onClick={() => history.push("/clients/create")}>
-        add client
-      </button> */}
+      <h1 className="cursive">
+        all clients 
+        <Button
+          className="cursive"
+          fitted
+          size="large"
+          icon="add"
+          onClick={() => history.push("/clients/create")}
+        ></Button>
+      </h1>
 
       <div className="clientList--list">
         {clients.map((client) => {

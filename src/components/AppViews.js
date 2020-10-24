@@ -64,7 +64,7 @@ export const AppViews = () => {
 
         <ClientProvider>
             <VisitProvider>
-                <Route exact path="/client-center">
+                <Route exact path="/client-history">
                     <Header />
                     <SidebarLeft />
                     <VisitList />

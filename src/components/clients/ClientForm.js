@@ -29,16 +29,14 @@ export const ClientForm = () => {
 
   // If clientId is in the URL, getClientById
   useEffect(() => {
-    
-        if (clientId) {
-          getClientById(clientId).then((client) => {
-            setClient(client);
-            setIsLoading(false);
-          });
-        } else {
-          setIsLoading(false);
-        }
-      ;
+    if (clientId) {
+      getClientById(clientId).then((client) => {
+        setClient(client);
+        setIsLoading(false);
+      });
+    } else {
+      setIsLoading(false);
+    }
   }, []);
 
   const constructClientObject = () => {
@@ -51,8 +49,10 @@ export const ClientForm = () => {
         lastName: client.lastName,
         email: client.email,
         phone: +client.phone,
-        userId: activeUser
-      }).then(() => history.push(`/clients/detail/${client.id}`)).then(() => setClient({})) 
+        userId: activeUser,
+      })
+        .then(() => history.push(`/clients/detail/${client.id}`))
+        .then(() => setClient({}));
     } else {
       //POST - add
       addClient({
@@ -60,91 +60,90 @@ export const ClientForm = () => {
         lastName: client.lastName,
         email: client.email,
         phone: +client.phone,
-        userId: activeUser
+        userId: activeUser,
       }).then(() => history.push("/clients"));
     }
   };
 
   return (
-      <div className="formContainer">
-    <form className="clientForm">
-      <h2 className="clientForm__title">
-        {clientId ? "edit client" : "add client"}
-      </h2>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="firstName">first name: </label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            required
-            autoFocus
-            className="form-control"
-            placeholder="first name"
-            onChange={handleControlledInputChange}
-            defaultValue={client.firstName}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="lastName">last name: </label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            required
-            className="form-control"
-            placeholder="last name"
-            onChange={handleControlledInputChange}
-            defaultValue={client.lastName}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="clientEmail">email: </label>
-          <input
-            type="email"
-            id="clientEmail"
-            name="email"
-            required
-            className="form-control"
-            placeholder="email"
-            onChange={handleControlledInputChange}
-            defaultValue={client.email}
-          />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className="form-group">
-          <label htmlFor="clientPhone">phone: </label>
-          <input
-            type="text"
-            id="clientPhone"
-            name="phone"
-            required
-            className="form-control"
-            placeholder="phone"
-            onChange={handleControlledInputChange}
-            defaultValue={client.phone}
-          />
-        </div>
-      </fieldset>
+    <div className="cursive formContainer">
+      <form className="clientForm">
+        <h2 className="clientForm__title">
+          {clientId ? "edit client" : "add client"}
+        </h2>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="firstName">first name: </label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              autoFocus
+              className="form-control"
+              placeholder="first name"
+              onChange={handleControlledInputChange}
+              defaultValue={client.firstName}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="lastName">last name: </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              className="form-control"
+              placeholder="last name"
+              onChange={handleControlledInputChange}
+              defaultValue={client.lastName}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="clientEmail">email: </label>
+            <input
+              type="email"
+              id="clientEmail"
+              name="email"
+              required
+              className="form-control"
+              placeholder="email"
+              onChange={handleControlledInputChange}
+              defaultValue={client.email}
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="clientPhone">phone: </label>
+            <input
+              type="text"
+              id="clientPhone"
+              name="phone"
+              required
+              className="form-control"
+              placeholder="phone"
+              onChange={handleControlledInputChange}
+              defaultValue={client.phone}
+            />
+          </div>
+        </fieldset>
 
-      <button
-        className="btn btn-primary"
-        disabled={isLoading} // Prevent browser from submitting the form
-        onClick={(event) => {
-          event.preventDefault();
-          constructClientObject();
-          
-        }}
-      >
-        {clientId ? "save client" : "add client"}
-      </button>
-    </form>
+        <button
+          className="cursive btn btn-primary"
+          disabled={isLoading} // Prevent browser from submitting the form
+          onClick={(event) => {
+            event.preventDefault();
+            constructClientObject();
+          }}
+        >
+          {clientId ? "save client" : "add client"}
+        </button>
+      </form>
     </div>
   );
 };

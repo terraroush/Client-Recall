@@ -10,6 +10,7 @@ import { SidebarLeft } from './sidebars/SidebarLeft'
 import { SidebarRight } from './sidebars/SidebarRight'
 import { VisitProvider } from './visits/VisitProvider'
 import { VisitList } from './visits/VisitList'
+import { ClientSearch } from './clients/ClientSearch'
 
 export const AppViews = () => {
   
@@ -68,6 +69,29 @@ export const AppViews = () => {
                     <Header />
                     <SidebarLeft />
                     <VisitList />
+                    <SidebarRight />
+                    <Footer />
+                </Route>
+            </VisitProvider>
+        </ClientProvider>
+        <ClientProvider>
+            <VisitProvider>
+                <Route exact path="/client-history/create">
+                    <Header />
+                    <SidebarLeft />
+                    <div></div>
+                    <SidebarRight />
+                    <Footer />
+                </Route>
+            </VisitProvider>
+        </ClientProvider>
+
+        <ClientProvider>
+            <VisitProvider>
+                <Route exact path="/client-history/search">
+                    <Header />
+                    <SidebarLeft />
+                    <ClientSearch />
                     <SidebarRight />
                     <Footer />
                 </Route>

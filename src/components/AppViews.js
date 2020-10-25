@@ -19,7 +19,7 @@ export const AppViews = () => {
         <Route exact path="/">
             <Header />
             <SidebarLeft />
-            <Home />
+                <Home />
             <SidebarRight />
             <Footer />
         </Route>
@@ -28,7 +28,7 @@ export const AppViews = () => {
             <Route exact path="/clients">
                 <Header />
                 <SidebarLeft />
-                <ClientList />
+                    <ClientList />
                 <SidebarRight />
                 <Footer />
             </Route>
@@ -38,16 +38,7 @@ export const AppViews = () => {
             <Route path="/clients/create">
                 <Header />
                 <SidebarLeft />
-                <ClientForm />
-                <SidebarRight />
-                <Footer />
-            </Route>
-        </ClientProvider>
-
-        <ClientProvider>
-            <Route path="/clients/detail/:clientId(\d+)">
-                <Header />
-                <SidebarLeft />
+                    <ClientForm />
                 <SidebarRight />
                 <Footer />
             </Route>
@@ -57,7 +48,7 @@ export const AppViews = () => {
             <Route path="/clients/edit/:clientId(\d+)">
                 <Header />
                 <SidebarLeft />
-                <ClientForm />
+                    <ClientForm />
                 <SidebarRight />
                 <Footer />
             </Route>
@@ -68,18 +59,31 @@ export const AppViews = () => {
                 <Route exact path="/client-history">
                     <Header />
                     <SidebarLeft />
-                    <VisitList />
+                        <VisitList />
                     <SidebarRight />
                     <Footer />
                 </Route>
             </VisitProvider>
         </ClientProvider>
+
+        <ClientProvider>
+            <VisitProvider>
+                <Route exact path="/client-history/:clientId(\d+)">
+                    <Header />
+                    <SidebarLeft />
+                        <VisitList />
+                    <SidebarRight />
+                    <Footer />
+                </Route>
+            </VisitProvider>
+        </ClientProvider>
+
         <ClientProvider>
             <VisitProvider>
                 <Route exact path="/client-history/create">
                     <Header />
                     <SidebarLeft />
-                    <div></div>
+                        <div></div>
                     <SidebarRight />
                     <Footer />
                 </Route>
@@ -91,7 +95,7 @@ export const AppViews = () => {
                 <Route exact path="/client-history/search">
                     <Header />
                     <SidebarLeft />
-                    <ClientSearch />
+                        <ClientSearch />
                     <SidebarRight />
                     <Footer />
                 </Route>

@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react"
 import { useHistory } from "react-router-dom";
 import { ClientContext } from "./ClientProvider"
 import { ClientCard } from "./ClientCard"
-import { Button } from "semantic-ui-react";
 import "./ClientSearch.css"
 
 export const ClientSearch = () => {
@@ -40,14 +39,7 @@ export const ClientSearch = () => {
                     }
                     placeholder="start typing a name... " />
             </div>
-            <div>or add a client
-            <Button
-                className="cursive"
-                fitted="true"
-                size="large"
-                icon="add"
-                onClick={() => history.push("/clients/create")}>
-            </Button></div>
+        
             <div className="toggleClients">
                     {filteredClients.map(client => {
                         

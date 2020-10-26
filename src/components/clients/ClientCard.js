@@ -7,6 +7,7 @@ export const ClientCard = ({ client }) => {
 
   return (
     <section className="clientCard">
+    
       <button
         className="clientCardButtons"
         style={{ color: "inherit", textDecoration: "inherit" }}
@@ -19,6 +20,7 @@ export const ClientCard = ({ client }) => {
         <div className="client__email">{client.email}</div>
         <div className="client__phone">{client.phone}</div>
       </button>
+      
     </section>
   );
 };

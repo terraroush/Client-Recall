@@ -53,7 +53,7 @@ export const AppViews = () => {
                 <Route exact path="/client-history">
                     <Header />
                     <SidebarLeft />
-                        <VisitList />
+                        <div>modal with search that selects client, client card of client selected, and visit list of client selected</div>
                     <SidebarRight />
                     <Footer />
                 </Route>

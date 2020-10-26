@@ -32,9 +32,7 @@ export const AppViews = () => {
                 <SidebarRight />
                 <Footer />
             </Route>
-        </ClientProvider>
         
-        <ClientProvider>
             <Route path="/clients/create">
                 <Header />
                 <SidebarLeft />
@@ -42,9 +40,7 @@ export const AppViews = () => {
                 <SidebarRight />
                 <Footer />
             </Route>
-        </ClientProvider>
-
-        <ClientProvider>
+        
             <Route path="/clients/edit/:clientId(\d+)">
                 <Header />
                 <SidebarLeft />
@@ -52,9 +48,7 @@ export const AppViews = () => {
                 <SidebarRight />
                 <Footer />
             </Route>
-        </ClientProvider>
-
-        <ClientProvider>
+        
             <VisitProvider>
                 <Route exact path="/client-history">
                     <Header />
@@ -63,11 +57,7 @@ export const AppViews = () => {
                     <SidebarRight />
                     <Footer />
                 </Route>
-            </VisitProvider>
-        </ClientProvider>
-
-        <ClientProvider>
-            <VisitProvider>
+           
                 <Route exact path="/client-history/:clientId(\d+)">
                     <Header />
                     <SidebarLeft />
@@ -75,11 +65,7 @@ export const AppViews = () => {
                     <SidebarRight />
                     <Footer />
                 </Route>
-            </VisitProvider>
-        </ClientProvider>
-
-        <ClientProvider>
-            <VisitProvider>
+            
                 <Route exact path="/client-history/create">
                     <Header />
                     <SidebarLeft />
@@ -87,11 +73,7 @@ export const AppViews = () => {
                     <SidebarRight />
                     <Footer />
                 </Route>
-            </VisitProvider>
-        </ClientProvider>
-
-        <ClientProvider>
-            <VisitProvider>
+            
                 <Route exact path="/client-history/search">
                     <Header />
                     <SidebarLeft />

@@ -10,8 +10,6 @@ export const VisitList = () => {
 
   useEffect(() => {
     getVisitsByClientId(clientId)
-    
-    console.log(clientId)
   }, [])
   
   return (

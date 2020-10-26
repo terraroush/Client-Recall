@@ -7,10 +7,12 @@ export const ClientSearch = () => {
     const { clients, getClients, searchTerms, setSearchTerms } = useContext(ClientContext)
 
     const [ filteredClients, setFiltered ] = useState([])
+    const activeUser = parseInt(localStorage.getItem("activeUser"));
 
     useEffect(() => {
         getClients()
         setSearchTerms("")
+        
     }, [])
 
     useEffect(() => {
@@ -36,9 +38,10 @@ export const ClientSearch = () => {
                     placeholder="start typing a name... " />
             </div>
             <div className="toggleClients">
-                    {
-                    filteredClients.map(client => {
+                    {filteredClients.map(client => {
+                        if (client.userId !== activeUser) {
                         return <ClientCard key={client.id} client={client} clientId={client.id} />
+                        }
                     })
                     }
             </div>

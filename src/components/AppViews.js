@@ -28,7 +28,8 @@ export const AppViews = () => {
             <Route exact path="/clients">
                 <Header />
                 <SidebarLeft />
-                    <ClientList />
+                <div></div>
+                    {/* <ClientList /> */}
                 <SidebarRight />
                 <Footer />
             </Route>

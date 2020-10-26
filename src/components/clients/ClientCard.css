@@ -1,15 +1,21 @@
 .clientCard {
-    border: .01em solid black;
-    box-shadow: grey;
     margin: .5em;
-    padding: .5em;
-    max-width: 30%;
-    
+    padding: .2em;
+    max-width: 30%; 
 }
 
 .client__name {
     margin: 0
 }
+
+.clientCard > button {
+    min-width: 100%;
+    padding: .7em;
+    padding-left: 1em;
+    text-align: left;
+    cursor: pointer;
+}
+
 
 
 

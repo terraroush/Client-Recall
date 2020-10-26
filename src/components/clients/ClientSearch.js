@@ -33,12 +33,12 @@ export const ClientSearch = () => {
                     onKeyUp={
                         (keyEvent) => setSearchTerms(keyEvent.target.value)
                     }
-                    placeholder="search for a client... " />
+                    placeholder="start typing a name... " />
             </div>
             <div className="toggleClients">
                     {
                     filteredClients.map(client => {
-                        return <ClientCard key={client.id} client={client} />
+                        return <ClientCard key={client.id} client={client} clientId={client.id} />
                     })
                     }
             </div>

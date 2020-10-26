@@ -21,7 +21,7 @@ export const ClientList = () => {
         all clients 
         <Button
           className="cursive"
-          fitted
+          fitted="true"
           size="large"
           icon="add"
           onClick={() => history.push("/clients/create")}

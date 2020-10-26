@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Modal from "../modals/Modal"
 import { ClientDetail } from "./ClientDetail";
 import "./ClientName.css"

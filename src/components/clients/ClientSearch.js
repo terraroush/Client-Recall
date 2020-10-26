@@ -4,13 +4,13 @@ import { ClientCard } from "./ClientCard"
 import "./ClientSearch.css"
 
 export const ClientSearch = () => {
-    const { clients, getClients, searchTerms, setSearchTerms } = useContext(ClientContext)
+    const { clients, getClientsByUserId, searchTerms, setSearchTerms } = useContext(ClientContext)
 
     const [ filteredClients, setFiltered ] = useState([])
     const activeUser = parseInt(localStorage.getItem("activeUser"));
 
     useEffect(() => {
-        getClients()
+        getClientsByUserId(activeUser)
         setSearchTerms("")
         
     }, [])
@@ -39,9 +39,9 @@ export const ClientSearch = () => {
             </div>
             <div className="toggleClients">
                     {filteredClients.map(client => {
-                        if (client.userId !== activeUser) {
+                        
                         return <ClientCard key={client.id} client={client} clientId={client.id} />
-                        }
+                        
                     })
                     }
             </div>

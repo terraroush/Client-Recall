@@ -19,6 +19,12 @@ export const ClientProvider = props => {
             .then(res => res.json())
     }
 
+    const getClientsByUserId = id => {
+        return fetch(`http://localhost:8088/clients?_expand=user&userId=${id}`)
+            .then(res => res.json())
+            .then(setClients)
+    }
+
     const addClient = clientObj => {
         return fetch("http://localhost:8088/clients", {
             method: "POST",
@@ -48,7 +54,7 @@ export const ClientProvider = props => {
 
     return (
         <ClientContext.Provider value={{
-            clients, getClients, addClient, getClientById, deleteClient, editClient, searchTerms, setSearchTerms
+            clients, getClients, addClient, getClientById, deleteClient, editClient, searchTerms, setSearchTerms, getClientsByUserId
         }}>
             {props.children}
         </ClientContext.Provider>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory} from "react-router-dom";
+import { VisitList } from "../visits/VisitList";
 import "./ClientCard.css";
 
 export const ClientCard = ({client}) => {
@@ -12,7 +13,9 @@ export const ClientCard = ({client}) => {
         className="clientCardButtons"
         style={{ color: "inherit", textDecoration: "inherit" }}
         value={client.id}
-        onClick={() => history.push(`/client-history/${client.id}`)}
+        onClick={() => history.push(`/client-history/${client.id}`)
+         }
+        
       >
         <h4 className="client__name">
           {client.firstName + " " + client.lastName}

@@ -12,14 +12,14 @@ export const VisitList = () => {
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
   useEffect(() => {
-    getVisitsByClientId(clientId)
+    getClients()
     .then(() => {
-      getClients()
-      
+      getVisitsByClientId(clientId)
     })
   }, [])
   
   return (
+    // this page gets run twice. 
     <article className="visitList--grid">
       <h1>client history of</h1>
       <div className="visitList--clientCard">

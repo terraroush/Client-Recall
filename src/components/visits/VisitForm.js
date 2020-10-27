@@ -60,7 +60,7 @@ export const VisitForm = () => {
           clientId: +visit.clientId,
           userId: activeUser,
         })
-          // .then(() => history.push(`/visits/detail/${visit.id}`))
+          .then(() => history.push("/clients"))
           .then(() => setVisit({}));
       } else {
         //POST - add
@@ -76,7 +76,7 @@ export const VisitForm = () => {
           rating: +visit.rating,
           clientId: +visit.clientId,
           userId: activeUser,
-        }).then(() => history.push(`/client-history/${visit.id}`));
+        }).then(() => history.push("/clients"));
       }
     }
   };
@@ -100,11 +100,13 @@ export const VisitForm = () => {
               onChange={handleControlledInputChange}
             >
               <option value="0">select client</option>
-              {clients.map((client) => (
-                <option key={client.id} value={client.id}>
+              {clients.map(client => {
+                if (client.userId === activeUser) {
+                return <option key={client.id} value={client.id}>
                   {client.firstName}
-                </option>
-              ))}
+                </option>}
+              })
+              }
             </select>
           </div>
         </fieldset>

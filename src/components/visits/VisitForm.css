@@ -32,6 +32,11 @@
 }
 .btn-primary-visit {
   grid-area: seven;
+  padding: 0.4em;
+  margin: 0.5em;
+  width: 8em;
+  text-align: center;
+  justify-self: center;
 }
 .form-group2 {
   display: grid;
@@ -46,12 +51,4 @@ label {
 
 input {
   grid-area: two;
-}
-
-.btn-primary-visit {
-  padding: 0.4em;
-  margin: 0.5em;
-  width: 8em;
-  text-align: center;
-  justify-self: center;
 }

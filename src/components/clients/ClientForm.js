@@ -52,7 +52,7 @@ export const ClientForm = () => {
         phone: +client.phone,
         userId: activeUser,
       })
-        .then(() => history.push(`/clients/detail/${client.id}`))
+        .then(() => history.push("/clients"))
         .then(() => setClient({}));
     } else {
       //POST - add
@@ -63,7 +63,7 @@ export const ClientForm = () => {
         phone: +client.phone,
         userId: activeUser,
         // without that nav bar destination, i don't have anywhere to send the user after adding a client
-      }).then(() => history.push("/client-history/search"))
+      }).then(() => history.push("/clients"))
     }
   };
 

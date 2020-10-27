@@ -1,10 +1,12 @@
 #mySidenav .sidenavButton {
     position: absolute; /* Position them relative to the browser window */
-    left: -6em; /* Position them outside of the screen */
+    left: -6em; 
+    /* Position them outside of the screen */
     transition: 0.5s; /* Add transition on hover */
     padding: 1em; 
     width: 10em;
-    font-size: 1em; 
+    height: 3.5em;
+    font-size: 1.25em; 
     color: black; 
     border-radius: 0 .75em .75em 0; /* Rounded corners on the top right and bottom right side */
     border: none;
@@ -16,24 +18,24 @@
     cursor: pointer; /* On mouse-over, make the elements appear as they should */
   }
 
-  #addClient {
+  #search {
     top: 14em;
+    background-color: #669999; 
+  }
+
+  #addClient {
+    top: 18em;
     background-color: #669999;
     
   }
   
   #addVisit {
-    top: 17.5em;
+    top: 22em;
     background-color: #669999; 
   }
 
-  #search {
-    top: 21em;
-    background-color: #669999; 
-  }
-  
-  #allClients {
-    top: 24.5em;
+  #editClients {
+    top: 26em;
     background-color: #669999; 
   }
   

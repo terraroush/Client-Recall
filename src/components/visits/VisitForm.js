@@ -1,9 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
+import { ClientContext } from "../clients/ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
+import "./VisitForm.css"
 
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
+  const { clients, getClients } = useContext(ClientContext);
 
   //for edit, hold on to state of visit in this view
   const [visit, setVisit] = useState({});
@@ -24,65 +27,96 @@ export const VisitForm = () => {
     //set the property to the new value
     newVisit[event.target.name] = event.target.value;
     //update state
-   setVisit(newVisit);
+    setVisit(newVisit);
   };
 
   // If visitId is in the URL, getVisitById
   useEffect(() => {
-    if (visitId) {
-      getVisitById(visitId).then((visit) => {
-        setVisit(visit);
+    getClients().then(() => {
+      if (visitId) {
+        getVisitById(visitId).then((visit) => {
+          setVisit(visit);
+          setIsLoading(false);
+        });
+      } else {
         setIsLoading(false);
-      });
-    } else {
-      setIsLoading(false);
-    }
+      }
+    });
   }, []);
 
   const constructVisitObject = () => {
-    setIsLoading(true);
-    if (visitId) {
-      //PUT - update
-      editVisit({
-        id: visit.id,
-        date: Date.now(),
-        cost: visit.cost,
-        note: visit.note,
-        rating: +visit.rating,
-        // clientId: ,
-        userId: activeUser
-      })
-        // .then(() => history.push(`/visits/detail/${visit.id}`))
-        .then(() => setVisit({}));
+    if (+visit.clientId === 0) {
+      window.alert("please select a client");
     } else {
-      //POST - add
-      addVisit({
-        id: visit.id,
-        date: new Date(Date.now()).toLocaleDateString([], {year: '2-digit', month:'2-digit', day:'2-digit'}),
-        cost: visit.cost,
-        note: visit.note,
-        rating: +visit.rating,
-        // clientId: ,
-        userId: activeUser
-      }).then(() => history.push("/client-history"));
+      setIsLoading(true);
+      if (visitId) {
+        //PUT - update
+        editVisit({
+          id: visit.id,
+          date: Date.now(),
+          cost: visit.cost,
+          note: visit.note,
+          rating: +visit.rating,
+          clientId: +visit.clientId,
+          userId: activeUser,
+        })
+          // .then(() => history.push(`/visits/detail/${visit.id}`))
+          .then(() => setVisit({}));
+      } else {
+        //POST - add
+        addVisit({
+          id: visit.id,
+          date: new Date(Date.now()).toLocaleDateString([], {
+            year: "2-digit",
+            month: "2-digit",
+            day: "2-digit",
+          }),
+          cost: visit.cost,
+          note: visit.note,
+          rating: +visit.rating,
+          clientId: +visit.clientId,
+          userId: activeUser,
+        }).then(() => history.push(`/client-history/${visit.id}`));
+      }
     }
   };
 
   return (
-    <div className="cursive formContainer">
+    <div id="formContainer" className="cursive formContainer">
       <form className="visitForm">
         <h2 className="visitForm__title">
           {visitId ? "edit visit" : "add visit"}
         </h2>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group2 chooseClient">
+            <label htmlFor="chooseClient">client: </label>
+            <select
+              value={visit.clientId}
+              name="clientId"
+              id="visitClient"
+              className="form-control"
+              autoFocus
+              required
+              onChange={handleControlledInputChange}
+            >
+              <option value="0">select client</option>
+              {clients.map((client) => (
+                <option key={client.id} value={client.id}>
+                  {client.firstName}
+                </option>
+              ))}
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group2 dateVisitForm">
             <label htmlFor="date">date: </label>
             <input
               type="date"
               id="date"
               name="date"
               required
-              autoFocus
+              
               className="form-control"
               onChange={handleControlledInputChange}
               defaultValue={visit.date}
@@ -90,7 +124,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group2 costVisitForm">
             <label htmlFor="cost">cost: </label>
             <input
               type="text"
@@ -105,11 +139,11 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group2 noteVisitForm">
             <label htmlFor="note">note: </label>
-            <input
+            <textarea
               type="textarea"
-              rows="4" 
+              rows="4"
               cols="40"
               id="note"
               name="note"
@@ -122,7 +156,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
             <input
               type="text"
@@ -138,7 +172,7 @@ export const VisitForm = () => {
         </fieldset>
 
         <button
-          className="cursive btn btn-primary"
+          className="cursive btn btn-primary-visit"
           disabled={isLoading} // Prevent browser from submitting the form
           onClick={(event) => {
             event.preventDefault();

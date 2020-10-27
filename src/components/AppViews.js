@@ -11,6 +11,7 @@ import { SidebarRight } from './sidebars/SidebarRight'
 import { VisitProvider } from './visits/VisitProvider'
 import { VisitList } from './visits/VisitList'
 import { ClientSearch } from './clients/ClientSearch'
+import { VisitForm } from './visits/VisitForm'
 
 export const AppViews = () => {
   
@@ -59,11 +60,18 @@ export const AppViews = () => {
                     <SidebarRight />
                     <Footer />
                 </Route>
+                <Route exact path="/client-history/:visitId(\d+)">
+                    <Header />
+                    <SidebarLeft />
+                        <VisitList />
+                    <SidebarRight />
+                    <Footer />
+                </Route>
             
                 <Route exact path="/client-history/create">
                     <Header />
                     <SidebarLeft />
-                        <div></div>
+                        <VisitForm />
                     <SidebarRight />
                     <Footer />
                 </Route>

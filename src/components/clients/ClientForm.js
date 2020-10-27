@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
+import "./ClientForm.css"
 
 export const ClientForm = () => {
   const { addClient, getClientById, editClient } = useContext(ClientContext);
@@ -73,7 +74,7 @@ export const ClientForm = () => {
           {clientId ? "edit client" : "add client"}
         </h2>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group first">
             <label htmlFor="firstName">first name: </label>
             <input
               type="text"
@@ -89,7 +90,7 @@ export const ClientForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group last">
             <label htmlFor="lastName">last name: </label>
             <input
               type="text"
@@ -104,7 +105,7 @@ export const ClientForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group email">
             <label htmlFor="clientEmail">email: </label>
             <input
               type="email"
@@ -119,7 +120,7 @@ export const ClientForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group phone">
             <label htmlFor="clientPhone">phone: </label>
             <input
               type="text"

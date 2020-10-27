@@ -19,6 +19,7 @@ export const ClientList = () => {
     <article className="clientList--grid">
       <h1 className="cursive">
         all clients 
+      </h1>
         <Button
           className="cursive"
           fitted="true"
@@ -26,7 +27,6 @@ export const ClientList = () => {
           icon="add"
           onClick={() => history.push("/clients/create")}
         ></Button>
-      </h1>
 
       <div className="clientList--list">
         {clients.map((client) => {

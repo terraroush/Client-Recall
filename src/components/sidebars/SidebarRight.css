@@ -4,17 +4,17 @@
   }
   
   #sidebar-right {
-    background:rgb(248, 191, 92);
+    background:rgba(255,204,153,1);
     width: 100%;
   }
   
   #content {
-    background:rgb(248, 191, 92);
+    background:rgba(255,204,153,1);
     width: 100%;
   }
   
   .logo-container { 
-    background:rgb(248, 191, 92);
+    background:rgba(255,204,153,1);
     position: absolute;
     
   }

@@ -49,7 +49,7 @@ export const VisitForm = () => {
         cost: visit.cost,
         note: visit.note,
         rating: +visit.rating,
-        // clientId: ,
+        clientId: visit.clientId,
         userId: activeUser
       })
         // .then(() => history.push(`/visits/detail/${visit.id}`))
@@ -58,17 +58,19 @@ export const VisitForm = () => {
       //POST - add
       addVisit({
         id: visit.id,
-        date: new Date(Date.now()).toLocaleDateString([], {year: '2-digit', month:'2-digit', day:'2-digit'}),
+        date: new Date(Date.now()).toLocaleDateString([], {year: '4-digit', month:'2-digit', day:'2-digit'}),
         cost: visit.cost,
         note: visit.note,
         rating: +visit.rating,
-        // clientId: ,
+        clientId: visit.clientId,
         userId: activeUser
-      }).then(() => history.push("/client-history"));
+      }).then(() => history.push("/client-history"))
     }
   };
 
   return (
+
+
     <div className="cursive formContainer">
       <form className="visitForm">
         <h2 className="visitForm__title">

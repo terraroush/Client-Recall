@@ -8,6 +8,8 @@ html, body {
   display: grid;
   grid-template-columns: 130px auto 220px;
   grid-gap: 1em;
+  padding-bottom: 60px;
+
 }
 
 header, footer {
@@ -33,7 +35,6 @@ article {
 
 aside, article {
   background: #eaeaea;
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 65vh;
@@ -42,8 +43,7 @@ aside, article {
 
 footer{
   background: #eaeaea;
-  display: flex;
   align-items: center;
   justify-content: center;
-  height: 5vh;
+  height: 3.5vh;
 }

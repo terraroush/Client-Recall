@@ -1,12 +1,12 @@
 header {
   display: flex;
   height: 25vh;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .header {
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr .2fr;
   grid-template-rows: auto;
   grid-template-areas: "one two three";
 
@@ -20,6 +20,7 @@ header {
   grid-area: one;
 }
 .header-title {
+  align-self: center;
   font-size: xxx-large;
   grid-area: two;
 }

@@ -60,6 +60,13 @@ export const AppViews = () => {
                     <SidebarRight />
                     <Footer />
                 </Route>
+                <Route exact path="/client-history/:visitId(\d+)">
+                    <Header />
+                    <SidebarLeft />
+                        <VisitList />
+                    <SidebarRight />
+                    <Footer />
+                </Route>
             
                 <Route exact path="/client-history/create">
                     <Header />

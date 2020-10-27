@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
+import { useHistory } from "react-router-dom";
 import { ClientContext } from "./ClientProvider"
 import { ClientCard } from "./ClientCard"
 import "./ClientSearch.css"
@@ -7,6 +8,7 @@ export const ClientSearch = () => {
     const { clients, getClientsByUserId, searchTerms, setSearchTerms } = useContext(ClientContext)
 
     const [ filteredClients, setFiltered ] = useState([])
+    const history = useHistory();
     const activeUser = parseInt(localStorage.getItem("activeUser"));
 
     useEffect(() => {
@@ -37,6 +39,7 @@ export const ClientSearch = () => {
                     }
                     placeholder="start typing a name... " />
             </div>
+        
             <div className="toggleClients">
                     {filteredClients.map(client => {
                         

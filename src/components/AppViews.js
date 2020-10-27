@@ -28,6 +28,7 @@ export const AppViews = () => {
             <Route exact path="/clients">
                 <Header />
                 <SidebarLeft />
+                
                     <ClientList />
                 <SidebarRight />
                 <Footer />
@@ -50,14 +51,7 @@ export const AppViews = () => {
             </Route>
         
             <VisitProvider>
-                <Route exact path="/client-history">
-                    <Header />
-                    <SidebarLeft />
-                        <div>modal with search that selects client, client card of client selected, and visit list of client selected</div>
-                    <SidebarRight />
-                    <Footer />
-                </Route>
-           
+                
                 <Route exact path="/client-history/:clientId(\d+)">
                     <Header />
                     <SidebarLeft />

@@ -61,7 +61,8 @@ export const ClientForm = () => {
         email: client.email,
         phone: +client.phone,
         userId: activeUser,
-      }).then(() => history.push("/clients"));
+        // without that nav bar destination, i don't have anywhere to send the user after adding a client
+      }).then(() => history.push("/client-history/search"))
     }
   };
 

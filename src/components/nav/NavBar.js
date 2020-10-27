@@ -8,12 +8,6 @@ export const NavBar = props => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/">home</Link>
             </li>
-            <li className="navbar__item">
-                <Link className="navbar__link" to="/clients">all clients</Link>
-            </li>
-            <li className="navbar__item">
-                <Link className="navbar__link" to="/client-history">client history</Link>
-            </li>
         </ul>
     )
 }

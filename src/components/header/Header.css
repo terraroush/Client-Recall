@@ -10,8 +10,8 @@ header {
   grid-template-rows: auto;
   grid-template-areas: "one two three";
 
-  background-color: rgba(208, 177, 154, 1);
-  }
+  background:  rgba(255,204,153,1);
+}
 
 .cursive {
   font-family: 'Beth Ellen', cursive;

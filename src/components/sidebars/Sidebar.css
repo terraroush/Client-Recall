@@ -18,19 +18,23 @@
 
   #addClient {
     top: 14em;
-    background-color: rgba(253, 142, 62, 1);
+    background-color: #669999;
     
   }
   
   #addVisit {
     top: 17.5em;
-    background-color: rgba(247, 188, 51, 1); 
-  }
-  
-  #search {
-    top: 21em;
-    background-color: rgba(186, 121, 73, 1); 
+    background-color: #669999; 
   }
 
+  #search {
+    top: 21em;
+    background-color: #669999; 
+  }
+  
+  #allClients {
+    top: 24.5em;
+    background-color: #669999; 
+  }
   
   

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect } from "react"
 import { VisitContext } from "./VisitProvider"
 import { VisitCard } from "./VisitCard";
 import { useParams } from "react-router-dom";
@@ -22,6 +22,7 @@ export const VisitList = () => {
     // this page gets run twice. 
     <article className="visitList--grid">
       <h1>client history of</h1>
+
       <div className="visitList--clientCard">
         {clients.map(client => {
           if (client.id === +clientId){
@@ -39,23 +40,3 @@ export const VisitList = () => {
     </article>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <button onClick={() => history.push("/clients/create")}>
-  add client
-</button> */}

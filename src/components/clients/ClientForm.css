@@ -28,6 +28,11 @@
 }
 .btn-primary {
     grid-area: six;
+    padding: 0.4em;
+    margin: 0.5em;
+    width: 8em;
+    text-align: center;
+    justify-self: center;    
 }
 .form-group {
     display: grid;

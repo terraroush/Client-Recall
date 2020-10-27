@@ -1,49 +1,57 @@
 .visitForm {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
-    grid-template-areas: 
-     "one"
-     "two "
-     "three"
-     "four"
-     "five"
-     "six"
-     "seven";
-     justify-content: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+  grid-template-areas:
+    "one"
+    "two "
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven";
+  justify-content: center;
 }
 .visitForm__title {
-    grid-area: one;
+  grid-area: one;
 }
 .chooseClient {
-    grid-area: two;
+  grid-area: two;
 }
 .dateVisitForm {
-    grid-area: three;
+  grid-area: three;
 }
 .costVisitForm {
-    grid-area: four;
+  grid-area: four;
 }
 .noteVisitForm {
-    grid-area: five;
+  grid-area: five;
 }
 .ratingVisitForm {
-    grid-area: six;
+  grid-area: six;
 }
 .btn-primary-visit {
-    grid-area: seven;
+  grid-area: seven;
 }
 .form-group2 {
-    display: grid;
-    grid-template-columns: auto auto;
-   
-    grid-template-areas: "one two";
-  }
-  
-  
-  label {
-    grid-area: one;
-  }
-  input {
-    grid-area: two;
-  }
+  display: grid;
+  grid-template-columns: auto auto;
+
+  grid-template-areas: "one two";
+}
+
+label {
+  grid-area: one;
+}
+
+input {
+  grid-area: two;
+}
+
+.btn-primary-visit {
+  padding: 0.4em;
+  margin: 0.5em;
+  width: 8em;
+  text-align: center;
+  justify-self: center;
+}

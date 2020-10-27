@@ -16,23 +16,23 @@
     cursor: pointer; /* On mouse-over, make the elements appear as they should */
   }
 
-  #addClient {
+  #search {
     top: 14em;
+    background-color: #669999; 
+  }
+
+  #addClient {
+    top: 17.5em;
     background-color: #669999;
     
   }
   
   #addVisit {
-    top: 17.5em;
-    background-color: #669999; 
-  }
-
-  #search {
     top: 21em;
     background-color: #669999; 
   }
-  
-  #allClients {
+
+  #editClients {
     top: 24.5em;
     background-color: #669999; 
   }

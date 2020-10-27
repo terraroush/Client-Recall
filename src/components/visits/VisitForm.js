@@ -82,13 +82,13 @@ export const VisitForm = () => {
   };
 
   return (
-    <div className="cursive formContainer">
+    <div id="formContainer" className="cursive formContainer">
       <form className="visitForm">
         <h2 className="visitForm__title">
           {visitId ? "edit visit" : "add visit"}
         </h2>
         <fieldset>
-          <div className="form-group chooseClient">
+          <div className="form-group2 chooseClient">
             <label htmlFor="chooseClient">client: </label>
             <select
               value={visit.clientId}
@@ -109,7 +109,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group dateVisitForm">
+          <div className="form-group2 dateVisitForm">
             <label htmlFor="date">date: </label>
             <input
               type="date"
@@ -124,7 +124,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group costVisitForm">
+          <div className="form-group2 costVisitForm">
             <label htmlFor="cost">cost: </label>
             <input
               type="text"
@@ -139,9 +139,9 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group noteVisitForm">
+          <div className="form-group2 noteVisitForm">
             <label htmlFor="note">note: </label>
-            <input
+            <textarea
               type="textarea"
               rows="4"
               cols="40"
@@ -156,7 +156,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group ratingVisitForm">
+          <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
             <input
               type="text"

@@ -1,9 +1,7 @@
 import React from "react"
 import "./VisitCard.css"
 
-
 export const VisitCard = ({ visit }) => {
-
         return (
         <section className="visitCard">
             <h4 className="visit__date">{visit.date}</h4>

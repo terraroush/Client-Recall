@@ -33,3 +33,17 @@
 .btn-primary-visit {
     grid-area: seven;
 }
+.form-group2 {
+    display: grid;
+    grid-template-columns: auto auto;
+   
+    grid-template-areas: "one two";
+  }
+  
+  
+  label {
+    grid-area: one;
+  }
+  input {
+    grid-area: two;
+  }

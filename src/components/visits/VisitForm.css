@@ -1,4 +1,4 @@
-.clientForm {
+.visitForm {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
@@ -8,24 +8,28 @@
      "three"
      "four"
      "five"
-     "six";
+     "six"
+     "seven";
      justify-content: center;
 }
-.clientForm__title {
+.visitForm__title {
     grid-area: one;
 }
-.first {
+.chooseClient {
     grid-area: two;
 }
-.last {
+.dateVisitForm {
     grid-area: three;
 }
-.email {
+.costVisitForm {
     grid-area: four;
 }
-.phone {
+.noteVisitForm {
     grid-area: five;
 }
-.btn-primary {
+.ratingVisitForm {
     grid-area: six;
+}
+.btn-primary-visit {
+    grid-area: seven;
 }

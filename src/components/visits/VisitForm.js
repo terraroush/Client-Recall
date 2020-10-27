@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
+import "./VisitForm.css"
 
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
@@ -87,13 +88,15 @@ export const VisitForm = () => {
           {visitId ? "edit visit" : "add visit"}
         </h2>
         <fieldset>
-          <div className="form-group">
-            <label htmlFor="chooseClient">choose client first: </label>
+          <div className="form-group chooseClient">
+            <label htmlFor="chooseClient">client: </label>
             <select
               value={visit.clientId}
               name="clientId"
               id="visitClient"
               className="form-control"
+              autoFocus
+              required
               onChange={handleControlledInputChange}
             >
               <option value="0">select client</option>
@@ -106,14 +109,14 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group dateVisitForm">
             <label htmlFor="date">date: </label>
             <input
               type="date"
               id="date"
               name="date"
               required
-              autoFocus
+              
               className="form-control"
               onChange={handleControlledInputChange}
               defaultValue={visit.date}
@@ -121,7 +124,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group costVisitForm">
             <label htmlFor="cost">cost: </label>
             <input
               type="text"
@@ -136,7 +139,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group noteVisitForm">
             <label htmlFor="note">note: </label>
             <input
               type="textarea"
@@ -153,7 +156,7 @@ export const VisitForm = () => {
           </div>
         </fieldset>
         <fieldset>
-          <div className="form-group">
+          <div className="form-group ratingVisitForm">
             <label htmlFor="rating">rating: </label>
             <input
               type="text"
@@ -169,7 +172,7 @@ export const VisitForm = () => {
         </fieldset>
 
         <button
-          className="cursive btn btn-primary"
+          className="cursive btn btn-primary-visit"
           disabled={isLoading} // Prevent browser from submitting the form
           onClick={(event) => {
             event.preventDefault();

@@ -12,6 +12,7 @@ export const ClientSearch = () => {
     const activeUser = parseInt(localStorage.getItem("activeUser"));
 
     useEffect(() => {
+    
         getClientsByUserId(activeUser)
         setSearchTerms("")
         
@@ -24,7 +25,7 @@ export const ClientSearch = () => {
             setFiltered(subset)
         } else {
             // If the search field is blank, display all clients
-            setFiltered(clients)
+            setFiltered([])
         }
     }, [searchTerms, clients])
 

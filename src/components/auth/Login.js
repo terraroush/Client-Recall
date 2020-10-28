@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
+import { Header } from "../header/Header";
 import "./Login.css";
 
 export const Login = (props) => {
@@ -30,6 +31,8 @@ export const Login = (props) => {
   };
 
   return (
+      <>
+      {<Header />}
     <main className="container--login">
       <dialog className="dialog dialog--auth" ref={existDialog}>
         <div>user does not exist</div>
@@ -40,7 +43,7 @@ export const Login = (props) => {
           close
         </button>
       </dialog>
-
+<header className="header--login"></header>
     <div className="form-box">
       <section>
         <form className="form--login" onSubmit={handleLogin}>
@@ -68,5 +71,6 @@ export const Login = (props) => {
       </section>
       </div>
     </main>
+    </>
   );
 };

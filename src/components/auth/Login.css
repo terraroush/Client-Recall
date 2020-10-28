@@ -31,7 +31,6 @@ main {
     padding-left: 1em;
     padding-right: 1em;
     align-items: center;
-
 }
 
 .login--button {
@@ -43,4 +42,6 @@ main {
     flex-direction: column; 
     min-width: 17.5em; 
 }
+
+
 

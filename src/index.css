@@ -12,7 +12,7 @@ html, body {
 
 }
 
-header, footer {
+.header, footer {
   grid-column: 1 / 4;
 }
 

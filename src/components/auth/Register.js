@@ -1,5 +1,6 @@
 import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
+import { Header } from "../header/Header"
 import "./Login.css"
 
 export const Register = props => {
@@ -48,6 +49,8 @@ export const Register = props => {
     }
 
     return (
+        <>
+         {<Header />}
         <main className="container--login">
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
@@ -77,6 +80,7 @@ export const Register = props => {
             </form>
             </div>
         </main>
+        </>
     )
 }
 

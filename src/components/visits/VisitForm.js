@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
-import "./VisitForm.css"
+import "./VisitForm.css";
 
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
@@ -45,7 +45,7 @@ export const VisitForm = () => {
   }, []);
 
   const constructVisitObject = () => {
-    if (+visit.clientId === 0) {
+    if (!+visit.clientId) {
       window.alert("please select a client");
     } else {
       setIsLoading(true);
@@ -82,35 +82,43 @@ export const VisitForm = () => {
   };
 
   return (
-    <div id="formContainer" className="cursive formContainer">
-      <form className="visitForm">
-        <h2 className="visitForm__title">
-          {visitId ? "edit visit" : "add visit"}
-        </h2>
+    <div id="formContainer" className=" formContainer">
+      <form
+        className="visitForm"
+        onSubmit={(event) => {
+          event.preventDefault();
+          constructVisitObject();
+        }}
+      >
+        
         <fieldset>
+        <legend><h2 className="cursive visitForm__title">
+          {visitId ? "edit visit" : "add visit"}
+        </h2></legend>
           <div className="form-group2 chooseClient">
             <label htmlFor="chooseClient">client: </label>
             <select
               value={visit.clientId}
               name="clientId"
+              required
               id="visitClient"
               className="form-control"
               autoFocus
-              required
               onChange={handleControlledInputChange}
             >
               <option value="0">select client</option>
-              {clients.map(client => {
+              {clients.map((client) => {
                 if (client.userId === activeUser) {
-                return <option key={client.id} value={client.id}>
-                  {client.firstName}
-                </option>}
-              })
-              }
+                  return (
+                    <option key={client.id} value={client.id}>
+                      {client.firstName}
+                    </option>
+                  );
+                }
+              })}
             </select>
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 dateVisitForm">
             <label htmlFor="date">date: </label>
             <input
@@ -118,14 +126,12 @@ export const VisitForm = () => {
               id="date"
               name="date"
               required
-              
               className="form-control"
               onChange={handleControlledInputChange}
               defaultValue={visit.date}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 costVisitForm">
             <label htmlFor="cost">cost: </label>
             <input
@@ -139,8 +145,7 @@ export const VisitForm = () => {
               defaultValue={visit.cost}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 noteVisitForm">
             <label htmlFor="note">note: </label>
             <textarea
@@ -156,8 +161,7 @@ export const VisitForm = () => {
               defaultValue={visit.note}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
             <input
@@ -176,10 +180,7 @@ export const VisitForm = () => {
         <button
           className="cursive btn btn-primary-visit"
           disabled={isLoading} // Prevent browser from submitting the form
-          onClick={(event) => {
-            event.preventDefault();
-            constructVisitObject();
-          }}
+          type="submit"
         >
           {visitId ? "save visit" : "add visit"}
         </button>

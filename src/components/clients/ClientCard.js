@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory} from "react-router-dom";
-import { VisitList } from "../visits/VisitList";
 import "./ClientCard.css";
 
 export const ClientCard = ({client}) => {

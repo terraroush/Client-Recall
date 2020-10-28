@@ -55,12 +55,12 @@ export const Register = props => {
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>account with that email address already exists</div>
-                <button className="button--close" onClick={e => conflictDialog.current.close()}>close</button>
+                <button className="cursive button--close" onClick={e => conflictDialog.current.close()}>close</button>
             </dialog>
 
             <div className="form-box">
-            <form className="form--login" onSubmit={handleRegister}>
-                <h2 className="title">create an account</h2>
+            <form className="cursive form--login" onSubmit={handleRegister}>
+                <h2 className="cursive title">create an account</h2>
                 
                 <fieldset className="flex">
                 <legend><h3 className="command">register</h3></legend>
@@ -75,7 +75,7 @@ export const Register = props => {
                         placeholder="email address" required />
                 </fieldset>
                 
-                    <button className="login--button" type="submit"> submit </button>
+                    <button className="cursive login--button" type="submit"> submit </button>
                 
             </form>
             </div>

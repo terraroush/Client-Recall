@@ -47,3 +47,8 @@ footer{
   justify-content: center;
   height: 3.5vh;
 }
+
+fieldset, input {
+  border-radius: .3em;
+}
+

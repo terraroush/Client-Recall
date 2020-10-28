@@ -37,17 +37,17 @@ export const Login = (props) => {
       <dialog className="dialog dialog--auth" ref={existDialog}>
         <div>user does not exist</div>
         <button
-          className="button--close"
+          className="cursive button--close"
           onClick={(e) => existDialog.current.close()}
         >
           close
         </button>
       </dialog>
-<header className="header--login"></header>
+
     <div className="form-box">
       <section>
-        <form className="form--login" onSubmit={handleLogin}>
-        <h2>welcome back</h2>
+        <form className=" cursive form--login" onSubmit={handleLogin}>
+        <h2 className="cursive">welcome back</h2>
           <fieldset>
             <legend>
               <h3 className="command">log in</h3>
@@ -63,7 +63,7 @@ export const Login = (props) => {
               autoFocus
             />
           </fieldset>
-          <button className="login--button" type="submit">enter</button>
+          <button className="cursive login--button" type="submit">enter</button>
         </form>
       </section>
       <section className="link--register">

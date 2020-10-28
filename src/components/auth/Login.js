@@ -41,6 +41,7 @@ export const Login = (props) => {
         </button>
       </dialog>
 
+    <div className="form-box">
       <section>
         <form className="form--login" onSubmit={handleLogin}>
         <h2>welcome back</h2>
@@ -59,12 +60,13 @@ export const Login = (props) => {
               autoFocus
             />
           </fieldset>
-          <button type="submit">enter</button>
+          <button className="login--button" type="submit">enter</button>
         </form>
       </section>
       <section className="link--register">
         <Link to="/register">or register here</Link>
       </section>
+      </div>
     </main>
   );
 };

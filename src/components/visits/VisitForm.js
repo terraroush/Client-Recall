@@ -82,7 +82,7 @@ export const VisitForm = () => {
   };
 
   return (
-    <div id="formContainer" className="cursive formContainer">
+    <div id="formContainer" className=" formContainer">
       <form
         className="visitForm"
         onSubmit={(event) => {
@@ -90,10 +90,11 @@ export const VisitForm = () => {
           constructVisitObject();
         }}
       >
-        <h2 className="visitForm__title">
-          {visitId ? "edit visit" : "add visit"}
-        </h2>
+        
         <fieldset>
+        <legend><h2 className="cursive visitForm__title">
+          {visitId ? "edit visit" : "add visit"}
+        </h2></legend>
           <div className="form-group2 chooseClient">
             <label htmlFor="chooseClient">client: </label>
             <select
@@ -117,8 +118,7 @@ export const VisitForm = () => {
               })}
             </select>
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 dateVisitForm">
             <label htmlFor="date">date: </label>
             <input
@@ -131,8 +131,7 @@ export const VisitForm = () => {
               defaultValue={visit.date}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 costVisitForm">
             <label htmlFor="cost">cost: </label>
             <input
@@ -146,8 +145,7 @@ export const VisitForm = () => {
               defaultValue={visit.cost}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 noteVisitForm">
             <label htmlFor="note">note: </label>
             <textarea
@@ -163,8 +161,7 @@ export const VisitForm = () => {
               defaultValue={visit.note}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
             <input

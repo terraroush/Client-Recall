@@ -1,9 +1,9 @@
-.header {
+.page--header {
   display: flex;
   height: 25vh;
 }
 
-.header {
+.page--header {
   display: grid;
   grid-template-columns: auto 80% ;
   grid-template-rows: auto;

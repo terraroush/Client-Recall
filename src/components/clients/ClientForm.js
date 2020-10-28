@@ -68,7 +68,7 @@ export const ClientForm = () => {
   };
 
   return (
-    <div className="cursive formContainer">
+    <div className="formContainer1">
       <form
         className="clientForm"
         onSubmit={(event) => {
@@ -76,10 +76,12 @@ export const ClientForm = () => {
           constructClientObject();
         }}
       >
-        <h2 className="clientForm__title">
-          {clientId ? "edit client" : "add client"}
-        </h2>
         <fieldset>
+          <legend>
+            <h2 className="cursive clientForm__title">
+              {clientId ? "edit client" : "add client"}
+            </h2>
+          </legend>
           <div className="form-group first">
             <label htmlFor="firstName">first name: </label>
             <input
@@ -94,8 +96,7 @@ export const ClientForm = () => {
               defaultValue={client.firstName}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group last">
             <label htmlFor="lastName">last name: </label>
             <input
@@ -109,8 +110,7 @@ export const ClientForm = () => {
               defaultValue={client.lastName}
             />
           </div>
-        </fieldset>
-        <fieldset>
+        
           <div className="form-group email">
             <label htmlFor="clientEmail">email: </label>
             <input
@@ -124,8 +124,7 @@ export const ClientForm = () => {
               defaultValue={client.email}
             />
           </div>
-        </fieldset>
-        <fieldset>
+       
           <div className="form-group phone">
             <label htmlFor="clientPhone">phone: </label>
             <input

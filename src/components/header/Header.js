@@ -9,7 +9,7 @@ export const Header = () => {
         <header className="header">
             <Logo className="header-logo"/>
             <h1 className="header-title cursive">client recall</h1>
-            <NavBar className="header-nav"/>
+            {/* <NavBar className="header-nav"/> */}
         </header>
     )
 }

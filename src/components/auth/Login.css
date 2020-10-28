@@ -1,5 +1,58 @@
 .container--login {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   justify-content: center; 
+   width: 20em;
+   margin-left: 35%;
+   
 }
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    
+}
+.form-box {
+    display: flex;
+    flex-direction: column;
+    border: .1em black solid;
+    border-radius: .5em;
+    align-items: center;
+
+}
+
+.form--login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 4em;
+    padding-bottom: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    align-items: center;
+}
+
+.login--button {
+    padding: .2em;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column; 
+    min-width: 17.5em; 
+}
+
+.dialog {
+    border-radius: .5em;
+   
+    font-size: 1.5em;
+}
+.button--close {
+    padding: .2em;
+    margin: .4em;
+    width: 7em;
+}
+
 

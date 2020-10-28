@@ -1,5 +1,6 @@
 import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
+import { Header } from "../header/Header"
 import "./Login.css"
 
 export const Register = props => {
@@ -48,21 +49,24 @@ export const Register = props => {
     }
 
     return (
+        <>
+         {<Header />}
         <main className="container--login">
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>account with that email address already exists</div>
-                <button className="button--close" onClick={e => conflictDialog.current.close()}>close</button>
+                <button className="cursive button--close" onClick={e => conflictDialog.current.close()}>close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="title">client recall</h1>
-                <h2 className="command">please register</h2>
-                <fieldset>
+            <div className="form-box">
+            <form className="cursive form--login" onSubmit={handleRegister}>
+                <h2 className="cursive title">create an account</h2>
+                
+                <fieldset className="flex">
+                <legend><h3 className="command">register</h3></legend>
                     <label htmlFor="username"> username </label>
                     <input ref={username} type="text" name="username" className="form-control" placeholder="username" required autoFocus />
-                </fieldset>
-                <fieldset>
+                
                     <label htmlFor="inputEmail"> email </label>
                     <input ref={email} 
                         type="email"
@@ -70,11 +74,13 @@ export const Register = props => {
                         className="form-control"
                         placeholder="email address" required />
                 </fieldset>
-                <fieldset>
-                    <button type="submit"> register </button>
-                </fieldset>
+                
+                    <button className="cursive login--button" type="submit"> submit </button>
+                
             </form>
+            </div>
         </main>
+        </>
     )
 }
 

@@ -29,7 +29,6 @@ export const AppViews = () => {
             <Route exact path="/clients">
                 <Header />
                 <SidebarLeft />
-                
                     <ClientList />
                 <SidebarRight />
                 <Footer />

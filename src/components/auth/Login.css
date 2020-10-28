@@ -1,5 +1,9 @@
 .container--login {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+}
+
+.container--login > section {
     justify-content: center;
 }
 

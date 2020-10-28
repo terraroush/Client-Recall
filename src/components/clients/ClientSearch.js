@@ -30,7 +30,7 @@ export const ClientSearch = () => {
       );
       setFiltered(subset);
     } else {
-      // If the search field is blank, display all clients
+      // If the search field is blank, display NO clients
       setFiltered([]);
     }
   }, [searchTerms, clients]);

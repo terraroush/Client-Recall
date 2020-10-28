@@ -19,7 +19,7 @@ export const VisitList = () => {
   }, [])
   
   return (
-    // this page gets run twice. 
+   
     <article className="visitList--grid">
       <h1>client history of</h1>
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
-import "./VisitForm.css"
+import "./VisitForm.css";
 
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
@@ -45,7 +45,7 @@ export const VisitForm = () => {
   }, []);
 
   const constructVisitObject = () => {
-    if (+visit.clientId === 0) {
+    if (!+visit.clientId) {
       window.alert("please select a client");
     } else {
       setIsLoading(true);
@@ -83,7 +83,13 @@ export const VisitForm = () => {
 
   return (
     <div id="formContainer" className="cursive formContainer">
-      <form className="visitForm">
+      <form
+        className="visitForm"
+        onSubmit={(event) => {
+          event.preventDefault();
+          constructVisitObject();
+        }}
+      >
         <h2 className="visitForm__title">
           {visitId ? "edit visit" : "add visit"}
         </h2>
@@ -93,20 +99,22 @@ export const VisitForm = () => {
             <select
               value={visit.clientId}
               name="clientId"
+              required
               id="visitClient"
               className="form-control"
               autoFocus
-              required
               onChange={handleControlledInputChange}
             >
               <option value="0">select client</option>
-              {clients.map(client => {
+              {clients.map((client) => {
                 if (client.userId === activeUser) {
-                return <option key={client.id} value={client.id}>
-                  {client.firstName}
-                </option>}
-              })
-              }
+                  return (
+                    <option key={client.id} value={client.id}>
+                      {client.firstName}
+                    </option>
+                  );
+                }
+              })}
             </select>
           </div>
         </fieldset>
@@ -118,7 +126,6 @@ export const VisitForm = () => {
               id="date"
               name="date"
               required
-              
               className="form-control"
               onChange={handleControlledInputChange}
               defaultValue={visit.date}
@@ -176,10 +183,7 @@ export const VisitForm = () => {
         <button
           className="cursive btn btn-primary-visit"
           disabled={isLoading} // Prevent browser from submitting the form
-          onClick={(event) => {
-            event.preventDefault();
-            constructVisitObject();
-          }}
+          type="submit"
         >
           {visitId ? "save visit" : "add visit"}
         </button>

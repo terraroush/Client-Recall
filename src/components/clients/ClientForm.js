@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
-import "./ClientForm.css"
+import "./ClientForm.css";
 
 export const ClientForm = () => {
   const { addClient, getClientById, editClient } = useContext(ClientContext);
@@ -62,14 +62,20 @@ export const ClientForm = () => {
         email: client.email,
         phone: +client.phone,
         userId: activeUser,
-        // without that nav bar destination, i don't have anywhere to send the user after adding a client
-      }).then(() => history.push("/clients"))
+        // without that nav bar destination, i don't have anywhere meaningful to send the user after adding a client
+      }).then(() => history.push("/clients"));
     }
   };
 
   return (
     <div className="cursive formContainer">
-      <form className="clientForm">
+      <form
+        className="clientForm"
+        onSubmit={(event) => {
+          event.preventDefault();
+          constructClientObject();
+        }}
+      >
         <h2 className="clientForm__title">
           {clientId ? "edit client" : "add client"}
         </h2>
@@ -138,10 +144,7 @@ export const ClientForm = () => {
         <button
           className="cursive btn btn-primary"
           disabled={isLoading} // Prevent browser from submitting the form
-          onClick={(event) => {
-            event.preventDefault();
-            constructClientObject();
-          }}
+          type="submit"
         >
           {clientId ? "save client" : "add client"}
         </button>

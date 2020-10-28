@@ -1,20 +1,17 @@
 #sidebar-right {
-    height: 100%;
+    height: 100vh;
     overflow: auto;
-  }
-  
-  #sidebar-right {
     background:rgba(255,204,153,1);
     width: 100%;
+    align-items: center;
   }
   
   #content {
+    display: flex;
+    flex-direction: column;
     background:rgba(255,204,153,1);
     width: 100%;
+    align-items: center;
   }
   
-  .logo-container { 
-    background:rgba(255,204,153,1);
-    position: absolute;
-    
-  }
+ 

@@ -1,0 +1,23 @@
+.logout--button {
+  border-radius: 0;
+  appearance: none;
+  border: .1em rgb(197, 192, 181) solid;
+  border-radius: 30px;
+  color: black;
+  font-size: 1.1em;
+  min-width: 6em;
+  padding: .3em;
+  cursor: pointer;
+  /* margin: .3em;  */
+  background: peachpuff
+}
+
+.logout--button:hover {
+    background: lightsalmon;
+    color: #fff;
+  }
+  
+.logout--button:focus {
+    outline: none;
+    
+  }

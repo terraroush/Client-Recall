@@ -12,9 +12,7 @@ export const SidebarRight = () => (
         <div className="logout-container">
           <Logout />
         </div>
-        <div className="logo-container">
-            <Logo />
-        </div>
+        
       </div>
     </aside>
   );

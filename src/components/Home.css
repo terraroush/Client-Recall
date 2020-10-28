@@ -1,0 +1,11 @@
+.home-flex {
+    display: flex;
+    
+    justify-content: space-evenly;
+}
+.flex-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

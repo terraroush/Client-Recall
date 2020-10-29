@@ -31,11 +31,11 @@ export const VisitProvider = props => {
         })
             .then(getVisits)
     }
-    const deleteVisit = visitId => {
-        return fetch(`http://localhost:8088/visits/${visitId}`, {
+    const deleteVisit = visitObj => {
+        return fetch(`http://localhost:8088/visits/${visitObj.id}`, {
             method: "DELETE"
         })
-            .then(getVisits)
+           .then(getVisitsByClientId(visitObj.clientId))
     }
     const editVisit = visit => {
         return fetch(`http://localhost:8088/visits/${visit.id}`, {

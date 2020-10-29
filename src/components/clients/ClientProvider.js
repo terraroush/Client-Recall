@@ -33,7 +33,7 @@ export const ClientProvider = props => {
             },
             body: JSON.stringify(clientObj)
         })
-            .then(getClients)
+            .then(res => res.json())
     }
     const deleteClient = clientId => {
         return fetch(`http://localhost:8088/clients/${clientId}`, {

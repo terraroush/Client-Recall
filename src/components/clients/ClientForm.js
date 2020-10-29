@@ -15,16 +15,9 @@ export const ClientForm = () => {
   const { clientId } = useParams();
   const history = useHistory();
 
-  //when field changes, update state. This causes a re-render and updates the view.
-  //Controlled component
   const handleControlledInputChange = (event) => {
-    //When changing a state object or array,
-    //always create a copy to make changes, and then set state.
     const newClient = { ...client };
-    //client is an object with properties.
-    //set the property to the new value
     newClient[event.target.name] = event.target.value;
-    //update state
     setClient(newClient);
   };
 
@@ -43,7 +36,7 @@ export const ClientForm = () => {
   const constructClientObject = () => {
     setIsLoading(true);
     if (clientId) {
-      //PUT - update
+      
       editClient({
         id: client.id,
         firstName: client.firstName,
@@ -55,15 +48,16 @@ export const ClientForm = () => {
         .then(() => history.push(`/client-history/${client.id}`))
         .then(() => setClient({}));
     } else {
-      //POST - add
+     
       addClient({
+        id: +client.id,
         firstName: client.firstName,
         lastName: client.lastName,
         email: client.email,
         phone: +client.phone,
         userId: activeUser,
-        // without that nav bar destination, i don't have anywhere meaningful to send the user after adding a client
-      }).then(() => history.push(`/client-history/${client.id}`));
+      })
+        .then((clientObj) => history.push(`/client-history/${clientObj.id}`))
     }
   };
 

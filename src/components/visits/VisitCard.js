@@ -35,7 +35,7 @@ export const VisitCard = ({visit}) => {
       <button className="cursive"
         onClick={() => {
           deleteVisit(visit.id).then(() => {
-            history.push(`/client-history/${visit.clientId}`);
+            history.push(`/client-history/${visit.id}`);
           });
         }}
       >

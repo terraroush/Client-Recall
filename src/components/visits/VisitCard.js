@@ -40,9 +40,7 @@ export const VisitCard = ({ visit }) => {
         // }}
         onClick={(e) => {
           if (window.confirm("delete this visit?"))
-            deleteVisit(visit.id).then(() => {
-              history.push(`/client-history/${visit.id}`);
-            });
+            deleteVisit(visit.id)
         }}
       >
         delete

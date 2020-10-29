@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react"
 import { VisitContext } from "./VisitProvider"
 import { VisitCard } from "./VisitCard";
 import { useParams } from "react-router-dom";
-import { ClientCard } from "../clients/ClientCard";
 import { ClientContext } from "../clients/ClientProvider";
 import { ClientDetail } from "../clients/ClientDetail";
 

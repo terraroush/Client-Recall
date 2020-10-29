@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-// import { ClientDetail } from "./ClientDetail";
 import "./ClientName.css"
 
 export const ClientName = ({ client }) => {
@@ -17,7 +16,6 @@ export const ClientName = ({ client }) => {
          }}
         name={client.firstName + " " + client.lastName}>
         {client.firstName + " " + client.lastName}
-      {/* <ClientDetail clientId={client.id} /> */}
       </button>
     </section>
     </>

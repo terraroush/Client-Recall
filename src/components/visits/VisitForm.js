@@ -60,7 +60,7 @@ export const VisitForm = () => {
           clientId: +visit.clientId,
           userId: activeUser,
         })
-          .then(() => history.push("/clients"))
+          .then(() => history.push(`/client-history/${visit.clientId}`))
           .then(() => setVisit({}));
       } else {
         //POST - add
@@ -76,7 +76,7 @@ export const VisitForm = () => {
           rating: +visit.rating,
           clientId: +visit.clientId,
           userId: activeUser,
-        }).then(() => history.push("/clients"));
+        }).then(() => history.push(`/client-history/${visit.clientId}`));
       }
     }
   };

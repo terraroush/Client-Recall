@@ -14,7 +14,7 @@ export const VisitForm = () => {
   const [isLoading, setIsLoading] = useState(true);
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
-  const { visitId } = useParams();
+  const { visitId, clientId } = useParams();
   const history = useHistory();
 
   //when field changes, update state. This causes a re-render and updates the view.
@@ -53,7 +53,11 @@ export const VisitForm = () => {
         //PUT - update
         editVisit({
           id: visit.id,
-          date: Date.now(),
+          date: new Date(Date.now()).toLocaleDateString([], {
+            year: "2-digit",
+            month: "2-digit",
+            day: "2-digit",
+          }),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,

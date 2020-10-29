@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { ClientContext } from "./ClientProvider";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { ClientName } from "./ClientName";
 // import { Button } from "semantic-ui-react";
 
@@ -18,15 +18,8 @@ export const ClientList = () => {
   return (
     <article className="clientList--grid">
       <h1 className="cursive">
-        edit clients </h1>
-        <p><small>click to edit or delete</small></p>
-        {/* <Button
-          className="cursive"
-          fitted="true"
-          size="large"
-          icon="add"
-          onClick={() => history.push("/clients/create")}
-        ></Button> */}
+        client book </h1>
+        <p><small>click for more information</small></p>
 
       <div className="clientList--list">
         {clients.map((client) => {
@@ -38,3 +31,23 @@ export const ClientList = () => {
     </article>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <Button
+  className="cursive"
+  fitted="true"
+  size="large"
+  icon="add"
+  onClick={() => history.push("/clients/create")}
+></Button> */}

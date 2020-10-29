@@ -35,7 +35,7 @@ export const VisitProvider = props => {
         return fetch(`http://localhost:8088/visits/${visitId}`, {
             method: "DELETE"
         })
-            .then(getVisits)
+            .then(res => res.json())
     }
     const editVisit = visit => {
         return fetch(`http://localhost:8088/visits/${visit.id}`, {

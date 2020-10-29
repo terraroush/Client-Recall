@@ -2,10 +2,10 @@ import React, { useContext, useEffect } from "react"
 import { VisitContext } from "./VisitProvider"
 import { VisitCard } from "./VisitCard";
 import { useParams } from "react-router-dom";
-import { ClientCard } from "../clients/ClientCard";
 import { ClientContext } from "../clients/ClientProvider";
+import { ClientDetail } from "../clients/ClientDetail";
 
-export const VisitList = () => {
+export const VisitList = ({client}) => {
   const { visits, getVisitsByClientId } = useContext(VisitContext);
   const { clients, getClients } = useContext(ClientContext);
   const {clientId} = useParams()
@@ -26,7 +26,7 @@ export const VisitList = () => {
       <div className="visitList--clientCard">
         {clients.map(client => {
           if (client.id === +clientId){
-            return <ClientCard key={client.id} client={client} userId={client.userId} />
+            return <ClientDetail clientId={client.id} />
         }})
         }
       </div>

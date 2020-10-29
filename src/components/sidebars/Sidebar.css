@@ -1,6 +1,6 @@
 #mySidenav .sidenavButton {
     position: absolute; /* Position them relative to the browser window */
-    left: -6em; 
+    left: -6.5em; 
     /* Position them outside of the screen */
     transition: 0.5s; /* Add transition on hover */
     padding: 1em; 
@@ -34,7 +34,7 @@
     background-color: #669999; 
   }
 
-  #editClients {
+  #clientBook {
     top: 26em;
     background-color: #669999; 
   }

@@ -36,7 +36,7 @@ export const VisitList = ({client}) => {
       <div className="visitList--clientCard">
         {clients.map(client => {
           if (client.id === +clientId){
-            return <ClientDetail clientId={client.id} />
+            return <ClientDetail key={client.id} clientId={client.id} />
         }})
         }
       </div>

@@ -44,6 +44,7 @@ export const ClientSearch = () => {
           className="clientSearch"
           onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value)}
           placeholder="start typing a name... "
+          autoFocus
         />
       </div>
 

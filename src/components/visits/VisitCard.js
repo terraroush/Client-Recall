@@ -1,18 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { VisitContext } from "./VisitProvider";
 import { useHistory } from "react-router-dom";
 import "./VisitCard.css";
 
 export const VisitCard = ({ visit }) => {
-  const { getVisitById, deleteVisit } = useContext(VisitContext);
-  const [aVisit, setVisit] = useState({});
+  const { deleteVisit } = useContext(VisitContext);
   const history = useHistory();
-
-  useEffect(() => {
-    getVisitById(visit.id).then((response) => {
-      setVisit(response);
-    });
-  }, []);
 
   return (
     <>
@@ -33,14 +26,9 @@ export const VisitCard = ({ visit }) => {
 
       <button
         className="cursive"
-        // onClick={() => {
-        //   deleteVisit(visit.id).then(() => {
-        //     history.push(`/client-history/${visit.id}`);
-        //   });
-        // }}
         onClick={(e) => {
           if (window.confirm("delete this visit?"))
-            deleteVisit(visit.id)
+            deleteVisit(visit)
         }}
       >
         delete

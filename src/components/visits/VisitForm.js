@@ -97,7 +97,7 @@ export const VisitForm = () => {
         
         <fieldset>
         <legend><h2 className="cursive visitForm__title">
-          {clientId ? "edit visit" : "add visit"}
+          {visitId ? "edit visit" : "add visit"}
         </h2></legend>
           <div className="form-group2 chooseClient">
             <label htmlFor="chooseClient">client: </label>
@@ -186,7 +186,7 @@ export const VisitForm = () => {
           disabled={isLoading} // Prevent browser from submitting the form
           type="submit"
         >
-          {clientId ? "save visit" : "add visit"}
+          {visitId ? "save visit" : "add visit"}
         </button>
       </form>
     </div>

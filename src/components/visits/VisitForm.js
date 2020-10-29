@@ -67,7 +67,7 @@ export const VisitForm = () => {
           .then(() => history.push(`/client-history/${visit.clientId}`))
           .then(() => setVisit({}));
       } else {
-        //POST - add
+        
         addVisit({
           id: visit.id,
           date: new Date(Date.now()).toLocaleDateString([], {

@@ -2,12 +2,16 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 #root {
   display: grid;
   grid-template-columns: 130px auto 220px;
   grid-gap: 1em;
+  font-family: 'Raleway', sans-serif;
+
   /* padding-bottom: 60px; */
 
 }
@@ -50,5 +54,7 @@ footer{
 
 fieldset, input {
   border-radius: .3em;
+  font-family: 'Raleway', sans-serif;
+
 }
 

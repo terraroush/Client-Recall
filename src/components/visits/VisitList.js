@@ -24,7 +24,7 @@ export const VisitList = ({client}) => {
   return (
    
     <article className="visitList--grid">
-      <h1>client history of</h1>
+      <h1 className="cursive">client history of</h1>
       <Button
         className="cursive"
         fitted="true"

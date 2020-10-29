@@ -14,7 +14,7 @@ export const VisitForm = () => {
   const [isLoading, setIsLoading] = useState(true);
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
-  const { visitId } = useParams();
+  const { visitId, clientId } = useParams();
   const history = useHistory();
 
   //when field changes, update state. This causes a re-render and updates the view.
@@ -93,7 +93,7 @@ export const VisitForm = () => {
         
         <fieldset>
         <legend><h2 className="cursive visitForm__title">
-          {visitId ? "edit visit" : "add visit"}
+          {clientId ? "edit visit" : "add visit"}
         </h2></legend>
           <div className="form-group2 chooseClient">
             <label htmlFor="chooseClient">client: </label>
@@ -182,7 +182,7 @@ export const VisitForm = () => {
           disabled={isLoading} // Prevent browser from submitting the form
           type="submit"
         >
-          {visitId ? "save visit" : "add visit"}
+          {clientId ? "save visit" : "add visit"}
         </button>
       </form>
     </div>

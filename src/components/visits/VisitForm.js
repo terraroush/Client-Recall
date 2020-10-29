@@ -53,7 +53,11 @@ export const VisitForm = () => {
         //PUT - update
         editVisit({
           id: visit.id,
-          date: Date.now(),
+          date: new Date(Date.now()).toLocaleDateString([], {
+            year: "2-digit",
+            month: "2-digit",
+            day: "2-digit",
+          }),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,

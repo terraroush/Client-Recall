@@ -1,21 +1,49 @@
 .clientCard {
     margin: .5em;
     padding: .2em;
-    max-width: 30%; 
+    min-width: 14em; 
+    align-content: center;
 }
 
 .client__name {
-    margin: 0
+    margin: .2em
 }
 
-.clientCard > button {
-    min-width: 100%;
+.clientCardButtons {
+    all: revert;
+    border-radius: .25rem;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
     padding: .7em;
     padding-left: 1em;
-    text-align: left;
+    width: 100%;
+    transition: all 0.4s;
     cursor: pointer;
+    margin: 5px;
+    font-family: inherit; 
+    line-height: 1.2em; 
 }
-
-
+  .clientCardButtons .cardContents {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .clientCardButtons .cardContents:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .clientCardButtons:hover .cardContents {
+    padding-right: 25px;
+  }
+  .clientCardButtons:hover .cardContents:after {
+    opacity: 1;
+    right: 0;
+  }
 
 

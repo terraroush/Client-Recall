@@ -29,11 +29,19 @@ export const ClientDetail = ({clientId}) => {
       </button>
 
       <button className="cursive"
-        onClick={() => {
-          deleteClient(client.id).then(() => {
+        onClick={(e) => {
+          if (window.confirm("delete this client?"))
+            deleteClient(client.id).then(() => {
             history.push("/clients");
           });
         }}
+        
+        
+        // {() => {
+        //   deleteClient(client.id).then(() => {
+        //     history.push("/clients");
+        //   });
+        // }}
       >
         delete
       </button>

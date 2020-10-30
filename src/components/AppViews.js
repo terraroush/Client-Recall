@@ -17,6 +17,7 @@ export const AppViews = () => {
   
     return (
     <>
+        <ClientProvider>
         <Route exact path="/">
             <Header />
             <SidebarLeft />
@@ -25,7 +26,6 @@ export const AppViews = () => {
             <Footer />
         </Route>
 
-        <ClientProvider>
             <Route exact path="/clients">
                 <Header />
                 <SidebarLeft />

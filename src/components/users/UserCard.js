@@ -2,6 +2,7 @@ import React from "react"
 import pic from "/Users/macuser/workspace43/client-recall/src/images/dummyPics/terraJumpsuit.jpeg"
 import { Card, Icon, Image } from 'semantic-ui-react'
 import "./UserCard.css"
+import { TotalClients } from "../clients/TotalClients"
 
 
 // const totalClients = 
@@ -19,7 +20,7 @@ export const UserCard = () => {
     <Card.Content extra>
       <a>
         <Icon name='users' />
-        {} total clients
+        <TotalClients /> total clients
       </a>
     </Card.Content>
   </Card>

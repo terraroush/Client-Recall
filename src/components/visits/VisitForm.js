@@ -53,11 +53,7 @@ export const VisitForm = () => {
         //PUT - update
         editVisit({
           id: visit.id,
-          date: new Date(Date.now()).toLocaleDateString([], {
-            year: "2-digit",
-            month: "2-digit",
-            day: "2-digit",
-          }),
+          date: new Date(visit.date).toLocaleDateString("en-US", {timeZone: 'UTC'}),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,
@@ -70,11 +66,7 @@ export const VisitForm = () => {
         
         addVisit({
           id: visit.id,
-          date: new Date(Date.now()).toLocaleDateString([], {
-            year: "2-digit",
-            month: "2-digit",
-            day: "2-digit",
-          }),
+          date: new Date(visit.date).toLocaleDateString("en-US", {timeZone: 'UTC'}),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,

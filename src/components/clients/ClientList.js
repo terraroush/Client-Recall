@@ -1,13 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { ClientContext } from "./ClientProvider";
-// import { useHistory } from "react-router-dom";
 import { ClientName } from "./ClientName";
-// import { Button } from "semantic-ui-react";
 
 export const ClientList = () => {
   const { clients, getClients } = useContext(ClientContext);
-
-  // const history = useHistory();
 
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 

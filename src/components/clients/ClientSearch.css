@@ -1,4 +1,5 @@
 .search-container {
+    display: flex;
     height: 65vh;
     overflow: scroll;
     font-size: 1.3em;

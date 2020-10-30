@@ -5,6 +5,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { ClientContext } from "../clients/ClientProvider";
 import { ClientDetail } from "../clients/ClientDetail";
 import { Button } from "semantic-ui-react";
+import "./VisitList.css"
 
 export const VisitList = ({client}) => {
   const { visits, getVisitsByClientId } = useContext(VisitContext);

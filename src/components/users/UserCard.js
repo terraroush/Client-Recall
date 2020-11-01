@@ -3,9 +3,8 @@ import pic from "/Users/macuser/workspace43/client-recall/src/images/dummyPics/t
 import { Card, Icon, Image } from 'semantic-ui-react'
 import "./UserCard.css"
 import { TotalClients } from "../clients/TotalClients"
+import { AveRating } from "../ratings/AveRating"
 
-
-// const totalClients = 
 const username = localStorage.getItem("username")
 
 export const UserCard = () => {
@@ -20,7 +19,11 @@ export const UserCard = () => {
     <Card.Content extra>
       <a>
         <Icon name='users' />
-        <TotalClients /> total clients
+        <p>total clients</p><TotalClients /> 
+      </a>
+
+      <a>
+      <p>average rating<AveRating /></p> 
       </a>
     </Card.Content>
   </Card>

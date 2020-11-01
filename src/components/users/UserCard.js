@@ -3,6 +3,7 @@ import pic from "/Users/macuser/workspace43/client-recall/src/images/dummyPics/t
 import { Card, Icon, Image } from 'semantic-ui-react'
 import "./UserCard.css"
 import { TotalClients } from "../clients/TotalClients"
+import { AveRating } from "../ratings/AveRating"
 
 
 // const totalClients = 
@@ -18,10 +19,14 @@ export const UserCard = () => {
       <Card.Header className="cursive card-header">{username}</Card.Header>
     </Card.Content>
     <Card.Content extra>
-      <a>
+      <p>
         <Icon name='users' />
-        <TotalClients /> total clients
-      </a>
+        <p>total clients</p><TotalClients /> 
+      </p>
+      <p>
+        
+      <p>rating average</p><AveRating /> 
+      </p>
     </Card.Content>
   </Card>
   )

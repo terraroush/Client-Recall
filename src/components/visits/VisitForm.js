@@ -3,10 +3,15 @@ import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./VisitForm.css";
+// import { StarRating } from "../ratings/StarRating";
 
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
   const { clients, getClients } = useContext(ClientContext);
+  // const [rating, setRating] = useState(0);
+  
+  // const [rating, setRating] = useState(null);
+  // const [isRatingActive, setIsRatingActive] = useState(false);
 
   //for edit, hold on to state of visit in this view
   const [visit, setVisit] = useState({});
@@ -14,7 +19,7 @@ export const VisitForm = () => {
   const [isLoading, setIsLoading] = useState(true);
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
-  const { visitId, clientId } = useParams();
+  const { visitId } = useParams();
   const history = useHistory();
 
   //when field changes, update state. This causes a re-render and updates the view.
@@ -53,20 +58,23 @@ export const VisitForm = () => {
         //PUT - update
         editVisit({
           id: visit.id,
-          date: new Date(visit.date).toLocaleDateString("en-US", {timeZone: 'UTC'}),
+          date: new Date(visit.date).toLocaleDateString("en-US", {
+            timeZone: "UTC",
+          }),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,
           clientId: +visit.clientId,
           userId: activeUser,
         })
-          .then(() => history.push(`/client-history/${visit.clientId}`))
-          .then(() => setVisit({}));
+        .then(() => history.push(`/client-history/${visit.clientId}`))
+        .then(() => setVisit({}));
       } else {
-        
         addVisit({
           id: visit.id,
-          date: new Date(visit.date).toLocaleDateString("en-US", {timeZone: 'UTC'}),
+          date: new Date(visit.date).toLocaleDateString("en-US", {
+            timeZone: "UTC",
+          }),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,
@@ -84,13 +92,15 @@ export const VisitForm = () => {
         onSubmit={(event) => {
           event.preventDefault();
           constructVisitObject();
+          // setIsRatingActive(false)
         }}
       >
-        
         <fieldset>
-        <legend><h2 className="cursive visitForm__title">
-          {visitId ? "edit visit" : "add visit"}
-        </h2></legend>
+          <legend>
+            <h2 className="cursive visitForm__title">
+              {visitId ? "edit visit" : "add visit"}
+            </h2>
+          </legend>
           <div className="form-group2 chooseClient">
             <label htmlFor="chooseClient">client: </label>
             <select
@@ -114,7 +124,7 @@ export const VisitForm = () => {
               })}
             </select>
           </div>
-        
+
           <div className="form-group2 dateVisitForm">
             <label htmlFor="date">date: </label>
             <input
@@ -127,7 +137,7 @@ export const VisitForm = () => {
               defaultValue={visit.date}
             />
           </div>
-        
+
           <div className="form-group2 costVisitForm">
             <label htmlFor="cost">cost: </label>
             <input
@@ -141,7 +151,7 @@ export const VisitForm = () => {
               defaultValue={visit.cost}
             />
           </div>
-        
+
           <div className="form-group2 noteVisitForm">
             <label htmlFor="note">note: </label>
             <textarea
@@ -157,9 +167,26 @@ export const VisitForm = () => {
               defaultValue={visit.note}
             />
           </div>
-        
+
+
+          {/* <div className="form-group2 ratingVisitForm">
+          <label htmlFor="rating">rating: </label>
+            <StarRating
+              required
+              onChange={handleControlledInputChange}
+              onClick={e => {
+                        setIsRatingActive(false)
+                        setRating(e.target.value)
+                        
+                    }}
+              checked={visit.rating === {rating}}
+              defaultValue={rating}
+            />
+          </div> */}
+
           <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
+            
             <input
               type="text"
               id="rating"
@@ -169,7 +196,8 @@ export const VisitForm = () => {
               placeholder="rate your service 1-5"
               onChange={handleControlledInputChange}
               defaultValue={visit.rating}
-            />
+              />
+            
           </div>
         </fieldset>
 

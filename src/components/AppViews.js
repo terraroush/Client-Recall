@@ -18,6 +18,7 @@ export const AppViews = () => {
     return (
     <>
         <ClientProvider>
+            <VisitProvider>
         <Route exact path="/">
             <Header />
             <SidebarLeft />
@@ -50,7 +51,6 @@ export const AppViews = () => {
                 <Footer />
             </Route>
         
-            <VisitProvider>
                 
                 <Route exact path="/client-history/:clientId(\d+)">
                     <Header />

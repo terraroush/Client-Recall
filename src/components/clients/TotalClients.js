@@ -1,8 +1,8 @@
-import React, {useContext, useEffect} from "react"
+import React, {useContext} from "react"
 import { ClientContext } from "./ClientProvider"
 
 export const TotalClients = () => {
-    const { clients, getClients } = useContext(ClientContext);
+    const { clients} = useContext(ClientContext);
 
     const activeUser = +localStorage.getItem("activeUser")
     

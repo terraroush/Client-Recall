@@ -8,10 +8,6 @@ import "./VisitForm.css";
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
   const { clients, getClients } = useContext(ClientContext);
-  // const [rating, setRating] = useState(0);
-  
-  // const [rating, setRating] = useState(null);
-  // const [isRatingActive, setIsRatingActive] = useState(false);
 
   //for edit, hold on to state of visit in this view
   const [visit, setVisit] = useState({});

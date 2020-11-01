@@ -21,6 +21,12 @@ export const VisitProvider = props => {
             .then(setVisits)
     }
 
+    const getVisitsByUserId = id => {
+        return fetch(`http://localhost:8088/visits?_expand=user&userId=${id}`)
+            .then(res => res.json())
+            .then(setVisits)
+    }
+
     const addVisit = visitObj => {
         return fetch("http://localhost:8088/visits", {
             method: "POST",
@@ -50,7 +56,7 @@ export const VisitProvider = props => {
 
     return (
         <VisitContext.Provider value={{
-            visits, getVisits, addVisit, getVisitById, deleteVisit, editVisit, getVisitsByClientId
+            visits, getVisits, addVisit, getVisitById, deleteVisit, editVisit, getVisitsByClientId, getVisitsByUserId
         }}>
             {props.children}
         </VisitContext.Provider>

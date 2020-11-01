@@ -5,8 +5,6 @@ import "./UserCard.css"
 import { TotalClients } from "../clients/TotalClients"
 import { AveRating } from "../ratings/AveRating"
 
-
-// const totalClients = 
 const username = localStorage.getItem("username")
 
 export const UserCard = () => {
@@ -25,8 +23,7 @@ export const UserCard = () => {
       </a>
 
       <a>
-        
-      rating average<AveRating /> 
+      <p>average rating<AveRating /></p> 
       </a>
     </Card.Content>
   </Card>

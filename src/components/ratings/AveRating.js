@@ -1,68 +1,32 @@
 import React, { useContext, useEffect, useState } from "react"
 import { VisitContext } from "../visits/VisitProvider"
+// import { useParams } from "react-router-dom";
+
 
 export const AveRating = () => {
-    const { visits, getVisits } = useContext(VisitContext);
-    const [ visit, setVisit ] = useState([]);
-        const activeUser = +localStorage.getItem("activeUser")
-
-
-
-        let ratingSum = 0;
-        const len = visits.length
-        let item = null;
-        for (let i = 0; i < len; i++) {
-            item = visits[i];
-            ratingSum = item.rating + ratingSum;
-
-        }
-        const averageRating = ratingSum / len
-        console.log("ave rating:", averageRating)
-        console.log(visits)
-
-        useEffect(() => {
-            getVisits().then((response) => {
-                setVisit(response);
-            });
-          }, []);
-
-        return (
-
-            <div>
-                {averageRating}
-            </div>
-        )
-
-}
-
-
-
-
-
-// export const AveRating = () => {
-//     const { visits, getVisits } = useContext(VisitContext);
-//     const activeUser = +localStorage.getItem("activeUser")
-
-//     const getRating = (item) => {
-//         return item.rating;
-//     }
-//     const addScores = (runningTotal, rating) => {
+    const { visits, getVisitsByUserId } = useContext(VisitContext);
+    const [ visit, setVisit ] = useState([])
+    const activeUser = +localStorage.getItem("activeUser")
+    // const { clientId } = useParams();
         
-//         return runningTotal + rating;
-//     }
-
-//     const ratingScores = visits.map(getRating)
-//     const scoresTotal = ratingScores.reduce(addScores, 0)
-//     const averageRating = scoresTotal / visits.length;
-//     console.log("ave rating:", averageRating)
-//     console.log(getRating)
+    const addScores = (runningTotal, rating) => runningTotal + rating;
     
+    const ratingScores = visits.map(visit => visit.rating)
+    const scoresTotal = ratingScores.reduce(addScores, 0)
+    const averageRating = scoresTotal / visits.length;
+    console.log("ave rating:", averageRating)
+    console.log(scoresTotal)
+    console.log(visits.length)
+    // console.log("client id", clientId)
+    
+    useEffect(() => {
+        getVisitsByUserId(activeUser).then((res) => setVisit(res))
+    }, [])
 
-   
-
-//     return (
-//         <div>
-//             {averageRating}
-//         </div>
-//     )
-// }
+    return (
+        <div>
+            {/* {clientId ? "average rating " : "overall average "} */}
+            {averageRating.toFixed(1)}
+        </div>
+    )
+}

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import pic from "/Users/macuser/workspace43/client-recall/src/images/dummyPics/terraJumpsuit.jpeg"
 import { Card, Icon, Image } from 'semantic-ui-react'
 import "./UserCard.css"

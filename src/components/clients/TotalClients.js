@@ -11,9 +11,6 @@ export const TotalClients = () => {
           return client
         }
       })
-    useEffect(() => {
-        getClients();
-      }, []);
 
   
     return (

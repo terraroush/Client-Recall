@@ -19,14 +19,15 @@ export const UserCard = () => {
       <Card.Header className="cursive card-header">{username}</Card.Header>
     </Card.Content>
     <Card.Content extra>
-      <p>
+      <a>
         <Icon name='users' />
         <p>total clients</p><TotalClients /> 
-      </p>
-      <p>
+      </a>
+
+      <a>
         
-      <p>rating average</p><AveRating /> 
-      </p>
+      rating average<AveRating /> 
+      </a>
     </Card.Content>
   </Card>
   )

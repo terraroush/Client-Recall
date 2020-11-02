@@ -1,13 +1,18 @@
-import React, {useState} from "react"
+import React, {useContext, useEffect} from "react"
+import { UserContext } from "./UserProvider"
 import pic from "/Users/macuser/workspace43/client-recall/src/images/dummyPics/terraJumpsuit.jpeg"
 import { Card, Icon, Image } from 'semantic-ui-react'
 import "./UserCard.css"
 import { TotalClients } from "../clients/TotalClients"
 import { AveRating } from "../ratings/AveRating"
 
-const username = localStorage.getItem("username")
-
 export const UserCard = () => {
+  const {users, getUsers} = useContext(UserContext)
+  const username = localStorage.getItem("username")
+  
+  useEffect(() => {
+    getUsers()
+  }, [])
 
   return (
 

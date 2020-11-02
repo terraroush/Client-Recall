@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
+import { UserContext } from "./users/UserProvider"
 import "./Home.css"
 
-const username = localStorage.getItem("username")
+export const Home = () => {
+  const {users, getUsers} = useContext(UserContext)
+  const username = localStorage.getItem("username")
+  
+  useEffect(() => {
+    getUsers()
+  }, [])
 
-export const Home = () => (
+  return (
   <article className="home-flex">
     <h3 className="cursive">welcome to client recall, {username}!</h3>
     <div className="flex-home">
@@ -18,4 +25,5 @@ export const Home = () => (
       
     </div>
   </article>
-);
+  )
+}

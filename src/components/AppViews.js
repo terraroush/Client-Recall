@@ -12,10 +12,12 @@ import { VisitProvider } from "./visits/VisitProvider";
 import { VisitList } from "./visits/VisitList";
 import { ClientSearch } from "./clients/ClientSearch";
 import { VisitForm } from "./visits/VisitForm";
+import { UserProvider } from "./users/UserProvider";
 
 export const AppViews = () => {
   return (
     <>
+    <UserProvider>
       <ClientProvider>
         <VisitProvider>
           <Header />
@@ -24,6 +26,7 @@ export const AppViews = () => {
           <Route exact path="/">
             <Home />
           </Route>
+          
 
           <Route exact path="/clients">
             <ClientList />
@@ -57,6 +60,7 @@ export const AppViews = () => {
           <Footer />
         </VisitProvider>
       </ClientProvider>
+      </UserProvider>
     </>
   );
 };

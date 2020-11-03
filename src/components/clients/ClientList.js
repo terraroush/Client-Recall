@@ -20,7 +20,7 @@ export const ClientList = ({client}) => {
 
       <div className="clientList--list">
         {clients
-          .sort((a, b) => a.lastName - b.lastName)
+          .sort((a, b) => a.lastName.toUpperCase().localeCompare(b.lastName.toUpperCase()))
           .map((client) => <ClientName key={client.id} client={client} />)}
       </div>
     </article>

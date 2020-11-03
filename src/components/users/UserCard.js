@@ -28,7 +28,7 @@ export const UserCard = () => {
       </a>
 
       <a>
-      <p>average rating<AveRating /></p> 
+      <p>average rating</p><AveRating />
       </a>
     </Card.Content>
   </Card>

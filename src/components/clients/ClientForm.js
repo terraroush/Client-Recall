@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
+import PhoneInput from 'react-phone-number-input/input'
+
+
 import "./ClientForm.css";
 
 export const ClientForm = () => {
@@ -8,6 +11,9 @@ export const ClientForm = () => {
 
   //for edit, hold on to state of client in this view
   const [client, setClient] = useState({});
+
+  const [value, setValue] = useState()
+
   //wait for data before button is active
   const [isLoading, setIsLoading] = useState(true);
   const activeUser = parseInt(localStorage.getItem("activeUser"));
@@ -120,7 +126,22 @@ export const ClientForm = () => {
           </div>
        
           <div className="form-group phone">
-            <label htmlFor="clientPhone">phone: </label>
+
+          <label htmlFor="clientPhone">phone: </label>
+          <PhoneInput
+              placeholder="Enter phone number"
+              country="US"
+              // name="phone"
+              value={value}
+              onChange={setValue}
+              // onChange={setValue, handleControlledInputChange}
+           
+              defaultValue={client.phone}
+              required
+              id="clientPhone"
+              className="form-control"
+              />
+            {/* <label htmlFor="clientPhone">phone: </label>
             <input
               type="text"
               id="clientPhone"
@@ -130,7 +151,7 @@ export const ClientForm = () => {
               placeholder="phone"
               onChange={handleControlledInputChange}
               defaultValue={client.phone}
-            />
+            /> */}
           </div>
         </fieldset>
 

@@ -24,7 +24,7 @@ export const ClientSearch = () => {
     if (searchTerms !== "") {
       // If the search field is not blank, display matching clients
       const subset = clients.filter((client) =>
-        client.firstName
+        (client.firstName + " " + client.lastName)
           .toLowerCase()
           .includes(searchTerms.toLowerCase().trim())
       );

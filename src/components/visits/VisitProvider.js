@@ -12,7 +12,7 @@ export const VisitProvider = props => {
     }
 
     const getVisitById = id => {
-        return fetch(`http://localhost:8088/visits/${id}?_expand=client&_expand=user`)
+        return fetch(`http://localhost:8088/visits/${id}?`)
             .then(res => res.json())
     }
     const getVisitsByClientId = id => {

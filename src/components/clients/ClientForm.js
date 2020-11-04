@@ -57,7 +57,7 @@ export const ClientForm = () => {
         phone: +client.phone,
         userId: activeUser,
       })
-        .then((clientObj) => history.push(`/client-history/${clientObj.id}`))
+      .then((clientObj) => history.push(`/client-history/${clientObj.id}`))        
     }
   };
 

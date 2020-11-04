@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "../visits/VisitProvider";
+import "./AveRating.css"
 
 export const AveRating = () => {
   const { visits, getVisitsByUserId } = useContext(VisitContext);
@@ -13,11 +14,16 @@ export const AveRating = () => {
   const averageRating = scoresTotal / visits.length;
 
   useEffect(() => {
-    if (averageRating) {
       getVisitsByUserId(activeUser).then((res) => setVisit(res));
-    } else {
-    }
+    
   }, []);
 
-  return <div>{visits.length === 0 ? "0" : averageRating.toFixed(1)}</div>;
+  return (
+      <>
+  
+  <div className="padThis">{visits.length === 0 ? "" : "average rating " }</div>
+  
+  <div >{visits.length === 0 ? "" :  averageRating.toFixed(1)}</div>
+  </>
+  )
 };

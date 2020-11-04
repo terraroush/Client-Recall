@@ -1,12 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import "./VisitCard.css";
 // import { StarRating } from "../ratings/StarRating";
 
 export const VisitCard = ({ visit }) => {
-  const { deleteVisit } = useContext(VisitContext);
+  const { deleteVisit, getVisitsByClientId } = useContext(VisitContext);
   const history = useHistory();
+  const [aVisit, setVisit] = useState({});
+  const {clientId} = useParams()
+
+
+  useEffect(() => {
+    getVisitsByClientId(clientId).then((response) => {
+      setVisit(response);
+      
+    });
+  }, []);
 
   return (
     <>

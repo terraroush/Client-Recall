@@ -333,14 +333,6 @@
       "userId": 1
     },
     {
-      "id": 44,
-      "firstName": "sco",
-      "lastName": "ro",
-      "email": "sco@ro.com",
-      "phone": 1111111111,
-      "userId": 2
-    },
-    {
       "id": 45,
       "firstName": "Jamie",
       "lastName": "Mitchell",
@@ -847,7 +839,7 @@
     },
     {
       "id": 63,
-      "date": "10/30/2020",
+      "date": "10/2/2020",
       "cost": "155",
       "note": "keratin treatment",
       "rating": 5,
@@ -925,33 +917,6 @@
       "rating": 5,
       "clientId": 43,
       "userId": 1
-    },
-    {
-      "id": 75,
-      "date": "10/7/2020",
-      "cost": "54",
-      "note": "fhsdf",
-      "rating": 3,
-      "clientId": 43,
-      "userId": 1
-    },
-    {
-      "date": "10/2/2020",
-      "cost": "54",
-      "note": "tu",
-      "rating": 4,
-      "clientId": 4,
-      "userId": 2,
-      "id": 76
-    },
-    {
-      "date": "11/7/2020",
-      "cost": "54",
-      "note": "rthws",
-      "rating": 2,
-      "clientId": 14,
-      "userId": 2,
-      "id": 77
     }
   ]
 }

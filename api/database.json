@@ -1,0 +1,957 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "carly",
+      "email": "carly@me.com"
+    },
+    {
+      "id": 2,
+      "username": "terra",
+      "email": "terra@me.com"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "Gabriella",
+      "lastName": "Dominguez",
+      "email": "gdo@me.com",
+      "phone": 3034447778,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "firstName": "Alma",
+      "lastName": "Gonzales",
+      "email": "ago@me.com",
+      "phone": 3034448888,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Cameron",
+      "lastName": "Mooney",
+      "email": "cmo@me.com",
+      "phone": 3034449999,
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "firstName": "Anabel",
+      "lastName": "Norris",
+      "email": "ano@me.com",
+      "phone": 3038881111,
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "firstName": "Leah",
+      "lastName": "Christensen",
+      "email": "lch@me.com",
+      "phone": 3038882222,
+      "userId": 2
+    },
+    {
+      "id": 6,
+      "firstName": "Fiona",
+      "lastName": "Ennis",
+      "email": "fen@me.com",
+      "phone": 3038883355,
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "firstName": "Angelina",
+      "lastName": "Munoz",
+      "email": "amu@me.com",
+      "phone": 3038884444,
+      "userId": 2
+    },
+    {
+      "id": 10,
+      "firstName": "Olive",
+      "lastName": "Clay",
+      "email": "ocl@me.com",
+      "phone": 3038887777,
+      "userId": 2
+    },
+    {
+      "id": 11,
+      "firstName": "Kamari",
+      "lastName": "Salazar",
+      "email": "ksa@me.com",
+      "phone": 3038888889,
+      "userId": 2
+    },
+    {
+      "id": 12,
+      "firstName": "Zara",
+      "lastName": "Castillo",
+      "email": "zca@me.com",
+      "phone": 3038889999,
+      "userId": 2
+    },
+    {
+      "id": 13,
+      "firstName": "Sophia",
+      "lastName": "Harper",
+      "email": "sha@me.com",
+      "phone": 3039991111,
+      "userId": 2
+    },
+    {
+      "id": 14,
+      "firstName": "Tiara",
+      "lastName": "Soto",
+      "email": "tso@me.com",
+      "phone": 3039992222,
+      "userId": 2
+    },
+    {
+      "id": 15,
+      "firstName": "Chani",
+      "lastName": "Atreides",
+      "email": "cat@me.com",
+      "phone": 3039993333,
+      "userId": 2
+    },
+    {
+      "id": 16,
+      "firstName": "Sandra",
+      "lastName": "Reid",
+      "email": "sre@me.com",
+      "phone": 3039994444,
+      "userId": 2
+    },
+    {
+      "id": 17,
+      "firstName": "Helena",
+      "lastName": "Ashley",
+      "email": "has@me.com",
+      "phone": 3039995555,
+      "userId": 2
+    },
+    {
+      "id": 18,
+      "firstName": "Madison",
+      "lastName": "Conrad",
+      "email": "mco@me.com",
+      "phone": 3039996666,
+      "userId": 2
+    },
+    {
+      "id": 19,
+      "firstName": "Elliana",
+      "lastName": "Romero",
+      "email": "ero@me.com",
+      "phone": 3039997777,
+      "userId": 2
+    },
+    {
+      "id": 20,
+      "firstName": "Zaniyah",
+      "lastName": "Pena",
+      "email": "zpe@me.com",
+      "phone": 3039998888,
+      "userId": 2
+    },
+    {
+      "id": 21,
+      "firstName": "Alana",
+      "lastName": "Powers",
+      "email": "apo@me.com",
+      "phone": 3031119999,
+      "userId": 2
+    },
+    {
+      "id": 22,
+      "firstName": "Henry",
+      "lastName": "Pennington",
+      "email": "hpe@me.com",
+      "phone": 3031116666,
+      "userId": 2
+    },
+    {
+      "id": 23,
+      "firstName": "Bennett",
+      "lastName": "Moreno",
+      "email": "bmo@me.com",
+      "phone": 3031117777,
+      "userId": 2
+    },
+    {
+      "id": 24,
+      "firstName": "Pierce",
+      "lastName": "Shepard",
+      "email": "psh@me.com",
+      "phone": 3031118888,
+      "userId": 2
+    },
+    {
+      "id": 25,
+      "firstName": "Paul",
+      "lastName": "Atreides",
+      "email": "thespicemustflow@arrakis.com",
+      "phone": 3031115555,
+      "userId": 2
+    },
+    {
+      "id": 27,
+      "firstName": "Luke",
+      "lastName": "Nichols",
+      "email": "lhi@me.com",
+      "phone": 3034445555,
+      "userId": 2
+    },
+    {
+      "id": 28,
+      "firstName": "Zack",
+      "lastName": "Nelson",
+      "email": "zne@me.com",
+      "phone": 3037778888,
+      "userId": 2
+    },
+    {
+      "id": 29,
+      "firstName": "Julian",
+      "lastName": "Murillo",
+      "email": "jmu@me.com",
+      "phone": 3036659999,
+      "userId": 2
+    },
+    {
+      "id": 30,
+      "firstName": "Terri",
+      "lastName": "McKee",
+      "email": "tmc@me.com",
+      "phone": 3304442222,
+      "userId": 2
+    },
+    {
+      "id": 31,
+      "firstName": "Rob",
+      "lastName": "Tucker",
+      "email": "rtu@me.com",
+      "phone": 3035552222,
+      "userId": 2
+    },
+    {
+      "id": 32,
+      "firstName": "Alex",
+      "lastName": "Taylor",
+      "email": "ata@me.com",
+      "phone": 3033334444,
+      "userId": 2
+    },
+    {
+      "id": 33,
+      "firstName": "Nick",
+      "lastName": "Roberts",
+      "email": "nro@me.com",
+      "phone": 2172225555,
+      "userId": 2
+    },
+    {
+      "id": 34,
+      "firstName": "Brett",
+      "lastName": "Parker",
+      "email": "bpa@me.com",
+      "phone": 3032224444,
+      "userId": 2
+    },
+    {
+      "id": 35,
+      "firstName": "Brandon",
+      "lastName": "Hogan",
+      "email": "bho@me.com",
+      "phone": 3031112222,
+      "userId": 2
+    },
+    {
+      "id": 36,
+      "firstName": "Lance",
+      "lastName": "Davis",
+      "email": "lda@me.com",
+      "phone": 8889997777,
+      "userId": 2
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Ed",
+      "email": "sed@me.com",
+      "phone": 1111111111,
+      "userId": 2,
+      "id": 37
+    },
+    {
+      "id": 38,
+      "firstName": "George",
+      "lastName": "Roush",
+      "email": "scratchnmeow@gmeow.com",
+      "phone": 2224447778,
+      "userId": 1
+    },
+    {
+      "id": 39,
+      "firstName": "Sophie",
+      "lastName": "Roush",
+      "email": "purrsalot@bedtime.com",
+      "phone": 3339993334,
+      "userId": 1
+    },
+    {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "email": "wizard@school.com",
+      "phone": 2177784505,
+      "userId": 2,
+      "id": 40
+    },
+    {
+      "firstName": "Hermoine",
+      "lastName": "Granger",
+      "email": "wildhair@dontcare.com",
+      "phone": 1111111111,
+      "userId": 2,
+      "id": 41
+    },
+    {
+      "id": 42,
+      "firstName": "Amanda",
+      "lastName": "Heines",
+      "email": "mandy@heines.com",
+      "phone": 2223034004,
+      "userId": 1
+    },
+    {
+      "id": 43,
+      "firstName": "Sarah",
+      "lastName": "Vriner",
+      "email": "sarah@vriner.com",
+      "phone": 4043032002,
+      "userId": 1
+    },
+    {
+      "id": 44,
+      "firstName": "sco",
+      "lastName": "ro",
+      "email": "sco@ro.com",
+      "phone": 1111111111,
+      "userId": 2
+    },
+    {
+      "id": 45,
+      "firstName": "Jamie",
+      "lastName": "Mitchell",
+      "email": "j@mitch.com",
+      "phone": 1111111111,
+      "userId": 2
+    }
+  ],
+  "visits": [
+    {
+      "id": 1,
+      "date": "01/10/2019",
+      "cost": "275",
+      "note": "came in looking a mess. long long hair. the blonde highlights she has go from super orange to white and breaking. she flat irons her hair everyday. she wanted to 'fix' the orange with more bleach. I gave her no gaurantees about the condition of her hair afterwards and made her sign a waiver. Natural level 3n. Double process. 1)Roots: Wella KP 6/01 with blue and green additives, 30vol, midway band: heavy foil with Olaplex and 20vol, careful not to overlap bleach. 2) lowlight transition from root to mids. mids-top of white blonde: wella ct 7/01+7/89.",
+      "rating": 4,
+      "clientId": 1,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "date": "01/11/2019",
+      "cost": "70",
+      "note": "adorable and spunky! has several kids and grandkids in the area. wants a conditioning treatment for home. simple uniform cut.",
+      "rating": 4,
+      "clientId": 2,
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "date": "01/14/2019",
+      "cost": "154",
+      "note": "natural level 8. roots wella high lift 12/81, double 30 vol, 45 minutes. looked perfect! long, reinvigorated layers.",
+      "rating": 5,
+      "clientId": 4,
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "date": "04/15/2019",
+      "cost": "100",
+      "note": "natural level 8. roots wella high lift 12/81, double 30 vol. works a treat every time!",
+      "rating": 5,
+      "clientId": 4,
+      "userId": 2
+    },
+    {
+      "id": 6,
+      "date": "07/20/2019",
+      "cost": "100",
+      "note": "nothing new today. the root color has been perfect. natural level 8. roots wella high lift 12/81, double 30 vol.",
+      "rating": 5,
+      "clientId": 4,
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "date": "11/01/2019",
+      "cost": "190",
+      "note": "natural level 8. she's decided to stop coloring her hair bc she's trying to get pregnant. to aid in that process-- roots +2inches: wella ct 9/0, 1:2, 1.9%, spray hair with water and comb the color down a bit to blend with previous color. beaitiful results, soft transition",
+      "rating": 5,
+      "clientId": 4,
+      "userId": 2
+    },
+    {
+      "id": 8,
+      "date": "02/11/2019",
+      "cost": "229",
+      "note": "basic lob; balayage touch up, medium coverage. must get enough around face. level 9 ends.",
+      "rating": 5,
+      "clientId": 5,
+      "userId": 2
+    },
+    {
+      "id": 9,
+      "date": "07/24/2019",
+      "cost": "205",
+      "note": "loved her color last time! just touching up a few highlights around face. trim.",
+      "rating": 5,
+      "clientId": 5,
+      "userId": 2
+    },
+    {
+      "id": 10,
+      "date": "10/11/2019",
+      "cost": "15",
+      "note": "simple undercut clean up",
+      "rating": 5,
+      "clientId": 6,
+      "userId": 2
+    },
+    {
+      "id": 11,
+      "date": "03/14/2019",
+      "cost": "54",
+      "note": "real weird and i love it. i got to shave one side of her head today!",
+      "rating": 5,
+      "clientId": 7,
+      "userId": 2
+    },
+    {
+      "id": 14,
+      "date": "03/03/2019",
+      "cost": "205",
+      "note": "amazing short hair. Today we bleached out the front fringe section and colored with pulp riot seaglass",
+      "rating": 5,
+      "clientId": 10,
+      "userId": 2
+    },
+    {
+      "id": 15,
+      "date": "04/06/2019",
+      "cost": "74",
+      "note": "little trim. crystal clear shine treatment.",
+      "rating": 5,
+      "clientId": 11,
+      "userId": 2
+    },
+    {
+      "id": 16,
+      "date": "04/22/2019",
+      "cost": "64",
+      "note": "gorgeous thick long hair. simple trim with blowout took 1.5 hours. schedule more time next appt.",
+      "rating": 4,
+      "clientId": 12,
+      "userId": 2
+    },
+    {
+      "id": 17,
+      "date": "05/20/2019",
+      "cost": "200",
+      "note": "Natural Level: 5.Color over old highlights from another stylist. Two parts: 1) color fill with Wella CT 7/43, 1:2, 20 min; add Olaplex; 2) after rinsed and dried, Wella CT 5/71 with 1.9%, 1:2, 20 min",
+      "rating": 5,
+      "clientId": 13,
+      "userId": 2
+    },
+    {
+      "id": 18,
+      "date": "10/02/2019",
+      "cost": "54",
+      "note": "Loved color from last time; barely faded. Just a trim to keep ends healthy",
+      "rating": 5,
+      "clientId": 13,
+      "userId": 2
+    },
+    {
+      "id": 19,
+      "date": "06/27/2019",
+      "cost": "100",
+      "note": "natural level 7 with highlights. wants to cover highlights and go to a rich chocolate brown. wella ct 5/73, 1.9%, 25 minutes.",
+      "rating": 5,
+      "clientId": 14,
+      "userId": 2
+    },
+    {
+      "id": 20,
+      "date": "07/07/2019",
+      "cost": "74",
+      "note": "she came in with super slicked back hair in a high bun. lots of damage due to the tightness of the bands. super dry. Gave her a deep conditioning treatment to take home. she would NOT let me wash her hair. just minor trim. ",
+      "rating": 3,
+      "clientId": 15,
+      "userId": 2
+    },
+    {
+      "id": 21,
+      "date": "11/27/2019",
+      "cost": "95",
+      "note": "natural level 5, 25% grey. root: wella kp 6/01, 20 vol, 1:1, 40 min; refresh at bowl: wella ct, 1.9%, 1:2, 10 min, 6/71",
+      "rating": 5,
+      "clientId": 16,
+      "userId": 2
+    },
+    {
+      "id": 22,
+      "date": "12/10/2019",
+      "cost": "54",
+      "note": "long to short haircut. she wanted something very specific. the inspo pic was a fine, thin haired pixie. she has 3 heads of hair. it took an hour and a half and even with all the tricks int he book, i couldn't get it to work 'just' right. next time, show a picture of someone with her type of hair as a pixie. she was happy though.",
+      "rating": 3,
+      "clientId": 17,
+      "userId": 2
+    },
+    {
+      "id": 23,
+      "date": "12/11/2019",
+      "cost": "154",
+      "note": "Natural Level: 7, grey 50%. Roots: Wella KP 7/03 20 vol, 1:1; Mid-ends: Wella CT 7/71, 1.9% 1:2. simple trim on bob. no layer, textured.",
+      "rating": 4,
+      "clientId": 18,
+      "userId": 2
+    },
+    {
+      "id": 24,
+      "date": "12/14/2019",
+      "cost": "74",
+      "note": "super long hair. trim length and overhaul layers.",
+      "rating": 5,
+      "clientId": 19,
+      "userId": 2
+    },
+    {
+      "id": 25,
+      "date": "01/04/2020",
+      "cost": "100",
+      "note": "Natural Level: 3. Roots: Wella KP 3/0 20 vol, 1:1; Mid-ends: Wella CT 3/0+4/6, 1.9% 1:2",
+      "rating": 4,
+      "clientId": 20,
+      "userId": 2
+    },
+    {
+      "id": 26,
+      "date": "04/12/2020",
+      "cost": "229",
+      "note": "Natural Level: 3. Same roots as last time. Balayage gentle lift, heavy coverage; recolor mid-ends with Wella CT 6/71",
+      "rating": 5,
+      "clientId": 20,
+      "userId": 2
+    },
+    {
+      "id": 27,
+      "date": "05/11/2020",
+      "cost": "54",
+      "note": "curly! very creative and edgy shag cut! gorgeous. friends with alma's granddaughter.",
+      "rating": 5,
+      "clientId": 21,
+      "userId": 2
+    },
+    {
+      "id": 28,
+      "date": "07/02/2020",
+      "cost": "54",
+      "note": "says he gets his hair cut twice a year. very easy-going and interesting. works for nasa.",
+      "rating": 4,
+      "clientId": 22,
+      "userId": 2
+    },
+    {
+      "id": 29,
+      "date": "07/05/2020",
+      "cost": "54",
+      "note": "classic barbered bald fade. sides: 0-2; top: scissors. slightly round transistion, but mainly keep disconected.",
+      "rating": 5,
+      "clientId": 23,
+      "userId": 2
+    },
+    {
+      "id": 30,
+      "date": "10/01/2020",
+      "cost": "54",
+      "note": "he got the job in seattle. he loved the cut from last time, so keeping it the same.",
+      "rating": 5,
+      "clientId": 23,
+      "userId": 2
+    },
+    {
+      "id": 31,
+      "date": "08/22/2020",
+      "cost": "54",
+      "note": "super easy. basicaly one length, 2 everywhere. slightly taper the neck and sides. likes to fan out the front with styling product.",
+      "rating": 3,
+      "clientId": 24,
+      "userId": 2
+    },
+    {
+      "id": 32,
+      "date": "07/05/2020",
+      "cost": "54",
+      "note": "whoa! startling blue eyes! super thick moppy helmet hair. wants to keep it long-ish, but reduce bulk and feathering shape.",
+      "rating": 5,
+      "clientId": 25,
+      "userId": 2
+    },
+    {
+      "id": 34,
+      "date": "05/30/2019",
+      "cost": "54",
+      "note": "Medium curly--he uses a ton of gel and slicks it back and puts in ponytail. no no no. Try to ease into new direction.",
+      "rating": 3,
+      "clientId": 27,
+      "userId": 2
+    },
+    {
+      "id": 35,
+      "date": "08/02/2019",
+      "cost": "54",
+      "note": "He let me cut off the ponytail completely this time! Looks almost perfect. I hesitate to cut it as short as I think will look good. Maybe next time.",
+      "rating": 4,
+      "clientId": 27,
+      "userId": 2
+    },
+    {
+      "id": 36,
+      "date": "11/15/2019",
+      "cost": "54",
+      "note": "seems like a new person. confidence is through the roof. wife said she loves it! we're taking the plunge with shorter sides/back and longer on top. still scissors. shortest is about 3/4inch to 1 1/2 inch on sides/back; top is longer, 2.5-3 inches and blended to allow easy hair days.",
+      "rating": 5,
+      "clientId": 27,
+      "userId": 2
+    },
+    {
+      "id": 37,
+      "date": "02/03/2020",
+      "cost": "54",
+      "note": "repeat last time. he's a lifer.",
+      "rating": 5,
+      "clientId": 27,
+      "userId": 2
+    },
+    {
+      "id": 38,
+      "date": "01/16/2020",
+      "cost": "54",
+      "note": "used to live in champaign and played dnd with my brother a few times. moved to texas; grad school at austin; moved to denver for job. married musician and now lives in nashville.",
+      "rating": 5,
+      "clientId": 28,
+      "userId": 2
+    },
+    {
+      "id": 39,
+      "date": "03/19/2020",
+      "cost": "54",
+      "note": "very particular about everything. ",
+      "rating": 4,
+      "clientId": 29,
+      "userId": 2
+    },
+    {
+      "id": 40,
+      "date": "09/09/2020",
+      "cost": "54",
+      "note": "So jovial! In a band touring company and passing through. Tipped $54 on a $54 haircut!!",
+      "rating": 5,
+      "clientId": 30,
+      "userId": 2
+    },
+    {
+      "id": 41,
+      "date": "05/08/2020",
+      "cost": "54",
+      "note": "long rockstar hair. simple trim",
+      "rating": 4,
+      "clientId": 31,
+      "userId": 2
+    },
+    {
+      "id": 42,
+      "date": "06/26/2020",
+      "cost": "30",
+      "note": "was happy with the last cut and wants more layers",
+      "rating": 5,
+      "clientId": 31,
+      "userId": 2
+    },
+    {
+      "id": 43,
+      "date": "02/09/2019",
+      "cost": "54",
+      "note": "shaved sides and super disconected top. like exagerated texture and pieciness.",
+      "rating": 5,
+      "clientId": 32,
+      "userId": 2
+    },
+    {
+      "id": 44,
+      "date": "04/18/2019",
+      "cost": "54",
+      "note": "passing through on a roadtrip to Glacier Natl Park. simple cut.",
+      "rating": 4,
+      "clientId": 33,
+      "userId": 2
+    },
+    {
+      "id": 45,
+      "date": "05/03/2019",
+      "cost": "54",
+      "note": "barbered through and through. not quite bald fade.",
+      "rating": 5,
+      "clientId": 34,
+      "userId": 2
+    },
+    {
+      "id": 46,
+      "date": "06/20/2020",
+      "cost": "54",
+      "note": "loves a bowl cut.",
+      "rating": 5,
+      "clientId": 35,
+      "userId": 2
+    },
+    {
+      "id": 48,
+      "date": "07/23/2020",
+      "cost": "54",
+      "note": "It's been almost a year since I saw her last. She has crazy crazy crazy split ends and wants to keep as much length as possible. I recommend a healthy and conservative chop of 4 inches. She agrees to 3. I did my best.",
+      "rating": 4,
+      "clientId": 14,
+      "userId": 2
+    },
+    {
+      "id": 49,
+      "date": "08/24/2020",
+      "cost": "54",
+      "note": "Traveler. Doesn't live here",
+      "rating": 4,
+      "clientId": 33,
+      "userId": 2
+    },
+    {
+      "id": 50,
+      "date": "10/01/2020",
+      "cost": "54",
+      "note": "Returned for another visit before going to Tanzania! Referred by Rob Tucker.",
+      "rating": 5,
+      "clientId": 33,
+      "userId": 2
+    },
+    {
+      "id": 51,
+      "date": "05/15/2020",
+      "cost": "54",
+      "note": "basically bowl cut with shaved undercut.",
+      "rating": 5,
+      "clientId": 35,
+      "userId": 2
+    },
+    {
+      "id": 52,
+      "date": "06/02/2020",
+      "cost": "54",
+      "note": "wild curly hair! she likes to try to reduce the curls and make it look flat. i talked her into trying something new. lots of round layers and face framing and bangs! it is so cute. she says it may take awhile to adjust to styling the curls with body.",
+      "rating": 5,
+      "clientId": 17,
+      "userId": 2
+    },
+    {
+      "id": 53,
+      "date": "05/05/2020",
+      "cost": "54",
+      "note": "has growing out white-blonde color. will be back to color later. soft pixie cut with lots of texture",
+      "rating": 5,
+      "clientId": 6,
+      "userId": 2
+    },
+    {
+      "id": 54,
+      "date": "07/25/2020",
+      "cost": "250",
+      "note": "natural level 7. double process blonding: wella blondor, 20vol roots.second round to get alllll the yellow gone. followed by pulp riot silver toner. fantastic!",
+      "rating": 5,
+      "clientId": 6,
+      "userId": 2
+    },
+    {
+      "id": 55,
+      "date": "04/15/2020",
+      "cost": "54",
+      "note": "sweet little gran! came here last year but then forgot my name and was too embarassed to call and ask without it! simple uniform cut, leave the bangs long. hip surgery next week.",
+      "rating": 5,
+      "clientId": 2,
+      "userId": 2
+    },
+    {
+      "id": 56,
+      "date": "06/17/2020",
+      "cost": "54",
+      "note": "recovering well from hip surgery. lives nearby so she walked in today. wanted to try some new shaping with the back. ",
+      "rating": 5,
+      "clientId": 2,
+      "userId": 2
+    },
+    {
+      "id": 57,
+      "date": "08/20/2020",
+      "cost": "54",
+      "note": "Loves the new shape, just wants to keep looking fresh. granddaughter thinks the hair change is really awesome.",
+      "rating": 5,
+      "clientId": 2,
+      "userId": 2
+    },
+    {
+      "id": 58,
+      "date": "12/02/2019",
+      "cost": "74",
+      "note": "beautiful long hair. she let me cut heavy bangs and it's gorgeous. shine treatment: redken shades crystal clear.",
+      "rating": 5,
+      "clientId": 11,
+      "userId": 2
+    },
+    {
+      "id": 59,
+      "date": "06/04/2020",
+      "cost": "54",
+      "note": "past color grew out so nicely. retouched roots and did a big chop to have a lob.",
+      "rating": 5,
+      "clientId": 13,
+      "userId": 2
+    },
+    {
+      "date": "10/28/2020",
+      "cost": "50",
+      "note": "wanted to keep the front long to cover a scar",
+      "rating": 4,
+      "clientId": 40,
+      "userId": 2,
+      "id": 62
+    },
+    {
+      "id": 63,
+      "date": "10/30/2020",
+      "cost": "155",
+      "note": "keratin treatment",
+      "rating": 5,
+      "clientId": 41,
+      "userId": 2
+    },
+    {
+      "date": "10/28/2020",
+      "cost": "54",
+      "note": "keeps hair long. asked for a trim to clean up the ends. no straight lines, only point cutting; extra texture cut at last 3 inches to give movement without layers. ",
+      "rating": 5,
+      "clientId": 37,
+      "userId": 2,
+      "id": 65
+    },
+    {
+      "date": "08/02/2020",
+      "cost": "54",
+      "note": "she loved her color last time and it shows. she took care of it and used the right products. just needed to clean up her ends and layers especially. lots of texture.",
+      "rating": 5,
+      "clientId": 1,
+      "userId": 2,
+      "id": 66
+    },
+    {
+      "date": "06/18/2020",
+      "cost": "54",
+      "note": "simple bob. she wanted the line really clean AND she also wanted layers. i tried to explain that those are contradictory, but she wasn't very receptive. my quest for clarity seemed to put her on edge. at that point i just grabbed my phone and pulled up two pictures and asked which she liked more and why. that was a solid recovery. i debulked and gave interior layers with my texture scissors. this was the ticket.",
+      "rating": 3,
+      "clientId": 3,
+      "userId": 2,
+      "id": 68
+    },
+    {
+      "date": "08/29/2020",
+      "cost": "5",
+      "note": "clip the claws",
+      "rating": 3,
+      "clientId": 38,
+      "userId": 1,
+      "id": 69
+    },
+    {
+      "date": "08/29/2020",
+      "cost": "5",
+      "note": "claw clipping season",
+      "rating": 5,
+      "clientId": 39,
+      "userId": 1,
+      "id": 70
+    },
+    {
+      "date": "09/15/2020",
+      "cost": "15",
+      "note": "brush out fur mats built up around back legs. he did NOT like that. tried to bite me a few times. didn't tip.",
+      "rating": 4,
+      "clientId": 38,
+      "userId": 1,
+      "id": 72
+    },
+    {
+      "id": 73,
+      "date": "10/16/2020",
+      "cost": "54",
+      "note": "awesome person! loves halloween as much as i do. does her own costuming as well. \nstandard tousled shag cut.",
+      "rating": 4,
+      "clientId": 43,
+      "userId": 1
+    },
+    {
+      "id": 74,
+      "date": "11/1/2020",
+      "cost": "54",
+      "note": "first visit",
+      "rating": 5,
+      "clientId": 43,
+      "userId": 1
+    },
+    {
+      "id": 75,
+      "date": "10/7/2020",
+      "cost": "54",
+      "note": "fhsdf",
+      "rating": 3,
+      "clientId": 43,
+      "userId": 1
+    },
+    {
+      "date": "10/2/2020",
+      "cost": "54",
+      "note": "tu",
+      "rating": 4,
+      "clientId": 4,
+      "userId": 2,
+      "id": 76
+    },
+    {
+      "date": "11/7/2020",
+      "cost": "54",
+      "note": "rthws",
+      "rating": 2,
+      "clientId": 14,
+      "userId": 2,
+      "id": 77
+    }
+  ]
+}

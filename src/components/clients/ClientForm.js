@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./ClientForm.css";
+import { ImageTestApp } from "../cloudinary/ImageTest";
 
 export const ClientForm = () => {
   const { addClient, getClientById, editClient } = useContext(ClientContext);
@@ -57,7 +58,7 @@ export const ClientForm = () => {
   }, []);
 
   const constructClientObject = () => {
-    if (client === 0) {
+    if (client.phone === "") {
       window.alert("please fill all fields")
     } else {
     setIsLoading(true);
@@ -70,6 +71,7 @@ export const ClientForm = () => {
         email: client.email,
         phone: +client.phone,
         userId: activeUser,
+       
       })
         .then(() => history.push(`/client-history/${client.id}`))
         .then(() => setClient({}));
@@ -82,6 +84,7 @@ export const ClientForm = () => {
         email: client.email,
         phone: +client.phone,
         userId: activeUser,
+
       })
       .then((clientObj) => history.push(`/client-history/${clientObj.id}`))        
     }

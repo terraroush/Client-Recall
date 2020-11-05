@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./ClientForm.css";
-import { ImageTestApp } from "../cloudinary/ImageTest";
 
 export const ClientForm = () => {
   const { addClient, getClientById, editClient } = useContext(ClientContext);

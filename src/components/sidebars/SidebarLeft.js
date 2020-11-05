@@ -15,6 +15,8 @@ export const SidebarLeft = () => {
 
             <button className="cursive sidenavButton" id="search" onClick={() => history.push("/client-history/search")}>search</button>
 
+            <button className="cursive sidenavButton" id="addPhoto" onClick={() => history.push("/client-photos/create")}>add photo</button>
+
             <button className="cursive sidenavButton" id="clientBook" onClick={() => history.push("/clients")}>client book</button>
             
         </div>

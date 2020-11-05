@@ -63,7 +63,7 @@ export const PhotoProvider = props => {
 
     return (
         <PhotoContext.Provider value={{
-            photos, getPhotos, addPhoto, getPhotoById, deletePhoto, editPhoto, searchTerms, setSearchTerms, getPhotosByUserId, getPhotosByClientId, getPhotosByVisitId
+            photos, getPhotos, addPhoto, getPhotoById, deletePhoto, editPhoto, getPhotosByUserId, getPhotosByClientId, getPhotosByVisitId
         }}>
             {props.children}
         </PhotoContext.Provider>

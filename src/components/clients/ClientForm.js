@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { ClientContext } from "./ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./ClientForm.css";
@@ -14,12 +14,35 @@ export const ClientForm = () => {
 
   const { clientId } = useParams();
   const history = useHistory();
+  const email = useRef();
+  const existDialog = useRef();
+
+  const existingClientCheck = () => {
+    return fetch(
+      `http://localhost:8088/clients?email=${client.email}`
+    )
+      .then((res) => res.json())
+      .then((client) => (client.length ? client[0] : false));
+  };
 
   const handleControlledInputChange = (event) => {
     const newClient = { ...client };
     newClient[event.target.name] = event.target.value;
     setClient(newClient);
   };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    
+    existingClientCheck().then((exists) => {
+      if (exists) {
+        existDialog.current.showModal();
+      } else {
+        constructClientObject() 
+      }
+      
+    })
+  }
 
   // If clientId is in the URL, getClientById
   useEffect(() => {
@@ -34,6 +57,9 @@ export const ClientForm = () => {
   }, []);
 
   const constructClientObject = () => {
+    if (client === 0) {
+      window.alert("please fill all fields")
+    } else {
     setIsLoading(true);
     if (clientId) {
       
@@ -59,16 +85,25 @@ export const ClientForm = () => {
       })
       .then((clientObj) => history.push(`/client-history/${clientObj.id}`))        
     }
+  }
   };
 
   return (
+    <>
+    <dialog className="dialog dialog--auth" ref={existDialog}>
+        <div>client already stored with that email</div>
+        <button
+          className="cursive button--close"
+          onClick={(e) => existDialog.current.close()}
+        >
+          close
+        </button>
+      </dialog>
+
     <div className="formContainer1">
       <form
         className="clientForm"
-        onSubmit={(event) => {
-          event.preventDefault();
-          constructClientObject();
-        }}
+        onSubmit={handleLogin}
       >
         <fieldset>
           <legend>
@@ -108,6 +143,7 @@ export const ClientForm = () => {
           <div className="form-group email">
             <label htmlFor="clientEmail">email: </label>
             <input
+              ref={email}
               type="email"
               id="clientEmail"
               name="email"
@@ -122,7 +158,7 @@ export const ClientForm = () => {
           <div className="form-group phone">
             <label htmlFor="clientPhone">phone: </label>
             <input
-              type="text"
+              type="number"
               id="clientPhone"
               name="phone"
               required
@@ -143,5 +179,6 @@ export const ClientForm = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };

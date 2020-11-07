@@ -1,37 +1,28 @@
 import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
+import {PhotoUpload} from "../photos/PhotoUpload"
 import { useHistory, useParams } from "react-router-dom";
 import "./VisitForm.css";
-// import { StarRating } from "../ratings/StarRating";
 
 export const VisitForm = () => {
   const { addVisit, getVisitById, editVisit } = useContext(VisitContext);
   const { clients, getClients } = useContext(ClientContext);
 
-  //for edit, hold on to state of visit in this view
   const [visit, setVisit] = useState({});
-  //wait for data before button is active
   const [isLoading, setIsLoading] = useState(true);
   const activeUser = parseInt(localStorage.getItem("activeUser"));
 
   const { visitId } = useParams();
   const history = useHistory();
 
-  //when field changes, update state. This causes a re-render and updates the view.
-  //Controlled component
+  
   const handleControlledInputChange = (event) => {
-    //When changing a state object or array,
-    //always create a copy to make changes, and then set state.
     const newVisit = { ...visit };
-    //visit is an object with properties.
-    //set the property to the new value
     newVisit[event.target.name] = event.target.value;
-    //update state
     setVisit(newVisit);
   };
 
-  // If visitId is in the URL, getVisitById
   useEffect(() => {
     getClients().then(() => {
       if (visitId) {
@@ -60,6 +51,7 @@ export const VisitForm = () => {
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,
+          photoUrl: localStorage.picture,
           clientId: +visit.clientId,
           userId: activeUser,
         })
@@ -74,6 +66,7 @@ export const VisitForm = () => {
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,
+          photoUrl: localStorage.picture,
           clientId: +visit.clientId,
           userId: activeUser,
         }).then(() => history.push(`/client-history/${visit.clientId}`));
@@ -88,7 +81,7 @@ export const VisitForm = () => {
         onSubmit={(event) => {
           event.preventDefault();
           constructVisitObject();
-          // setIsRatingActive(false)
+          localStorage.removeItem("picture")
         }}
       >
         <fieldset>
@@ -140,7 +133,7 @@ export const VisitForm = () => {
               type="text"
               id="cost"
               name="cost"
-              required
+              // required
               className="form-control"
               placeholder="cost"
               onChange={handleControlledInputChange}
@@ -156,29 +149,12 @@ export const VisitForm = () => {
               cols="40"
               id="note"
               name="note"
-              required
               className="form-control"
               placeholder="don't rely on your own memory! keep your notes here"
               onChange={handleControlledInputChange}
               defaultValue={visit.note}
             />
           </div>
-
-
-          {/* <div className="form-group2 ratingVisitForm">
-          <label htmlFor="rating">rating: </label>
-            <StarRating
-              required
-              onChange={handleControlledInputChange}
-              onClick={e => {
-                        setIsRatingActive(false)
-                        setRating(e.target.value)
-                        
-                    }}
-              checked={visit.rating === {rating}}
-              defaultValue={rating}
-            />
-          </div> */}
 
           <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
@@ -193,8 +169,10 @@ export const VisitForm = () => {
               onChange={handleControlledInputChange}
               defaultValue={visit.rating}
               />
-            
           </div>
+
+          <div><PhotoUpload /></div>
+          
         </fieldset>
 
         <button

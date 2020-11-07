@@ -13,14 +13,11 @@ import { VisitList } from "./visits/VisitList";
 import { ClientSearch } from "./clients/ClientSearch";
 import { VisitForm } from "./visits/VisitForm";
 import { UserProvider } from "./users/UserProvider";
-import { PhotoFormUpload } from "./photos/PhotoForm";
-import { PhotoProvider } from "./photos/PhotoProvider";
 
 export const AppViews = () => {
   return (
     <>
     <UserProvider>
-    <PhotoProvider>
       <ClientProvider>
         <VisitProvider>
           <Header />
@@ -34,6 +31,7 @@ export const AppViews = () => {
           <Route exact path="/clients">
             <ClientList />
           </Route>
+          
 
           <Route path="/clients/create">
             <ClientForm />
@@ -55,14 +53,6 @@ export const AppViews = () => {
             <VisitForm />
           </Route>
 
-          <Route exact path="/client-photos/edit/:visitId(\d+)">
-            <PhotoFormUpload />
-          </Route>
-
-          <Route exact path="/client-photos/create">
-            <PhotoFormUpload />
-          </Route>
-
           <Route exact path="/client-history/search">
             <ClientSearch />
           </Route>
@@ -71,7 +61,6 @@ export const AppViews = () => {
           <Footer />
         </VisitProvider>
       </ClientProvider>
-      </PhotoProvider>
       </UserProvider>
     </>
   );

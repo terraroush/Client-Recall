@@ -1,8 +1,6 @@
 import React, { useState, createContext } from "react"
 
-
 export const PhotoContext = createContext()
-
 
 export const PhotoProvider = props => {
     const [photos, setPhotos] = useState([])
@@ -34,29 +32,29 @@ export const PhotoProvider = props => {
             .then(setPhotos)
     }
 
-    const addPhoto = PhotoObj => {
+    const addPhoto = photoObj => {
         return fetch("http://localhost:8088/photos", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(PhotoObj)
-        })
-            .then(res => res.json())
-    }
-    const deletePhoto = PhotoId => {
-        return fetch(`http://localhost:8088/photos/${PhotoId}`, {
-            method: "DELETE"
+            body: JSON.stringify(photoObj)
         })
             .then(getPhotos)
     }
-    const editPhoto = Photo => {
-        return fetch(`http://localhost:8088/photos/${Photo.id}`, {
+    const deletePhoto = photoObj => {
+        return fetch(`http://localhost:8088/photos/${photoObj.id}`, {
+            method: "DELETE"
+        })
+            .then(getPhotosByClientId(photoObj.clientId))
+    }
+    const editPhoto = photo => {
+        return fetch(`http://localhost:8088/photos/${photo.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(Photo)
+            body: JSON.stringify(photo)
         })
             .then(getPhotos)
     }

@@ -2,96 +2,92 @@ import React, { useContext, useEffect, useState } from "react";
 import { PhotoContext } from "./PhotoProvider";
 import { ClientContext } from "../clients/ClientProvider";
 import { useHistory, useParams } from "react-router-dom";
+import { PhotoUpload } from "./PhotoUpload"
 
-export const PhotoFormUpload = () => {
+export const PhotoForm = () => {
   const { addPhoto, getPhotoById, editPhoto } = useContext(PhotoContext);
-//   const { clients, getClients } = useContext(ClientContext);
+  const { clients, getClients } = useContext(ClientContext);
 
-  //for edit, hold on to state of Photo in this view
-//   const [photo, setPhoto] = useState({});
-  const [selectedFile, setSelectedFile] = useState("")
-  const [fileInputState, setFileInputState] = useState("")
-  //wait for data before button is active
-//   const [isLoading, setIsLoading] = useState(true);
-//   const activeUser = parseInt(localStorage.getItem("activeUser"));
+  const [photo, setPhoto] = useState({});
+  const [client, setClient] = useState({})
+  const [isLoading, setIsLoading] = useState(true);
 
-//   const { photoId } = useParams();
-//   const history = useHistory();
+  const activeUser = parseInt(localStorage.getItem("activeUser"));
 
-//   const handleControlledInputChange = (event) => {
-//     const newPhoto = { ...photo };
-//     newPhoto[event.target.name] = event.target.value;
-//     setPhoto(newPhoto);
-//   };
+  const { photoId } = useParams();
+  const history = useHistory();
 
-  const handleFileInputChange = (e) => {
-    const file = e.target.files[0]
+
+  const handleControlledInputChange = (event) => {
+    const newPhoto = { ...photo };
+    newPhoto[event.target.name] = event.target.value;
+    setPhoto(newPhoto);
+  };
+
+  const resetFields = {
+    note: "",
+    photoUrl: "",
+    clientId: "",
   }
 
   // If PhotoId is in the URL, getPhotoById
-//   useEffect(() => {
-//     getClients().then(() => {
-//       if (photoId) {
-//         getPhotoById(photoId).then((photo) => {
-//           setPhoto(photo);
-//           setIsLoading(false);
-//         });
-//       } else {
-//         setIsLoading(false);
-//       }
-//     });
-//   }, []);
+  useEffect(() => {
+    getClients().then(() => {
+      if (photoId) {
+        getPhotoById(photoId).then((photo) => {
+          setPhoto(photo);
+          setIsLoading(false);
+        });
+      } else {
+        setIsLoading(false);
+      }
+    });
+  }, []);
 
-//   const constructPhotoObject = () => {
-//     if (!+photo.clientId) {
-//       window.alert("please select a client");
-//     } else {
-//       setIsLoading(true);
-//       if (photoId) {
-//         //PUT - update
-//         editPhoto({
-//           id: photo.id,
-//           description: photo.description,
-//           clientId: +photo.clientId,
-//           //   visitId: +photo.visitId,
-//           userId: activeUser,
-//         })
-//           .then(() => history.push(`/client-history/${photo.clientId}`))
-//           .then(() => setPhoto({}));
-//       } else {
-//         addPhoto({
-//           id: photo.id,
-//           description: photo.description,
-//           clientId: +photo.clientId,
-//           //   visitId: +photo.visitId,
-//           userId: activeUser,
-//         }).then(() => history.push(`/client-history/${photo.clientId}`));
-//       }
-//     }
-//   };
+  const constructPhotoObject = () => {
+    if (!+photo.clientId) {
+      window.alert("please select a client");
+    } else {
+      setIsLoading(true);
+      if (photoId) {
+        //PUT - update
+        editPhoto({
+          id: photo.id,
+          photoUrl: photo.photoUrl,
+          clientId: +photo.clientId,
+          visitId: +photo.visitId,
+          userId: activeUser,
+        })
+        // .then(() => history.push(`/client-history/${photo.clientId}`))
+        .then(() => setPhoto({}));
+      } else {
+        addPhoto({
+            id: photo.id,
+            photoUrl: localStorage.picture,
+            clientId: +photo.clientId,
+            visitId: +photo.visitId,
+            userId: activeUser,
+        })
+        .then(() => history.push(`/client-history/${photo.clientId}`)) 
+      }
+    }
+  };
 
   return (
     <div id="formContainer" className=" formContainer">
-      <h1>upload</h1>
       <form
         className="PhotoForm"
         onSubmit={(event) => {
           event.preventDefault();
-        //   constructPhotoObject();
-        }}
+          constructPhotoObject();
+          localStorage.removeItem("picture")
+          }}
       >
-        <input
-          type="file"
-          name="image"
-          onChange={handleFileInputChange}
-          value={fileInputState}
-          className="form-input"
-        />
-
-        {/* <fieldset>
+        <fieldset>
           <legend>
             <h2 className="cursive PhotoForm__title">
-              {PhotoId ? "exchange photo" : "add photo"}
+            add photo
+              {/* {photoId ? "edit photo" : "add photo"} */}
             </h2>
           </legend>
           <div className="form-group2 chooseClient">
@@ -100,7 +96,7 @@ export const PhotoFormUpload = () => {
               value={photo.clientId}
               name="clientId"
               required
-              id="photoClient"
+              id="PhotoClient"
               className="form-control"
               autoFocus
               onChange={handleControlledInputChange}
@@ -118,31 +114,15 @@ export const PhotoFormUpload = () => {
             </select>
           </div>
 
-          <div className="form-group2 notePhotoForm">
-            <label htmlFor="description">description: </label>
-            <textarea
-              type="textarea"
-              rows="4"
-              cols="40"
-              id="description"
-              name="description"
-              
-              className="form-control"
-              placeholder="what did you do?"
-              onChange={handleControlledInputChange}
-              defaultValue={photo.description}
-            />
-          </div>
-
-        </fieldset> */}
+          <PhotoUpload />
+        </fieldset>
 
         <button
           className="cursive btn btn-primary-photo"
-        //   disabled={isLoading} 
-          // Prevent browser from submitting the form
+          disabled={isLoading} // Prevent browser from submitting the form
           type="submit"
         >
-        submit
+          submit
           {/* {photoId ? "save photo" : "add photo"} */}
         </button>
       </form>

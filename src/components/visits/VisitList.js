@@ -11,13 +11,14 @@ import "./VisitList.css";
 export const VisitList = ({ client }) => {
   const { visits, getVisitsByClientId } = useContext(VisitContext);
   const { clients, getClients } = useContext(ClientContext);
+  
   const { clientId } = useParams();
   const activeUser = parseInt(localStorage.getItem("activeUser"));
   const history = useHistory();
 
   useEffect(() => {
     getClients().then(() => {
-      getVisitsByClientId(clientId);
+      getVisitsByClientId(clientId)     
     });
   }, []);
 
@@ -58,6 +59,7 @@ export const VisitList = ({ client }) => {
             }
           })}
       </div>
+      
     </article>
   );
 };

@@ -31,6 +31,7 @@ export const AppViews = () => {
           <Route exact path="/clients">
             <ClientList />
           </Route>
+          
 
           <Route path="/clients/create">
             <ClientForm />

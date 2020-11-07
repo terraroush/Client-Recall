@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./VisitCard.css";
-// import { StarRating } from "../ratings/StarRating";
 
 export const VisitCard = ({ visit }) => {
   const { deleteVisit, getVisitsByClientId } = useContext(VisitContext);
@@ -12,7 +11,8 @@ export const VisitCard = ({ visit }) => {
 
 
   useEffect(() => {
-    getVisitsByClientId(clientId).then((response) => {
+    getVisitsByClientId(clientId)
+      .then((response) => {
       setVisit(response);
       
     });
@@ -24,8 +24,8 @@ export const VisitCard = ({ visit }) => {
         <h4 className="visit__date">{visit.date}</h4>
         <div className="visit__cost">${visit.cost}</div>
         <div className="visit__note">{visit.note}</div>
-        <div className="visit__rating">rating: {visit.rating}
-        </div>
+        <div className="visit__rating">rating: {visit.rating}</div>
+        <img className="visit__photo" src={visit.photoUrl} style={{width: "200px"}}/>
       </section>
       <button
         className="cursive"

@@ -17,6 +17,7 @@
     min-height: 5em;
     max-height: 20em;
     overflow: auto;
+    background-color: white;
 }
 
 .visit__date {

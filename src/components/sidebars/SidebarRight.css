@@ -1,17 +1,15 @@
 #sidebar-right {
+
     height: 100vh;
     overflow: auto;
     background:rgba(255,204,153,1);
-    width: 100%;
+  }
+  
+  .rightSideContainer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
   
-  #content {
-    display: flex;
-    flex-direction: column;
-    background:rgba(255,204,153,1);
-    width: 100%;
-    align-items: center;
-  }
   
  

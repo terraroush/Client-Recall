@@ -1,0 +1,40 @@
+.User-formContainer {
+    max-width: 5em;
+}
+
+.user-fieldset {
+    margin-left: -80px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+    justify-content: center;
+}
+
+.userForm__title {
+    grid-area: one;
+}
+.usernameUserForm {
+    display: flex;
+    flex-direction: column;
+    grid-area: two;
+}
+.emailUserForm {
+    display: flex;
+    flex-direction: column;
+    grid-area: three;
+}
+.UploudDiv {
+    grid-area: four;
+}
+.btn-primary-User {
+    grid-area: five;
+}
+
+

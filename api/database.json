@@ -3,12 +3,14 @@
     {
       "id": 1,
       "username": "carly",
-      "email": "carly@me.com"
+      "email": "carly@me.com",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604786847/roush/osthokvwcweq7rtby4ao.jpg"
     },
     {
       "id": 2,
       "username": "terra",
-      "email": "terra@me.com"
+      "email": "terra.roush@gmail.com",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604795841/roush/bwkqnkaie2tzeicqewf4.jpg"
     }
   ],
   "clients": [
@@ -78,10 +80,9 @@
     {
       "id": 10,
       "firstName": "Olive",
-      "lastName": "Clay",
-      "email": "ocl@me.com",
+      "lastName": "Bryant",
+      "email": "obr@me.com",
       "phone": 3038887777,
-      "picUrl": "",
       "userId": 2
     },
     {
@@ -310,15 +311,6 @@
       "userId": 2
     },
     {
-      "firstName": "Sam",
-      "lastName": "Ed",
-      "email": "sed@me.com",
-      "phone": 1111111111,
-      "picUrl": "",
-      "userId": 2,
-      "id": 37
-    },
-    {
       "id": 38,
       "firstName": "George",
       "lastName": "Roush",
@@ -373,12 +365,19 @@
       "userId": 1
     },
     {
-      "id": 45,
-      "firstName": "Jamie",
-      "lastName": "Mitchell",
-      "email": "j@mitch.com",
+      "id": 46,
+      "firstName": "Scott",
+      "lastName": "Roush",
+      "email": "scott@roush.com",
+      "phone": 4147777777,
+      "userId": 2
+    },
+    {
+      "id": 47,
+      "firstName": "Julie",
+      "lastName": "Dietrich",
+      "email": "j@d.com",
       "phone": 1111111111,
-      "picUrl": "",
       "userId": 2
     }
   ],
@@ -515,7 +514,7 @@
     },
     {
       "id": 18,
-      "date": "11/8/2019",
+      "date": "1/10/2020",
       "cost": "54",
       "note": "Loved color from last time; barely faded. Just a trim to keep ends healthy",
       "rating": 5,
@@ -932,16 +931,6 @@
       "userId": 2
     },
     {
-      "date": "10/28/2020",
-      "cost": "54",
-      "note": "keeps hair long. asked for a trim to clean up the ends. no straight lines, only point cutting; extra texture cut at last 3 inches to give movement without layers. ",
-      "rating": 5,
-      "photoUrl": "",
-      "clientId": 37,
-      "userId": 2,
-      "id": 65
-    },
-    {
       "date": "08/02/2020",
       "cost": "54",
       "note": "she loved her color last time and it shows. she took care of it and used the right products. just needed to clean up her ends and layers especially. lots of texture.",
@@ -962,14 +951,14 @@
       "id": 68
     },
     {
-      "date": "08/29/2020",
+      "id": 69,
+      "date": "10/23/2020",
       "cost": "5",
       "note": "clip the claws",
-      "rating": 3,
-      "photoUrl": "",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604787207/roush/lhxhnxyfxpvcvgfpchh2.jpg",
       "clientId": 38,
-      "userId": 1,
-      "id": 69
+      "userId": 1
     },
     {
       "date": "08/29/2020",
@@ -1003,11 +992,11 @@
     },
     {
       "id": 74,
-      "date": "11/1/2020",
+      "date": "11/3/2020",
       "cost": "54",
-      "note": "first visit",
+      "note": "first visit. gentle copper balayage.",
       "rating": 5,
-      "photoUrl": "",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604787257/roush/xpuc3q60etnsgyi2bm7q.jpg",
       "clientId": 43,
       "userId": 1
     },
@@ -1070,99 +1059,46 @@
       "clientId": 36,
       "userId": 2,
       "id": 80
-    }
-  ],
-  "photos": [
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604620875/roush/clczpgrjffkodcyg3oyk.jpg",
-      "note": "fingers crossed",
-      "clientId": 20,
-      "visitId": 25,
-      "userId": 2,
-      "id": 2
     },
     {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604629395/roush/wupbo58ixqu7pdojnzz2.jpg",
-      "note": "back view",
-      "clientId": 20,
-      "visitId": 25,
+      "date": "7/24/2020",
+      "cost": "0",
+      "note": "just a trim before the parents visit",
+      "rating": 4.5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604716221/roush/et61ttfdb9v0po0ids8h.jpg",
+      "clientId": 46,
       "userId": 2,
-      "id": 3
+      "id": 81
     },
     {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604629463/roush/nouiuzo4651xrzoxszei.jpg",
-      "clientId": 20,
-      "visitId": 25,
+      "date": "10/31/2020",
+      "cost": "0",
+      "note": "finally cut it all off! used a 2 on the sides up to zone 3. had a tough time blending past that point because of his baby-fine hair. perhaps next time i'll take the 2 higher...",
+      "rating": 4,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604716462/roush/dfi7rfk2ap9tiiargzhi.jpg",
+      "clientId": 46,
       "userId": 2,
-      "id": 4
+      "id": 82
     },
     {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604633050/roush/ym9s8vtexxbbyom9ige9.jpg",
-      "note": "transformation!",
-      "clientId": 13,
-      "visitId": 17,
+      "date": "7/9/2013",
+      "cost": "150",
+      "note": "on a path to get back to natural silver. heavy foils to break up old color.",
+      "rating": 4.5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604773526/roush/xjxlaoki01jea7ztklup.jpg",
+      "clientId": 47,
       "userId": 2,
-      "id": 5
+      "id": 83
     },
     {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604633168/roush/r8zi2xbpqzclevxfph3i.jpg",
-      "note": "the big chop",
-      "clientId": 5,
-      "visitId": 8,
+      "date": "2/19/2014",
+      "cost": "220",
+      "note": "double heavy foil highlights to fully break up old color. well color touch 7/89 all over 30 minutes.",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604776105/roush/kacswmml6wikggk5bdvo.jpg",
+      "clientId": 47,
       "userId": 2,
-      "id": 6
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604633211/roush/zvna1cbj4goja8c3m9x5.jpg",
-      "clientId": 5,
-      "visitId": 8,
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604633953/roush/djkyphrgh1cgayy7g08q.jpg",
-      "note": "what a mane!",
-      "clientId": 19,
-      "visitId": 24,
-      "userId": 2,
-      "id": 8
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604634160/roush/j0ksxscthcjtzzun8kdy.jpg",
-      "clientId": 4,
-      "visitId": 7,
-      "userId": 2,
-      "id": 9
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604634683/roush/jitssiaudoapjdy2gkxp.jpg",
-      "note": "love pulp riot colors!",
-      "clientId": 10,
-      "visitId": 14,
-      "userId": 2,
-      "id": 10
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604634941/roush/xwp3sb3pi3sbwphqjd7x.jpg",
-      "clientId": 10,
-      "visitId": 14,
-      "userId": 2,
-      "id": 11
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604635189/roush/inczmwwdth8c7yhobm7f.jpg",
-      "note": "much better",
-      "clientId": 27,
-      "visitId": 19,
-      "userId": 2,
-      "id": 13
-    },
-    {
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604695745/roush/uzthikdgnnpxrplndnii.jpg",
-      "clientId": 10,
-      "visitId": 49,
-      "userId": 2,
-      "id": 15
+      "id": 84
     }
   ]
 }

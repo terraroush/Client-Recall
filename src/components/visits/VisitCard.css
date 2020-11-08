@@ -1,9 +1,10 @@
 .visitCard {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 1fr auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
         "one one two"
+        "three four ."
         "three four ."
         "three five ."
         ;
@@ -12,9 +13,10 @@
     box-shadow: grey;
     margin: .5em;
     padding: .5em;
-    max-width: 80%;
+    max-width: 60em;
+    min-width: 60em;
     min-height: 20em;
-    max-height: 20em;
+    max-height: 21em;
     overflow: auto;
     background-color: white;
 }
@@ -35,9 +37,10 @@
 .visit__note {
     grid-area: four;
     min-height: 6em;
-    max-height: 6em;
+    max-height: 10em;
     overflow: auto;
     margin: 1.5em;
+    /* font-size: 14px; */
 }
 
 .visit__rating {

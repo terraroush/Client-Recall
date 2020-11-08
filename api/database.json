@@ -293,15 +293,6 @@
       "userId": 2
     },
     {
-      "id": 35,
-      "firstName": "Brandon",
-      "lastName": "Hogan",
-      "email": "bho@me.com",
-      "phone": 3031112222,
-      "picUrl": "",
-      "userId": 2
-    },
-    {
       "id": 36,
       "firstName": "Lance",
       "lastName": "Davis",
@@ -713,11 +704,11 @@
     },
     {
       "id": 39,
-      "date": "03/19/2020",
+      "date": "4/23/2020",
       "cost": "54",
       "note": "very particular about everything. ",
       "rating": 4,
-      "photoUrl": "",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604859629/roush/hbuwwr0070tvnekg08jl.jpg",
       "clientId": 29,
       "userId": 2
     },
@@ -782,16 +773,6 @@
       "userId": 2
     },
     {
-      "id": 46,
-      "date": "06/20/2020",
-      "cost": "54",
-      "note": "loves a bowl cut.",
-      "rating": 5,
-      "photoUrl": "",
-      "clientId": 35,
-      "userId": 2
-    },
-    {
       "id": 48,
       "date": "07/23/2020",
       "cost": "54",
@@ -819,16 +800,6 @@
       "rating": 5,
       "photoUrl": "",
       "clientId": 33,
-      "userId": 2
-    },
-    {
-      "id": 51,
-      "date": "05/15/2020",
-      "cost": "54",
-      "note": "basically bowl cut with shaved undercut.",
-      "rating": 5,
-      "photoUrl": "",
-      "clientId": 35,
       "userId": 2
     },
     {

@@ -5,7 +5,6 @@ import { Card, Icon, Image } from 'semantic-ui-react'
 import "./UserCard.css"
 import { TotalClients } from "../clients/TotalClients"
 import { AveRating } from "../ratings/AveRating"
-import { PhotoUpload } from "../photos/PhotoUpload"
 
 export const UserCard = ({user}) => {
   const {users, getUsers} = useContext(UserContext)

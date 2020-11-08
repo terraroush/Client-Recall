@@ -10,3 +10,8 @@
     width: 100%;
     text-align: center;
 }
+
+#colorThis {
+    background-color: white;
+    padding: .1em;
+}

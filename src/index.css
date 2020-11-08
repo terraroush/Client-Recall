@@ -3,17 +3,13 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Raleway', sans-serif;
-
 }
 
 #root {
   display: grid;
   grid-template-columns: 130px auto 220px;
-  grid-gap: 1em;
+  grid-gap: .4em;
   font-family: 'Raleway', sans-serif;
-
-  /* padding-bottom: 60px; */
-
 }
 
 .page--header, footer {
@@ -29,7 +25,7 @@ html, body {
 
 body {
   margin: 0 auto;
-  max-width: 100%;
+  /* max-width: 100%; */
   padding: 1em 0;
 }
 

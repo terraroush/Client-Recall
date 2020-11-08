@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
-import {PhotoUpload} from "../photos/PhotoUpload"
+import { PhotoUpload } from "../photos/PhotoUpload";
 import { useHistory, useParams } from "react-router-dom";
 import "./VisitForm.css";
 
@@ -16,7 +16,6 @@ export const VisitForm = () => {
   const { visitId } = useParams();
   const history = useHistory();
 
-  
   const handleControlledInputChange = (event) => {
     const newVisit = { ...visit };
     newVisit[event.target.name] = event.target.value;
@@ -55,8 +54,8 @@ export const VisitForm = () => {
           clientId: +visit.clientId,
           userId: activeUser,
         })
-        .then(() => history.push(`/client-history/${visit.clientId}`))
-        .then(() => setVisit({}));
+          .then(() => history.push(`/client-history/${visit.clientId}`))
+          .then(() => setVisit({}));
       } else {
         addVisit({
           id: visit.id,
@@ -81,7 +80,7 @@ export const VisitForm = () => {
         onSubmit={(event) => {
           event.preventDefault();
           constructVisitObject();
-          localStorage.removeItem("picture")
+          localStorage.removeItem("picture");
         }}
       >
         <fieldset>
@@ -102,15 +101,21 @@ export const VisitForm = () => {
               onChange={handleControlledInputChange}
             >
               <option value="0">select client</option>
-              {clients.map((client) => {
-                if (client.userId === activeUser) {
-                  return (
-                    <option key={client.id} value={client.id}>
-                      {client.firstName}
-                    </option>
-                  );
-                }
-              })}
+              {clients
+                .sort((a, b) =>
+                  a.lastName
+                    .toUpperCase()
+                    .localeCompare(b.lastName.toUpperCase())
+                )
+                .map((client) => {
+                  if (client.userId === activeUser) {
+                    return (
+                      <option key={client.id} value={client.id}>
+                        {client.firstName + " " + client.lastName}
+                      </option>
+                    );
+                  }
+                })}
             </select>
           </div>
 
@@ -133,7 +138,6 @@ export const VisitForm = () => {
               type="text"
               id="cost"
               name="cost"
-              // required
               className="form-control"
               placeholder="cost"
               onChange={handleControlledInputChange}
@@ -158,7 +162,7 @@ export const VisitForm = () => {
 
           <div className="form-group2 ratingVisitForm">
             <label htmlFor="rating">rating: </label>
-            
+
             <input
               type="text"
               id="rating"
@@ -168,11 +172,12 @@ export const VisitForm = () => {
               placeholder="rate your service 1-5"
               onChange={handleControlledInputChange}
               defaultValue={visit.rating}
-              />
+            />
           </div>
 
-          <div><PhotoUpload /></div>
-          
+          <div>
+            <PhotoUpload />
+          </div>
         </fieldset>
 
         <button

@@ -107,14 +107,14 @@ export const ClientForm = () => {
         className="clientForm"
         onSubmit={handleLogin}
       >
-        <fieldset>
+        <fieldset className="gridThis">
           <legend>
             <h2 className="cursive clientForm__title">
               {clientId ? "edit client" : "add client"}
             </h2>
           </legend>
           <div className="form-group first">
-            <label htmlFor="firstName">first name: </label>
+            <label className="client-label" htmlFor="firstName">first name: </label>
             <input
               type="text"
               id="firstName"
@@ -129,7 +129,7 @@ export const ClientForm = () => {
           </div>
         
           <div className="form-group last">
-            <label htmlFor="lastName">last name: </label>
+            <label className="client-label" htmlFor="lastName">last name: </label>
             <input
               type="text"
               id="lastName"
@@ -143,7 +143,7 @@ export const ClientForm = () => {
           </div>
         
           <div className="form-group email">
-            <label htmlFor="clientEmail">email: </label>
+            <label className="client-label" htmlFor="clientEmail">email: </label>
             <input
               ref={email}
               type="email"
@@ -158,7 +158,7 @@ export const ClientForm = () => {
           </div>
        
           <div className="form-group phone">
-            <label htmlFor="clientPhone">phone: </label>
+            <label className="client-label" htmlFor="clientPhone">phone: </label>
             <input
               type="number"
               id="clientPhone"
@@ -177,7 +177,7 @@ export const ClientForm = () => {
           disabled={isLoading} // Prevent browser from submitting the form
           type="submit"
         >
-          {clientId ? "save client" : "add client"}
+          {clientId ? "save client" : "submit"}
         </button>
       </form>
     </div>

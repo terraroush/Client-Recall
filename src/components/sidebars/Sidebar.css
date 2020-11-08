@@ -8,8 +8,6 @@
     height: 3.5em;
     font-size: 1.25em; 
     color: black; 
-    border-radius: .75em; /* Rounded corners on the top right and bottom right side */
-    border: none;
     text-align: right;
   }
   
@@ -20,61 +18,36 @@
 
   #search {
     top: 14em;
-    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );  }
+  }
 
   #addClient {
-    top: 18em;
-    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );    
+    top: 18em;    
   }
   
   #addVisit {
-    top: 22em;
-    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );  }
+    top: 22em; 
+  }
 
   #clientBook {
     top: 26em;
-    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );  }
+  }
   
 
-  /* #clientBook, #addVisit, #addClient, #search, .btn-grad {background-image: linear-gradient(to right, #44A08D 0%, #093637  51%, #44A08D  100%)}
-  .btn-grad {
-     margin: 10px;
-     padding: 15px 45px;
-     text-align: center;
-     text-transform: uppercase;
-     transition: 0.5s;
-     background-size: 200% auto;
-     color: white;            
-     box-shadow: 0 0 20px #eee;
-     border-radius: 10px;
-     display: block;
-   }
 
-   #clientBook:hover, #addVisit:hover, #addClient:hover, #search:hover, .btn-grad:hover {
-     background-position: right center; /* change the direction of the change here */
-     /* color: #fff;
-     text-decoration: none;
-   } */
-   /* */ 
-
-
-   #clientBook, #addVisit, #addClient, #search, .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
+   #clientBook, #addVisit, #addClient, #search {background-image: linear-gradient(to right, #ADD100 0%, #7B920A  51%, #ADD100  100%)}
    #clientBook, #addVisit, #addClient, #search, .btn-grad {
       margin: 10px;
       padding: 15px 45px;
       text-align: center;
-      /* text-transform: uppercase; */
       transition: 0.5s;
       background-size: 200% auto;
-      /* color: white;             */
-      box-shadow: 0 0 20px #eee;
-      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+      border-radius: 15px;
       display: block;
     }
 
-    #clientBook:hover, #addVisit:hover, #addClient:hover, #search:hover, .btn-grad:hover {
+    #clientBook:hover, #addVisit:hover, #addClient:hover, #search:hover {
       background-position: right center; /* change the direction of the change here */
-      /* color: #fff; */
       text-decoration: none;
     }
    

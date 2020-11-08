@@ -24,6 +24,7 @@ export const ClientList = ({client}) => {
         fitted="true"
         size="large"
         icon="add"
+        title="add new client"
         onClick={() => history.push("/clients/create")}
       ></Button> 
       {/* <p>

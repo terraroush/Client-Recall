@@ -1,23 +1,22 @@
-.logout--button {
-  border-radius: 0;
-  appearance: none;
-  border: .1em rgb(197, 192, 181) solid;
-  border-radius: 30px;
-  color: black;
-  font-size: 1.1em;
-  min-width: 6em;
-  padding: .3em;
-  cursor: pointer;
-  /* margin: .3em;  */
-  background: peachpuff
-}
+ .logout--button {
+    appearance: none;
+    background-image: linear-gradient(to right, #ADD100 0%, #7B920A  51%, #ADD100  100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 15px;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1em;
+  }
 
-.logout--button:hover {
-    background: lightsalmon;
-    color: #fff;
+  .logout--button:hover {
+    background-position: right center; /* change the direction of the change here */
+    text-decoration: none;
   }
+
   
-.logout--button:focus {
-    outline: none;
-    
-  }
+  

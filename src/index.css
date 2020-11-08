@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Raleway', sans-serif;
+  
 }
 
 #root {
@@ -10,6 +11,9 @@ html, body {
   grid-template-columns: 130px auto 220px;
   grid-gap: .4em;
   font-family: 'Raleway', sans-serif;
+  background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
 }
 
 .page--header, footer {
@@ -20,6 +24,7 @@ html, body {
   aside,
   article {
     grid-column: 1 / 4;
+    
   }
 }
 
@@ -27,6 +32,7 @@ body {
   margin: 0 auto;
   /* max-width: 100%; */
   padding: 1em 0;
+  
 }
 
 article {
@@ -34,15 +40,15 @@ article {
 }
 
 aside, article {
-  background: #eaeaea;
+  background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );  
   align-items: center;
   justify-content: center;
-  height: 65vh;
+  height: 75vh;
   overflow: scroll;
 }
 
 footer{
-  background: #eaeaea;
+  background-image: radial-gradient( circle farthest-corner at 5.3% 17.2%,  rgba(255,208,253,1) 0%, rgba(255,237,216,1) 90% );  
   align-items: center;
   justify-content: center;
   height: 3.5vh;
@@ -51,6 +57,7 @@ footer{
 fieldset, input {
   border-radius: .3em;
   font-family: 'Raleway', sans-serif;
+  background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
 
 }
 

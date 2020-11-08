@@ -8,9 +8,9 @@
     height: 3.5em;
     font-size: 1.25em; 
     color: black; 
-    border-radius: 0 .75em .75em 0; /* Rounded corners on the top right and bottom right side */
+    border-radius: .75em; /* Rounded corners on the top right and bottom right side */
     border: none;
-    text-align: left;
+    text-align: right;
   }
   
   #mySidenav .sidenavButton:hover {
@@ -20,23 +20,69 @@
 
   #search {
     top: 14em;
-    background-color: #669999; 
-  }
+    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );  }
 
   #addClient {
     top: 18em;
-    background-color: #669999;
-    
+    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );    
   }
   
   #addVisit {
     top: 22em;
-    background-color: #669999; 
-  }
+    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );  }
 
   #clientBook {
     top: 26em;
-    background-color: #669999; 
-  }
+    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );  }
   
+
+  /* #clientBook, #addVisit, #addClient, #search, .btn-grad {background-image: linear-gradient(to right, #44A08D 0%, #093637  51%, #44A08D  100%)}
+  .btn-grad {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+   }
+
+   #clientBook:hover, #addVisit:hover, #addClient:hover, #search:hover, .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     /* color: #fff;
+     text-decoration: none;
+   } */
+   /* */ 
+
+
+   #clientBook, #addVisit, #addClient, #search, .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
+   #clientBook, #addVisit, #addClient, #search, .btn-grad {
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      /* text-transform: uppercase; */
+      transition: 0.5s;
+      background-size: 200% auto;
+      /* color: white;             */
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+    }
+
+    #clientBook:hover, #addVisit:hover, #addClient:hover, #search:hover, .btn-grad:hover {
+      background-position: right center; /* change the direction of the change here */
+      /* color: #fff; */
+      text-decoration: none;
+    }
+   
+
+    
+    
+    
+    
+    
+    
   

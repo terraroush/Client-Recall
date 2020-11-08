@@ -4,7 +4,7 @@
   appearance: none;
   border: 0;
   border-radius: 5px;
-  background: rgba(164, 178, 195, 1);
+  background-image: radial-gradient( circle 788px at 0.7% 3.4%,  rgba(164,231,192,1) 0%, rgba(255,255,255,1) 90% );  
   color: black;
   padding: 8px 16px;
   font-size: 16px;
@@ -16,8 +16,9 @@
 }
 
 .nameButtons:hover {
-    background: rgba(68, 75, 84, 1);
-    color: #fff;
+  background-image: radial-gradient( circle farthest-corner at -1% 57.5%,  rgba(19,170,82,1) 0%, rgba(0,102,43,1) 90% );    
+  
+  color: #fff;
   }
   
 .nameButtons:focus {

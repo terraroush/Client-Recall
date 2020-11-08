@@ -9,7 +9,7 @@
         "five five five ";
     column-gap: .5em;
 
-    border: .01em solid black;
+    /* border: .01em solid black; */
     box-shadow: grey;
     margin: .5em;
     padding: .5em;

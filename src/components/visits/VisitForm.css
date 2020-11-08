@@ -10,6 +10,8 @@
     "six"
     "seven";
   justify-content: center;
+  background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
+  font-size: 17px;
 }
 
 .chooseClient {
@@ -33,6 +35,7 @@
   margin: 0.5em;
   width: 8em;
   text-align: center;
+  border-radius: .4rem;
   
 }
 .form-group2 {
@@ -52,6 +55,7 @@ label {
 input {
   grid-area: two;
   font-family: 'Raleway', sans-serif;
+  
 
 }
 

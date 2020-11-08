@@ -1,5 +1,26 @@
 .visitList--grid {
-    
-    
+    display: grid;
+    grid-template-columns: auto auto auto  auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "one two three ."
+        "four four four four"
+        ;
+    column-gap: .5em;
+    padding: 1em;
+}
 
+.pageTitle {
+    grid-area: one;
+}
+.visitList--clientCard {
+    grid-area: two;
+}
+.addVisitBtn {
+    grid-area: three;
+}
+
+.visitList--list {
+    grid-area: four;
+    padding: 0em 1em 1em 5em;
 }

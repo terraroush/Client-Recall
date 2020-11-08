@@ -24,14 +24,8 @@ export const VisitList = ({ client }) => {
 
   return (
     <article className="visitList--grid">
-      <h1 className="cursive">client history of</h1>
-      <Button
-        className="cursive"
-        fitted="true"
-        size="large"
-        icon="add"
-        onClick={() => history.push("/client-history/create")}
-      ></Button>
+      <h1 className="cursive pageTitle">client history of</h1>
+      
 
       <div className="visitList--clientCard">
         {clients.map((client) => {
@@ -40,6 +34,16 @@ export const VisitList = ({ client }) => {
           }
         })}
       </div>
+      
+      <Button
+        className="cursive addVisitBtn"
+        fitted="true"
+        size="large"
+        icon="add"
+        title="add new visit"
+        onClick={() => history.push("/client-history/create")}
+      ></Button>
+
       <div className="visitList--list">
         {visits
           .sort(

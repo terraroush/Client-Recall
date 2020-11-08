@@ -1,47 +1,58 @@
 .formContainer1 {
+    display: flex;
+    justify-content: center;
+}
+
+.gridThis {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-     "two "
-     "three"
-     "four"
-     "five"
-     "six";
-     justify-content: center;
+    "one "
+    "two"
+    "three"
+    "four"
+    ;
+    background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
+    font-size: 17px;
+    width: 28em;
+    height: 14em;
 }
 
 .first {
-    grid-area: two;
+    grid-area: one;
 }
 .last {
-    grid-area: three;
+    grid-area: two;
 }
 .email {
-    grid-area: four;
+    grid-area: three;
 }
 .phone {
-    grid-area: five;
+    grid-area: four;
 }
 .btn-primary {
-    grid-area: six;
+    font-size: 16px;
     padding: 0.4em;
     margin: 0.5em;
     width: 8em;
     text-align: center;
-    justify-self: center;    
+    justify-self: center; 
+    border-radius: .4rem;   
 }
 .form-group {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-template-areas: "one two";
+    grid-template-rows: 1fr;
+    grid-template-areas: "title  field";
     padding: .25em;
-  }
+  } 
   
-  label {
-    grid-area: one;
+  .client-label {
+    grid-area: title;
+    min-width: 5em;
+    
   }
-  input {
-    grid-area: two;
+  .form-control {
+    grid-area: field;
   }

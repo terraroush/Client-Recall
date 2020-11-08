@@ -8,9 +8,7 @@
     height: 3.5em;
     font-size: 1.25em; 
     color: black; 
-    border-radius: 0 .75em .75em 0; /* Rounded corners on the top right and bottom right side */
-    border: none;
-    text-align: left;
+    text-align: right;
   }
   
   #mySidenav .sidenavButton:hover {
@@ -20,23 +18,44 @@
 
   #search {
     top: 14em;
-    background-color: #669999; 
   }
 
   #addClient {
-    top: 18em;
-    background-color: #669999;
-    
+    top: 18em;    
   }
   
   #addVisit {
-    top: 22em;
-    background-color: #669999; 
+    top: 22em; 
   }
 
   #clientBook {
     top: 26em;
-    background-color: #669999; 
   }
   
+
+
+   #clientBook, #addVisit, #addClient, #search {background-image: linear-gradient(to right, #ADD100 0%, #7B920A  51%, #ADD100  100%)}
+   #clientBook, #addVisit, #addClient, #search, .btn-grad {
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      transition: 0.5s;
+      background-size: 200% auto;
+      box-shadow: 0 0 10px white;
+      border-radius: 15px;
+      display: block;
+    }
+
+    #clientBook:hover, #addVisit:hover, #addClient:hover, #search:hover {
+      background-position: right center; /* change the direction of the change here */
+      text-decoration: none;
+    }
+   
+
+    
+    
+    
+    
+    
+    
   

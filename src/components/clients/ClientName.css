@@ -4,20 +4,25 @@
   appearance: none;
   border: 0;
   border-radius: 5px;
-  background: rgba(164, 178, 195, 1);
+  background-image: radial-gradient( circle 788px at 0.7% 3.4%,  rgba(164,231,192,1) 0%, rgba(255,255,255,1) 90% );  
   color: black;
   padding: 8px 16px;
   font-size: 16px;
-  min-width: 11em;
+  min-width: 13.5em;
   padding: .5em;
   font-family: inherit;
   cursor: pointer;
   margin: .3em;
+  transition: 0.5s;
+  
+
 }
 
 .nameButtons:hover {
-    background: rgba(68, 75, 84, 1);
-    color: #fff;
+  background-image: linear-gradient( 109.6deg,  rgba(102,203,149,1) 11.2%, rgba(39,210,175,1) 98.7% );
+  /* background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );; */
+
+
   }
   
 .nameButtons:focus {
@@ -29,3 +34,8 @@
   font-family: 'Raleway', sans-serif;
 
 }
+
+
+
+
+

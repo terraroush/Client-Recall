@@ -4,7 +4,7 @@
       "id": 1,
       "username": "carly",
       "email": "carly@me.com",
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604786847/roush/osthokvwcweq7rtby4ao.jpg"
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604861178/roush/sbxnoqwsbqq82sk7bve3.jpg"
     },
     {
       "id": 2,
@@ -289,15 +289,6 @@
       "lastName": "Parker",
       "email": "bpa@me.com",
       "phone": 3032224444,
-      "picUrl": "",
-      "userId": 2
-    },
-    {
-      "id": 35,
-      "firstName": "Brandon",
-      "lastName": "Hogan",
-      "email": "bho@me.com",
-      "phone": 3031112222,
       "picUrl": "",
       "userId": 2
     },
@@ -713,11 +704,11 @@
     },
     {
       "id": 39,
-      "date": "03/19/2020",
+      "date": "4/23/2020",
       "cost": "54",
       "note": "very particular about everything. ",
       "rating": 4,
-      "photoUrl": "",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604859629/roush/hbuwwr0070tvnekg08jl.jpg",
       "clientId": 29,
       "userId": 2
     },
@@ -782,16 +773,6 @@
       "userId": 2
     },
     {
-      "id": 46,
-      "date": "06/20/2020",
-      "cost": "54",
-      "note": "loves a bowl cut.",
-      "rating": 5,
-      "photoUrl": "",
-      "clientId": 35,
-      "userId": 2
-    },
-    {
       "id": 48,
       "date": "07/23/2020",
       "cost": "54",
@@ -819,16 +800,6 @@
       "rating": 5,
       "photoUrl": "",
       "clientId": 33,
-      "userId": 2
-    },
-    {
-      "id": 51,
-      "date": "05/15/2020",
-      "cost": "54",
-      "note": "basically bowl cut with shaved undercut.",
-      "rating": 5,
-      "photoUrl": "",
-      "clientId": 35,
       "userId": 2
     },
     {
@@ -1011,14 +982,14 @@
       "userId": 2
     },
     {
-      "date": "11/6/2020",
+      "id": 76,
+      "date": "9/10/2020",
       "cost": "54",
-      "note": "arg",
+      "note": "growing out her traditional highlights to incorporate her natural color. imperfect root application drag down several inches to blend the highlights.\nnatural level 6/7.\nwella color touch (roots)7/71-top of mids)8/71, 1.9%, 1:2, 25 minutes",
       "rating": 4,
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604706384/roush/jfirxjodk5maxn9bcmpb.jpg",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604854629/roush/yefinocifc6tmd1r9hcy.jpg",
       "clientId": 18,
-      "userId": 2,
-      "id": 76
+      "userId": 2
     },
     {
       "id": 77,

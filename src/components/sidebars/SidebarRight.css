@@ -2,8 +2,7 @@
 
     height: 100vh;
     overflow: auto;
-    background:rgba(255,204,153,1);
-  }
+    background-image: radial-gradient( circle 673px at 10% 20%,  rgba(255,220,163,1) 0%, rgba(129,255,239,1) 48.5%, rgba(139,172,251,1) 97.8% );}
   
   .rightSideContainer {
     display: flex;

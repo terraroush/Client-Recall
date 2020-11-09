@@ -6,7 +6,11 @@
 }
 
 .client__name {
-    margin: .2em
+    margin: .1em
+}
+.client__email, .client__phone {
+    font-size: 16px;
+    padding: .1em;
 }
 
 .clientCardButtons {

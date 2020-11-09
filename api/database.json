@@ -10,7 +10,7 @@
       "id": 2,
       "username": "terra",
       "email": "terra.roush@gmail.com",
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604873926/roush/hnszlpgazu1t096lyrgi.jpg"
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604936544/roush/waydlhkcunkwlqsup2ah.jpg"
     }
   ],
   "clients": [
@@ -854,11 +854,10 @@
     },
     {
       "id": 57,
-      "date": "08/20/2020",
+      "date": "09/20/2020",
       "cost": "54",
       "note": "Loves the new shape, just wants to keep looking fresh. granddaughter thinks the hair change is really awesome.",
       "rating": 5,
-      "photoUrl": "",
       "clientId": 2,
       "userId": 2
     },

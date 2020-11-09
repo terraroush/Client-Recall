@@ -17,9 +17,9 @@ export const ClientCard = ({client}) => {
         
       >
       <div className="cardContents">
-        <h4 className="client__name">
+        <h3 className="client__name">
           {client.firstName + " " + client.lastName}
-        </h4>
+        </h3>
         <div className="client__email">{client.email}</div>
         <div className="client__phone">{client.phone}</div>
       </div>

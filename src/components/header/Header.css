@@ -1,31 +1,30 @@
-/* .page--header {
-  display: flex;
-  height: 25vh;
-} */
-
-.page--header {
-  /* display: grid;
-  grid-template-columns: auto  ;
-  grid-template-rows: auto;
-  grid-template-areas: "two"; */
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(62,133,238,1) 1.1%, rgba(227,137,240,1) 43.7%, rgba(243,193,124,1) 89.7% );
-  height: 20vh;
-
-}
-
 .cursive {
   font-family: 'Beth Ellen', cursive;
 }
-/* .header-logo {
-  grid-area: one;
-} */
-.header-title {
-  margin-top: 10em;
-  font-size: xxx-large;
-  text-align: left;
-  padding-top: .7em;
-  padding-left: 6em;
-  /* grid-area: one; */
+
+.page--header {
+  display: grid;
+  grid-template-columns: 11% auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: "logo title ."; 
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(62,133,238,1) 1.1%, rgba(227,137,240,1) 43.7%, rgba(243,193,124,1) 89.7% );
+  height: 23vh;
+
 }
+
+
+.hairLogo-container {
+  grid-area: logo;
+  margin-top: 1em;
+
+}
+
+.header-title {
+  grid-area: title;
+  font-size: 70px;
+  margin-top: 1.2em;
+  
+}
+
 
 

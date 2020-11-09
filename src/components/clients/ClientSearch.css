@@ -4,3 +4,8 @@
     overflow: scroll;
     font-size: 1.3em;
 }
+
+.search-container > div {
+    font-size: 22px;
+    padding: .3em;
+}

@@ -1,7 +1,6 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, {useContext, useEffect} from "react"
 import { UserContext } from "./UserProvider"
-// import pic from "/Users/macuser/workspace43/client-recall/src/images/dummyPics/terraJumpsuit.jpeg"
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon} from 'semantic-ui-react'
 import "./UserCard.css"
 import { TotalClients } from "../clients/TotalClients"
 import { AveRating } from "../ratings/AveRating"
@@ -21,7 +20,7 @@ export const UserCard = ({user}) => {
     <div>{
       users.map(user => {
         if (user.id === activeUser) {
-          return <img className="visit__photo" alt="profile photo" src={user.photoUrl} style={{width: "200px"}} key={user.id} userId={user.id} />
+          return <img className="visit__photo" alt="profile photo" src={user.photoUrl} style={{width: "200px"}} key={user.id}  />
         }
       })
     }

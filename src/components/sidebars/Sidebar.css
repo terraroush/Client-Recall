@@ -1,12 +1,12 @@
 #mySidenav .sidenavButton {
     position: absolute; /* Position them relative to the browser window */
-    left: -6.5em; 
+    left: -6em; 
     /* Position them outside of the screen */
     transition: 0.5s; /* Add transition on hover */
     padding: 1em; 
     width: 10em;
     height: 3.5em;
-    font-size: 1.25em; 
+    font-size: 1.5em; 
     color: black; 
     text-align: right;
   }

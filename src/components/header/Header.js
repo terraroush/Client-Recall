@@ -1,14 +1,19 @@
-import React from "react"
-import { NavBar } from "../nav/NavBar"
-// import { Logo } from "../logo/Logo"
-import "./Header.css"
+import React from "react";
+import "./Header.css";
+import hairLogo from "//Users/macuser/workspace43/client-recall/src/images/logo/hairdrawing.svg.png";
 
 export const Header = () => {
+  return (
+    <header className="page--header">
+      <div className="hairLogo-container">
+        <img
+          src={hairLogo}
+          style={{ width: "11em" }}
+          classname="hairlogo"
+        ></img>
+      </div>
 
-    return (
-        <header className="page--header">
-            {/* <Logo className="header-logo"/> */}
-            <h1 className="header-title cursive">client recall</h1>
-        </header>
-    )
-}
+      <h1 className="header-title cursive">client recall</h1>
+    </header>
+  );
+};

@@ -8,17 +8,18 @@
         "three four ."
         "three five ."
         ;
-    column-gap: .5em;
+    /* column-gap: .5em; */
 
     box-shadow: grey;
     margin: .5em;
     padding: .5em;
-    max-width: 60em;
-    min-width: 60em;
+    max-width: 55em;
+    min-width: 55em;
     min-height: 20em;
     max-height: 21em;
     overflow: auto;
     background-color: white;
+    font-size: 18px;
 }
 
 .visit__date {
@@ -43,7 +44,7 @@
     max-width: 30em;
     overflow: auto;
     margin: 1.5em;
-    /* font-size: 14px; */
+    line-height: 1.3em;
 }
 
 .visit__rating {

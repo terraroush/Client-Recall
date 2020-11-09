@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { VisitContext } from "./VisitProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./VisitCard.css";
+import DefaultPic from "///Users/macuser/workspace43/client-recall/src/images/defaultPic/defaultUserImg.png"
 
 export const VisitCard = ({ visit }) => {
   const { deleteVisit, getVisitsByClientId } = useContext(VisitContext);
@@ -25,7 +26,7 @@ export const VisitCard = ({ visit }) => {
         <div className="visit__cost">${visit.cost}</div>
         <div className="visit__note">{visit.note}</div>
         <div className="visit__rating">rating: {visit.rating}</div>
-        <img className="visit__photo" src={visit.photoUrl} style={{width: "200px"}}/>
+        <img className="visit__photo" src={visit.photoUrl ? visit.photoUrl : DefaultPic} style={{width: "200px"}}/>
       </section>
       <button
         className="cursive"

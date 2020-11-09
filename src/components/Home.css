@@ -1,11 +1,18 @@
 .home-flex {
-    display: flex;
-    
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "message"
+        "list";
+
+    align-content: center;
+    justify-items: center;
+}
+
+.message {
+    grid-area: message;
 }
 .flex-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    grid-area: list;
 }

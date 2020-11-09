@@ -8,15 +8,14 @@
         "three four ."
         "three five ."
         ;
-    /* column-gap: .5em; */
 
     box-shadow: grey;
     margin: .5em;
     padding: .5em;
     max-width: 55em;
     min-width: 55em;
-    min-height: 20em;
-    max-height: 21em;
+    min-height: 19em;
+    max-height: 19em;
     overflow: auto;
     background-color: white;
     font-size: 18px;
@@ -25,6 +24,7 @@
 .visit__date {
     grid-area: one;
     margin: 0;
+    font-size: 20px;
 }
 
 .visit__photo {

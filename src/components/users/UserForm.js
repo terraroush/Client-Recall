@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "./UserProvider";
 import {PhotoUpload} from "../photos/PhotoUpload"
-import { useHistory, useParams } from "react-router-dom";
 import "./UserForm.css"
 
 export const UserForm = () => {

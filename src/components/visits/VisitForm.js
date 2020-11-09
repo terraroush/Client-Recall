@@ -3,6 +3,8 @@ import { VisitContext } from "./VisitProvider";
 import { ClientContext } from "../clients/ClientProvider";
 import { PhotoUpload } from "../photos/PhotoUpload";
 import { useHistory, useParams } from "react-router-dom";
+import moment from 'moment';
+
 import "./VisitForm.css";
 
 export const VisitForm = () => {
@@ -41,12 +43,11 @@ export const VisitForm = () => {
     } else {
       setIsLoading(true);
       if (visitId) {
-        //PUT - update
+
         editVisit({
           id: visit.id,
-          date: new Date(visit.date).toLocaleDateString("en-US", {
-            timeZone: "UTC",
-          }),
+          date: moment(visit.date).format("MM/DD/YYYY"),
+          
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,
@@ -59,9 +60,10 @@ export const VisitForm = () => {
       } else {
         addVisit({
           id: visit.id,
-          date: new Date(visit.date).toLocaleDateString("en-US", {
-            timeZone: "UTC",
-          }),
+          date: moment(visit.date).format("MM/DD/YYYY"),
+          // date: new Date(visit.date).toLocaleDateString("en-US", {
+          //   timeZone: "UTC",
+          // }),
           cost: visit.cost,
           note: visit.note,
           rating: +visit.rating,

@@ -9,7 +9,7 @@ export const Header = () => {
         <img
           src={hairLogo}
           style={{ width: "11em" }}
-          classname="hairlogo"
+          className="hairlogo"
         ></img>
       </div>
 

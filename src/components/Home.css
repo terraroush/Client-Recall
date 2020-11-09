@@ -8,11 +8,18 @@
 
     align-content: center;
     justify-items: center;
+    font-size: 25px;
 }
 
 .message {
     grid-area: message;
+    font-size: 40px;
+
 }
 .flex-home {
     grid-area: list;
+    padding: .5em;
+}
+.flex-home > div, li {
+    padding: .3em;
 }

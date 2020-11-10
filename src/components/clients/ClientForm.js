@@ -31,15 +31,28 @@ export const ClientForm = () => {
     setClient(newClient);
   };
 
-  const handleLogin = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+    
+  //   existingClientCheck().then((exists) => {
+  //     if (exists) {
+  //       existDialog.current.showModal();
+  //     } else {
+  //       constructClientObject() 
+  //     }
+      
+  //   })
+  // }
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     existingClientCheck().then((exists) => {
-      if (exists) {
-        existDialog.current.showModal();
+      if(!clientId) {
+        if (exists) {
+        existDialog.current.showModal();}
       } else {
         constructClientObject() 
-      }
+    }
       
     })
   }
@@ -105,7 +118,7 @@ export const ClientForm = () => {
     <div className="formContainer1">
       <form
         className="clientForm"
-        onSubmit={handleLogin}
+        onSubmit={handleSubmit}
       >
         <fieldset className="gridThis">
           <legend>
@@ -177,7 +190,7 @@ export const ClientForm = () => {
           disabled={isLoading} // Prevent browser from submitting the form
           type="submit"
         >
-          {clientId ? "save client" : "submit"}
+          {clientId ? "update" : "submit"}
         </button>
       </form>
     </div>

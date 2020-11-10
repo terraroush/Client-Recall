@@ -10,7 +10,7 @@
       "id": 2,
       "username": "terra",
       "email": "terra.roush@gmail.com",
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604936544/roush/waydlhkcunkwlqsup2ah.jpg"
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604978368/roush/iavblxuqaepgl7g4lfit.jpg"
     }
   ],
   "clients": [
@@ -329,15 +329,6 @@
       "id": 40
     },
     {
-      "firstName": "Hermoine",
-      "lastName": "Granger",
-      "email": "wildhair@dontcare.com",
-      "phone": 1111111111,
-      "picUrl": "",
-      "userId": 2,
-      "id": 41
-    },
-    {
       "id": 42,
       "firstName": "Amanda",
       "lastName": "Heines",
@@ -455,11 +446,10 @@
     },
     {
       "id": 11,
-      "date": "03/14/2019",
-      "cost": "54",
-      "note": "real weird and i love it. i got to shave one side of her head today!",
+      "date": "11/03/2020",
+      "cost": "154",
+      "note": "real weird and i love it. i got to shave one side of her head today! \nmatrix sosocolor 5vr+SoRed RV, 20vol, 1:1, 45 min.",
       "rating": 5,
-      "photoUrl": "",
       "clientId": 7,
       "userId": 2
     },
@@ -574,21 +564,21 @@
     },
     {
       "id": 25,
-      "date": "01/04/2020",
+      "date": "07/02/2020",
       "cost": "100",
       "note": "Natural Level: 3. Roots: Wella KP 3/0 20 vol, 1:1; Mid-ends: Wella CT 3/0+4/6, 1.9% 1:2",
       "rating": 4,
-      "photoUrl": "",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604975564/roush/jeqrzfncmupt6ika03o2.jpg",
       "clientId": 20,
       "userId": 2
     },
     {
       "id": 26,
-      "date": "04/12/2020",
+      "date": "10/14/2020",
       "cost": "229",
       "note": "Natural Level: 3. Same roots as last time. Balayage gentle lift, heavy coverage; recolor mid-ends with Wella CT 6/71",
       "rating": 5,
-      "photoUrl": "",
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604975524/roush/kqjkwbvygmzc5zo6spli.jpg",
       "clientId": 20,
       "userId": 2
     },
@@ -891,16 +881,6 @@
       "id": 62
     },
     {
-      "id": 63,
-      "date": "10/2/2020",
-      "cost": "155",
-      "note": "keratin treatment",
-      "rating": 5,
-      "photoUrl": "",
-      "clientId": 41,
-      "userId": 2
-    },
-    {
       "date": "08/02/2020",
       "cost": "54",
       "note": "she loved her color last time and it shows. she took care of it and used the right products. just needed to clean up her ends and layers especially. lots of texture.",
@@ -1041,16 +1021,6 @@
       "id": 81
     },
     {
-      "date": "10/31/2020",
-      "cost": "0",
-      "note": "finally cut it all off! used a 2 on the sides up to zone 3. had a tough time blending past that point because of his baby-fine hair. perhaps next time i'll take the 2 higher...",
-      "rating": 4,
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604716462/roush/dfi7rfk2ap9tiiargzhi.jpg",
-      "clientId": 46,
-      "userId": 2,
-      "id": 82
-    },
-    {
       "date": "7/9/2013",
       "cost": "150",
       "note": "on a path to get back to natural silver. heavy foils to break up old color.",
@@ -1069,6 +1039,26 @@
       "clientId": 47,
       "userId": 2,
       "id": 84
+    },
+    {
+      "date": "11/07/2020",
+      "cost": "0",
+      "note": "finally cut it all off! used a 2 on the sides up to zone 3. had a tough time blending past that point because of his baby-fine hair. perhaps next time i'll take the 2 higher…",
+      "rating": 4,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604978570/roush/rhv2hqyfd4gja3erzsfy.jpg",
+      "clientId": 46,
+      "userId": 2,
+      "id": 85
+    },
+    {
+      "date": "11/07/2020",
+      "cost": "0",
+      "note": "finally cut it all off! used a 2 on the sides up to zone 3. had a tough time blending past that point because of his baby-fine hair. perhaps next time i'll take the 2 higher…",
+      "rating": 4,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604979776/roush/yszxj8ndfxrkkuuvwi1o.jpg",
+      "clientId": 46,
+      "userId": 2,
+      "id": 86
     }
   ]
 }

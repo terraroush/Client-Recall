@@ -3,24 +3,24 @@
     grid-template-columns: auto auto auto  auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "one two three ."
-        "four four four four"
+        "pageTitle clientCard addVisitBtn ."
+        "visitList--list visitList--list visitList--list visitList--list"
         ;
     column-gap: .5em;
     padding: 1em;
 }
 
 .pageTitle {
-    grid-area: one;
+    grid-area: pageTitle;
 }
 .visitList--clientCard {
-    grid-area: two;
+    grid-area: clientCard;
 }
 .addVisitBtn {
-    grid-area: three;
+    grid-area: addVisitBtn;
 }
 
 .visitList--list {
-    grid-area: four;
+    grid-area: visitList--list;
     padding: 0em 1em 1em 5em;
 }

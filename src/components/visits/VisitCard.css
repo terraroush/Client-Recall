@@ -3,10 +3,10 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
-        "one one two"
-        "three four ."
-        "three four ."
-        "three five ."
+        "date date cost"
+        "photo note ."
+        "photo note ."
+        "photo rating ."
         ;
 
     box-shadow: grey;
@@ -22,22 +22,22 @@
 }
 
 .visit__date {
-    grid-area: one;
+    grid-area: date;
     margin: 0;
     font-size: 20px;
 }
 
 .visit__photo {
-    grid-area: three;
+    grid-area: photo;
     
 }
 
 .visit__cost {
-    grid-area: two;
+    grid-area: cost;
 }
 
 .visit__note {
-    grid-area: four;
+    grid-area: note;
     min-height: 10em;
     max-height: 10em;
     min-width: 30em;
@@ -48,7 +48,7 @@
 }
 
 .visit__rating {
-    grid-area: five;
+    grid-area: rating;
     margin: 1.5em;
 
 }

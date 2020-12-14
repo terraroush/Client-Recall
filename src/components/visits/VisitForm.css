@@ -3,12 +3,12 @@
   grid-template-columns: auto;
   grid-template-rows:  1fr 1fr 1fr 1fr auto;
   grid-template-areas:
-    "two"
-    "three"
-    "four"
-    "five"
-    "six"
-    "seven";
+    "chooseClient"
+    "dateVisitForm"
+    "costVisitForm"
+    "noteVisitForm"
+    "ratingVisitForm"
+    "btn-primary-visit";
   justify-content: center;
   background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
   font-size: 20px;
@@ -16,22 +16,22 @@
 }
 
 .chooseClient {
-  grid-area: two;
+  grid-area: chooseClient;
 }
 .dateVisitForm {
-  grid-area: three;
+  grid-area: dateVisitForm;
 }
 .costVisitForm {
-  grid-area: four;
+  grid-area: costVisitForm;
 }
 .noteVisitForm {
-  grid-area: five;
+  grid-area: noteVisitForm;
 }
 .ratingVisitForm {
-  grid-area: six;
+  grid-area: ratingVisitForm;
 }
 .btn-primary-visit {
-  grid-area: seven;
+  grid-area: btn-primary-visit;
   padding: 0.4em;
   margin: 0.5em;
   width: 8em;
@@ -42,19 +42,19 @@
 .form-group2 {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-areas: "one two";
+  grid-template-areas: "oneVisit twoVisit";
   padding: .25em;
 }
 
 label {
-  grid-area: one;
+  grid-area: oneVisit;
   width:25%;
   margin-right:1em;
   padding-top:0.2em;
 }
 
 input {
-  grid-area: two;
+  grid-area: twoVisit;
   font-family: 'Raleway', sans-serif;
   
 

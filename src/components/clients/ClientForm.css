@@ -5,14 +5,14 @@
 }
 
 .gridThis {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "one "
-    "two"
-    "three"
-    "four"
+    "firstname"
+    "lastname"
+    "emailform"
+    "phoneform"
     ;
     background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );
     font-size: 20px;
@@ -21,16 +21,16 @@
 }
 
 .first {
-    grid-area: one;
+    grid-area: firstname;
 }
 .last {
-    grid-area: two;
+    grid-area: lastname;
 }
 .email {
-    grid-area: three;
+    grid-area: emailform;
 }
 .phone {
-    grid-area: four;
+    grid-area: phoneform;
 }
 .btn-primary {
     font-size: 16px;

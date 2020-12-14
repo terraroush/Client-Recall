@@ -10,7 +10,7 @@
       "id": 2,
       "username": "terra",
       "email": "terra.roush@gmail.com",
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604978368/roush/iavblxuqaepgl7g4lfit.jpg"
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1605368659/roush/jdaluvj8lbwpzqo8a0qf.jpg"
     }
   ],
   "clients": [
@@ -202,15 +202,6 @@
       "userId": 2
     },
     {
-      "id": 24,
-      "firstName": "Pierce",
-      "lastName": "Shepard",
-      "email": "psh@me.com",
-      "phone": 3031118888,
-      "picUrl": "",
-      "userId": 2
-    },
-    {
       "id": 25,
       "firstName": "Paul",
       "lastName": "Atreides",
@@ -359,6 +350,22 @@
       "lastName": "Dietrich",
       "email": "j@d.com",
       "phone": 1111111111,
+      "userId": 2
+    },
+    {
+      "id": 48,
+      "firstName": "Bree",
+      "lastName": "Harmon",
+      "email": "bree@harmon.com",
+      "phone": 2229993333,
+      "userId": 2
+    },
+    {
+      "id": 49,
+      "firstName": "Pierce",
+      "lastName": "Shepard",
+      "email": "psh@me.com",
+      "phone": 3035556666,
       "userId": 2
     }
   ],
@@ -622,16 +629,6 @@
       "userId": 2
     },
     {
-      "id": 31,
-      "date": "08/22/2020",
-      "cost": "54",
-      "note": "super easy. basicaly one length, 2 everywhere. slightly taper the neck and sides. likes to fan out the front with styling product.",
-      "rating": 3,
-      "photoUrl": "",
-      "clientId": 24,
-      "userId": 2
-    },
-    {
       "id": 32,
       "date": "07/05/2020",
       "cost": "54",
@@ -861,15 +858,6 @@
       "userId": 2
     },
     {
-      "id": 59,
-      "date": "8/4/2020",
-      "cost": "105",
-      "note": "past color grew out so nicely. retouched roots and did a big chop to have a lob.",
-      "rating": 5,
-      "clientId": 13,
-      "userId": 2
-    },
-    {
       "date": "10/28/2020",
       "cost": "50",
       "note": "wanted to keep the front long to cover a scar",
@@ -970,16 +958,6 @@
       "userId": 2
     },
     {
-      "id": 77,
-      "date": "7/10/2020",
-      "cost": "195",
-      "note": "insane cut! best client ever!\ndouble process blonde and tone.",
-      "rating": 5,
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604708874/roush/sxboqdegiiulh7pkeha9.jpg",
-      "clientId": 10,
-      "userId": 2
-    },
-    {
       "date": "12/3/2019",
       "cost": "205",
       "note": "pulp riot mixture",
@@ -1044,20 +1022,60 @@
       "cost": "0",
       "note": "finally cut it all off! used a 2 on the sides up to zone 3. had a tough time blending past that point because of his baby-fine hair. perhaps next time i'll take the 2 higher…",
       "rating": 4,
-      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604978570/roush/rhv2hqyfd4gja3erzsfy.jpg",
-      "clientId": 46,
-      "userId": 2,
-      "id": 85
-    },
-    {
-      "date": "11/07/2020",
-      "cost": "0",
-      "note": "finally cut it all off! used a 2 on the sides up to zone 3. had a tough time blending past that point because of his baby-fine hair. perhaps next time i'll take the 2 higher…",
-      "rating": 4,
       "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1604979776/roush/yszxj8ndfxrkkuuvwi1o.jpg",
       "clientId": 46,
       "userId": 2,
       "id": 86
+    },
+    {
+      "date": "11/06/2020",
+      "cost": "250",
+      "note": "double process blonde with blue fashion shade",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1605223506/roush/dnqpe3n8yqjiji3zy0ef.jpg",
+      "clientId": 48,
+      "userId": 2,
+      "id": 87
+    },
+    {
+      "id": 88,
+      "date": "11/14/2020",
+      "cost": "0",
+      "note": "just a few tweaks. brought the sides up higher and shortened the top. blended to have less of a disconnect",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1605392084/roush/cp1hpblwkx7mmylrzikx.jpg",
+      "clientId": 46,
+      "userId": 2
+    },
+    {
+      "date": "11/06/2020",
+      "cost": "54",
+      "note": "transformation! scissors over comb sides. clean blend to longer, textured top. lots of debulking.",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1605459571/roush/go5jmelkclexc4z9hstv.jpg",
+      "clientId": 49,
+      "userId": 2,
+      "id": 89
+    },
+    {
+      "date": "07/29/2020",
+      "cost": "200",
+      "note": "heartbreaking shape. vidal would be proud. double process blonde with wella relights /18.",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1605460062/roush/xxkrf4ctaebraynhiqh7.jpg",
+      "clientId": 10,
+      "userId": 2,
+      "id": 90
+    },
+    {
+      "date": "05/07/2020",
+      "cost": "220",
+      "note": "double process blonde. wella relights /18. triangular sections of pravana pastels: blue, lavender, and mint.",
+      "rating": 5,
+      "photoUrl": "https://res.cloudinary.com/terracloud1/image/upload/v1605460253/roush/zy0ru3ggr2hdm03kz2w9.jpg",
+      "clientId": 10,
+      "userId": 2,
+      "id": 91
     }
   ]
 }

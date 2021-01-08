@@ -3,7 +3,7 @@
 ## Application Overview
 
 ​
-client recall is a single page web application for users to organize and save important information about their client to assist in creating a smooth and positive relationship. In this case, the users are hairdressers and the important information, data, is general contact info: name, phone, email, also more specific visit info such as: visit date, cost, a personal rating, photos and notes, i.e. color formulas, haircut details, etc. I created client recall because I personally saw the need for such an app during my ten years as a hairstylist. Myself, and everyone I knew, stored notes on index cards. Those get lost and damaged easily to say the least. Not to mention, that after a year of diligent note taking, you'd have an unwieldy amount of cards. This app solves these problems. client recall takes things a step further and allows the stylist the opportunity to save a photo with each visit. Furthermore, the stylist can also rate their own performance. This feature should always encourage the user to provide the best service for their clients.
+client recall is a single page web application for users to organize and save important information about their clients to assist in creating smooth and positive relationships. In this case, the users are hairdressers and the important information, data, is general contact info: name, phone, email, also more specific visit info such as: visit date, cost, a personal rating, photos and notes, i.e. color formulas, haircut details, etc. I created client recall because I personally saw the need for such an app during my ten years as a hairstylist. Myself, and everyone I knew, stored notes on index cards. Those get lost and damaged easily to say the least. Not to mention, that after a year of diligent note taking, you'd have an unwieldy amount of cards. This app solves these problems. client recall takes things a step further and allows the stylist the opportunity to save a photo with each visit. Even furthermore, the stylist can rate their own performance on each visit. 
 
 ​
 
@@ -34,9 +34,11 @@ Follow the instructions below to demo this application for yourself!
 
 ### Installation
 
-Along with this repository, you will need to clone the [My Amazing Application Server](url link to your server repo) repo as well which contains the data structure.
+First thing's first: The app was created to work with a REST API by way of JSON Server. You'll need to install JSON Server in the console:
+`npm install -g json server`
+Along with this repository, you will need to clone the [client recall JSON Server](https://github.com/terraroush/client-recall-JSON) repo as well which contains the data structure.
 ​
-To start the application, run the following command in your terminal inside of the My Amazing Application directory:
+To start the application, run the following command in your terminal inside of the client recall directory:
 ​
 
 ```bash

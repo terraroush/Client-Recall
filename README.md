@@ -34,16 +34,26 @@ Follow the instructions below to demo this application for yourself!
 
 ### Installation
 
-First thing's first: The app was created to work with a REST API by way of JSON Server. You'll need to install JSON Server in the console:
+1. First thing's first: The app was created to work with a REST API by way of JSON Server. You'll need to install JSON Server in the terminal:
 `npm install -g json server`
-Along with this repository, you will need to clone the [client recall JSON Server](https://github.com/terraroush/client-recall-JSON) repo as well which contains the data structure.
-​
-To start the application, run the following command in your terminal inside of the client recall directory:
-​
+2. Next you'll need to clone this repo and cd in to it in the terminal:
+`git clone git@github.com:terraroush/client-recall.git`
+then
+`cd client-recall`
+3. You need to install a node package with dependencies (keep this terminal window open):
+`npm install`
+4. Along with this repository, you will need to clone the [client recall JSON Server](https://github.com/terraroush/client-recall-JSON) repo as well, which contains the data structure. In a new terminal window:
+`git clone git@github.com:terraroush/client-recall-JSON.git`
+then
+`cd client-recall-JSON`
+from here (this will serve the demo database):
+`json-server -p 8088 -w database.json`
+5. From the original terminal window start your own demo:
+`npm start`
+6. Log in using one of two demo accounts:
+- terra@demo.com (this one has the most data)
+- carly@me.com
 
-```bash
-npm start
-```
 
 ​
 

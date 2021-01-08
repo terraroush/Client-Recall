@@ -42,7 +42,7 @@ Follow the instructions below to demo this application for yourself!
    `cd client-recall`
 3. You need to install a node package with dependencies (keep this terminal window open):
    `npm install`
-4. Along with this repository, you will need to clone the [client recall JSON Server](https://github.com/terraroush/client-recall-JSON) repo as well, which contains the data structure. In a new terminal window:
+4. You will need to clone the [client recall JSON Server](https://github.com/terraroush/client-recall-JSON) repo as well, which contains the data structure. In a new terminal window:
    `git clone git@github.com:terraroush/client-recall-JSON.git`
    then
    `cd client-recall-JSON`

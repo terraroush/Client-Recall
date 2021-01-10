@@ -1,5 +1,8 @@
 # client recall
 
+![](SmallbriefDemoCR.gif)
+![](SmalladdExistingOlive.gif)
+
 ## Application Overview
 
 ​

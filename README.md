@@ -1,7 +1,7 @@
 # client recall
 
-![](SmallbriefDemoCR.gif)
-![](SmalladdExistingOlive.gif)
+![demo gif](src/images/GIFs/SmallbriefDemoCR.gif)
+![demo add visit to existing client](src/images/GIFs/SmalladdExisitingOlive.gif)
 
 ## Application Overview
 
